@@ -5,7 +5,7 @@ import json
 from playwright.sync_api import sync_playwright
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "video_docs")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "video_docs", "batches")
 BATCH_SIZE = 5
 
 ALL_URLS = [

@@ -17,7 +17,7 @@ import json
 from playwright.sync_api import sync_playwright
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "video_docs")
+OUTPUT_DIR = os.path.join(SCRIPT_DIR, "video_docs", "batches")
 PROGRESS_FILE = os.path.join(SCRIPT_DIR, "progress.json")
 BATCH_SIZE = 5
 

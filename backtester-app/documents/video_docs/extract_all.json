@@ -1,0 +1,2611 @@
+[
+  {
+    "video": 1,
+    "title": "Orderflow and Volume Profile Day Trading Strategy",
+    "source": "How I Made $14,068 Day Trading With Orderflow",
+    "overview": "This video breaks down a real-world trading session where the author made $14,068 trading NQ (Nasdaq futures) by combining ICT concepts with orderflow analysis via the Daily Volume Profile. The core philosophy emphasized is adaptability; traders should avoid sticking rigidly to a single strategy ideology and instead blend complementary tools to match evolving market conditions.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": [
+      "1-minute chart for monitoring market micro-structure and trade execution."
+    ]
+  },
+  {
+    "video": 2,
+    "title": "Volume Profile and Orderflow Reversal Strategy",
+    "source": "Volume Profile + Orderflow = Profit",
+    "overview": "This video provides an in-depth operational guide on combining the Overnight Volume Profile with 1-minute orderflow analytics. It outlines how to identify Level 1 and Level 2 institutional absorption at session value extremes (Value Area High and Value Area Low) to execute highly mechanical failed auction reversals and catch major intraday breakouts.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": [
+      "Plot the profile across macro sessions, then transition to the 1-minute timeframe for execution monitoring."
+    ]
+  },
+  {
+    "video": 3,
+    "title": "One-Minute Liquidity Sweep Trading Strategy",
+    "source": "Secret ICT Liquidity Sweep Trading Strategy With Insane Winrate!",
+    "overview": "This video outlines a highly mechanical, rule-based trading strategy centered around 1-minute liquidity sweeps framed by higher timeframe orderflow and clear draws on liquidity. It simplifies complex institutional mechanics into a practical \"three-strike\" or range-bound sweep model designed to filter out fakes and preserve capital.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30",
+      "NY cutoff 2PM",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "FVG",
+      "volume profile",
+      "orderflow absorption",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure",
+      "session/daily liquidity"
+    ],
+    "htf": [
+      "1-hour or 4-hour chart."
+    ],
+    "ltf": [
+      "1-minute chart.",
+      "5-minute or 15-minute chart."
+    ]
+  },
+  {
+    "video": 4,
+    "title": "Gold Fixed Range Volume Profile Scalping Strategy",
+    "source": "The Easiest Gold Volume Profile Trading Strategy That Works!",
+    "overview": "This video presents a highly mechanical, single-timeframe scalping strategy developed for Gold (XAUUSD) using the Fixed Range Volume Profile on a 5-minute chart. It details how to interpret volume profile geometric shapes (D, P, and B shapes) to trade failed auction reversals at value extremes or ride high-velocity momentum breakouts.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "volume profile"
+    ],
+    "ranges": [
+      "fixed-range VP"
+    ],
+    "htf": [],
+    "ltf": [
+      "Gold (XAUUSD) mapped strictly on the 5-minute timeframe. Avoid looking at the 1-minute or 15-minute charts."
+    ]
+  },
+  {
+    "video": 5,
+    "title": "Macro Volume Profile and ICT Confluence Strategy",
+    "source": "Volume Profile + ICT = Easy Profit",
+    "overview": "This video reveals an advanced institutional day trading strategy that combines the macro structural levels of multiple Volume Profiles with the precise execution entry triggers of Inner Circle Trader (ICT) concepts. By mapping major value boundaries across multiple timeframes, traders can locate high-probability turning points and enter with minimal risk on a 1-minute chart.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "MSS",
+      "CISD",
+      "breaker",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": [
+      "Drop down to the 1-minute timeframe the exact moment a 5-minute retest of a validated macro level occurs.",
+      "Monitor key level interactions on the 5-minute timeframe."
+    ]
+  },
+  {
+    "video": 6,
+    "title": "video_06_Strategy_1_Fractal-Based_Inversion_Order_Flow_Str",
+    "source": "The Only Trading Strategy I'd Use If I Had To Start Over (Stupid Simple)",
+    "overview": "This strategy presents a highly logical approach centered around trailing institutional order flow alongside clear targets. Trading focuses on combining higher-timeframe narrative direction with lower-timeframe execution filters after major market opens.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "order block",
+      "FVG",
+      "volume profile",
+      "orderflow absorption",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 7,
+    "title": "video_07_Strategy_2_Intraday_8_AM_Candle_Liquidity_Strategy",
+    "source": "this trading strategy is stupid but it works like magic..",
+    "overview": "This mechanical, rule-based approach exploits institutional order flow generated during the highly volatile window surrounding the 8:00 AM New York session open. By capturing liquidity sweeps across the high and low boundaries of the 8:00 AM hourly candle, traders can map short-term market directions effectively.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "9AM NY",
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "8AM 1H candle"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 8,
+    "title": "video_08_Strategy_3_Volume_Profile_Auction_Breakout_Strate",
+    "source": "The Only Volume Profile Strategy You'll Ever Need! (FULL COURSE)",
+    "overview": "This detailed guide moves away from pure candle charting to focus on price distribution using volume profiles. It outlines two distinct setups: the Failed Auction Setup (mean-reversion back inside value fields) and the Breakout Setup (momentum trades following the acceptance of new value).",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "fixed-range VP"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 9,
+    "title": "video_09_Strategy_4_Daily_Power_of_Three_PO3_Strategy",
+    "source": "I Simplified ICT PO3.. And It Actually Works!",
+    "overview": "This strategy simplifies the classic Inner Circle Trader (ICT) Power of Three model, which focuses on the Accumulation, Manipulation, and Distribution cycle. By focusing on the 10:00 AM New York 4-hour candle open, this approach captures the precise moments when major candle wicks are engineered.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 10,
+    "title": "video_10_Strategy_5_Gold_Scalping_Failed_Auction_Strategy",
+    "source": "ICT Not Working? Use This Gold Trading Strategy Instead..",
+    "overview": "This strategy provides a simplified profile built specifically for Gold (XAU/USD). By using a dedicated 5-minute volume profile window, this mechanical strategy tracks session value distributions to catch reliable intraday reversals.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "volume profile"
+    ],
+    "ranges": [
+      "fixed-range VP"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 11,
+    "title": "ICT + Volume Profile Breakout Strategy",
+    "source": "ICT + Volume Profile = Insane Profit",
+    "overview": "This video presents a highly mechanical trading strategy that combines Inner Circle Trader (ICT) concepts like Fair Value Gaps (FVG) and order blocks with the Fixed Range Volume Profile (FRVP). This approach helps eliminate false signals and market structure confusion by utilizing precise key volume levels from pre-market data to trade the New York session.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "9AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "session/daily liquidity",
+      "fixed-range VP"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 12,
+    "title": "The 8:00 AM Candle Strategy",
+    "source": "This \u201c8AM Candle\u201d Strategy Is Boring, But It Makes F*ck You Money",
+    "overview": "This highly mechanical strategy removes subjectivity by utilizing the 8:00 AM hourly candle boundaries on NQ or Gold futures to predict major pre-market and early morning expansion moves. By tracking liquidity sweeps across the high and low boundaries of this single candle alongside nearby structural swing points, traders can identify high-probability reversal execution zones.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "9AM NY",
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "8AM 1H candle"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 13,
+    "title": "The 3-Step A+ ICT Gold Strategy",
+    "source": "The 3-Step A+ ICT Gold Strategy (that actually works)",
+    "overview": "This systematic, trend-following strategy maps high-probability order flow directly on Gold by aligning structural multi-hour market legs with lower-timeframe confirmations. By implementing a strict 3-second macro trend detection rule combined with cross-asset correlation models (Gold/Silver SMT), it filters out noisy consolidation ranges.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "MSS",
+      "CISD",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 14,
+    "title": "The One-Candle Trading Strategy",
+    "source": "",
+    "overview": "This systematic approach eliminates higher timeframe multi-hour bias confusion by focusing entirely on the daily liquidity boundaries set by the 8:00 AM hourly candle. Designed for volatile indices like Nasdaq, this setup targets pre-market liquidity expansions to capture quick, high-probability morning scalps.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "9AM NY",
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "hourly one-candle range",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 15,
+    "title": "Orderflow Boot Camp Lesson 1: Volume Profile",
+    "source": "Orderflow Boot Camp Lesson 1: Volume Profile",
+    "overview": "This introductory lesson covers order flow dynamics by exploring distribution shapes within the Fixed Range Volume Profile tool. It details how to identify institutional value areas and how to execute high-probability trades by matching D-shaped profile structures with lower timeframe consolidations.",
+    "steps": 5,
+    "non_strategy": true,
+    "ns_reason": "educational lesson (orderflow boot camp)",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "fixed-range VP"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 16,
+    "title": "video_16_The_Easiest_Trading_Strategy_for_Beginners_in_2026",
+    "source": "The Easiest Trading Strategy for Beginners in 2026",
+    "overview": "This video introduces a completely mechanical mechanical trading strategy that eliminates the need for identifying a daily bias or conducting complex high-timeframe analysis. Operating on the 1-hour (1H) and 1-minute (1M) charts for Nasdaq (NQ) futures, it relies strictly on three primary confluences to execute precise daily setups.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "daily bias",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "session/daily liquidity"
+    ],
+    "htf": [
+      "1-hour chart (1H)."
+    ],
+    "ltf": [
+      "1-minute chart (1M)."
+    ]
+  },
+  {
+    "video": 17,
+    "title": "video_17_The_1H_Pattern_Nobody_Talks_About_1H_1M_Strategy",
+    "source": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)",
+    "overview": "This framework explains the internal mechanics of how individual candles develop using the classic \"Power of Three\" concept (Accumulation, Manipulation, and Distribution). By identifying historical high/low anchor points on the 5-minute chart right before a new 1-hour candle opens, traders can utilize precise Fibonacci standard deviation projections to accurately target the exact point where internal candle manipulation shifts into trend distribution.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "8PM NY",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "8PM candle/session",
+      "session/daily liquidity"
+    ],
+    "htf": [
+      "1-hour chart (1H)."
+    ],
+    "ltf": [
+      "Switch down to the 1-minute chart (1M).",
+      "Switch down to the 5-minute chart (5M)."
+    ]
+  },
+  {
+    "video": 18,
+    "title": "video_18_The_Only_GOLD_Trading_Strategy_You_Need_In_2026_St",
+    "source": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)",
+    "overview": "This execution model provides an optimized, standalone blueprint specifically tuned for Gold (XAU/USD) and Nasdaq (NQ) futures. Operating on the core principle that nearly 98% of all 1-hour candles form structural tail wicks during their initial development, this approach maps the pre-open 5-minute liquidity parameters to find high-probability scalping entries right inside these candle wicks.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "breaker",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [
+      "1-hour chart (1H)."
+    ],
+    "ltf": [
+      "Move down to the 1-minute execution chart (1M).",
+      "Shift directly down to the 5-minute chart (5M)."
+    ]
+  },
+  {
+    "video": 19,
+    "title": "video_19_Become_a_Profitable_Trader_in_ONE_DAY",
+    "source": "Become a Profitable Trader in ONE DAY!",
+    "overview": "This presentation focuses entirely on the critical psychology and identity architecture required to achieve long-term trading success. It challenges the common misconception that profitability depends on finding the perfect technical indicator or entry strategy. Instead, it demonstrates that true consistency is an identity-driven process. To succeed, a trader must shift their underlying identity so that following rules and managing risk becomes completely natural.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30"
+    ],
+    "entries": [],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 20,
+    "title": "video_20_This_Secret_One_Candle_Trading_Strategy",
+    "source": "",
+    "overview": "This video breaks down a powerful institutional trading framework built around the 10:00 AM EST 4-hour (4H) candle. By using 1-minute chart structures along with Fibonacci standard deviation projections, this strategy identifies high-probability internal candle manipulation phases. This allows traders to capture major macro trend expansions across NQ and Gold futures.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY",
+      "Silver Bullet window"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "MSS",
+      "CISD",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "hourly one-candle range",
+      "4H structure"
+    ],
+    "htf": [
+      "4-hour chart (4H)."
+    ],
+    "ltf": [
+      "Move directly down to the 1-minute execution chart (1M)."
+    ]
+  },
+  {
+    "video": 21,
+    "title": "video_21_Video_1_This_Trading_Strategy_Will_Change_Your_Lif",
+    "source": "This Trading Strategy Will Change Your Life In 2026",
+    "overview": "This video introduces a highly mechanical trading strategy focused on trading a single daily data block: the 10:00 AM EST 4-hour candle. It relies on the concept of Power of Three (AMD)\u2014Accumulation, Manipulation, and Distribution. The primary goal is to target and execute entries within the manipulation phase (the candle's wick) to capture the distribution expansion phase on lower timeframes.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 22,
+    "title": "video_22_Video_2_I_Simplified_ICT_AMD_Trading_Strategy",
+    "source": "I Simplified ICT AMD Trading Strategy..",
+    "overview": "This video breaks down a simplified approach to the ICT Accumulation, Manipulation, and Distribution (AMD) method using the 10:00 AM EST 4-hour candle. The framework utilizes a specialized indicator to visually map structural changes directly on the 1-minute timeframe to precisely predict where wicks end and major trend expansions begin.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "MSS",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "SMT divergence",
+      "ORB"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure",
+      "opening range"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 23,
+    "title": "video_23_Video_3_The_4H_Pattern_Nobody_Talks_About_step_by",
+    "source": "The 4H Pattern Nobody Talks About (step by step)",
+    "overview": "This video outlines a complete mechanical ruleset to exploit the manipulation wicks of the 10:00 AM EST 4-hour candle across Gold and NQ Futures markets. It introduces the precise use of standard deviations to track premium and discount levels, combined with lower-timeframe order flow shifts to capture rapid trends.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "CISD",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 24,
+    "title": "video_24_Video_4_The_Only_ICT_Trading_Strategy_Ill_Be_Using",
+    "source": "The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)",
+    "overview": "This video introduces a systematic framework that uses higher-timeframe Internal Range Liquidity (IRL) pools as an institutional magnet, combined with lower-timeframe Inversion Fair Value Gaps (IFVG) to build a mechanical setup for high-probability setups.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 25,
+    "title": "video_25_Video_5_The_3-Step_A_ICT_Strategy_That_Works_Every",
+    "source": "The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)",
+    "overview": "This video introduces an optimized, multi-timeframe approach that links 1-hour structural trends with lower-timeframe fair value gap inversions. It highlights a systematic process to identify highest-probability timeframes (from 1-minute to 5-minute charts) to maximize entry precision.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30",
+      "London session"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "CISD",
+      "FVG",
+      "volume profile",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 26,
+    "title": "video_26_Live_Trading_NQ_-_Inverse_FVG_Scalp_Setup",
+    "source": "Live Trading NQ 12/9/25 - Beautiful Win",
+    "overview": "This video captures a live trading session on Nasdaq futures (NQ). The trader demonstrates a highly mechanical breakout/continuation scalp trade executed during an NQ delivery phase that aggressively moves lower while respecting bearish higher timeframe PD arrays.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "order block",
+      "FVG",
+      "volume profile",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 27,
+    "title": "video_27_The_Power_of_3_AMD_Silver_Bullet_Strategy",
+    "source": "This ICT Strategy Is Boring But It Made Me Profitable",
+    "overview": "This comprehensive guide breaks down a highly reliable, rule-based approach using ICT\u2019s Power of Three (Accumulation, Manipulation, Distribution) concepts applied directly to the 4-Hour timeframe. By identifying precise standard deviation extensions on the 1-minute chart, the strategy determines macro-candle directionality to catch optimal expansions.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "10AM NY",
+      "Silver Bullet window"
+    ],
+    "assets": [
+      "NQ",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "daily bias"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 28,
+    "title": "video_28_Multi-Timeframe_Highest_Inversion_FVG_Model",
+    "source": "This 'iFVG' Strategy is The Easiest Way to Become Profitable FAST",
+    "overview": "This strategy leverages institutional displacement shifts occurring immediately after the New York market open. By evaluating consecutive Fair Value Gap inversions across the 1-minute to 5-minute timeframes, this model uncovers highly precise entry zones that tap into massive order book flow.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 29,
+    "title": "video_29_Time-Based_Volume_TBV_Core_Strategy",
+    "source": "Give Me 9 Minutes & I'll Teach You My 80% Winrate Trading Strategy",
+    "overview": "This strategy breaks down a powerful, highly mechanical trading model known as Time-Based Volume (TBV). By tracking single-candle institutional absorption blocks contextually anchored to same-timeframe Fair Value Gaps, this strategy isolates high-probability reversals without requiring complex macro analysis.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 30,
+    "title": "video_30_3-Step_Time-Based_Volume_TBV_Reassessment_Model",
+    "source": "My 80% Winrate 3-Step Trading Strategy That Works!",
+    "overview": "This tutorial provides an in-depth breakdown of the proprietary 3-Step Time-Based Volume (TBV) strategy. Designed to isolate institutional absorption blocks inside active Fair Value Gaps, this approach features advanced entry models using both 50% equilibrium retracements and opening price retests to maximize risk-to-reward ratios.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session"
+    ],
+    "assets": [
+      "NQ",
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 31,
+    "title": "video_31_1_One_Trading_Setup_For_Life_-_ICT_10AM_PO3",
+    "source": "One Trading Setup For Life - ICT 10AM PO3",
+    "overview": "This video introduces a rule-based, mechanical trading model built around the ICT Power of Three (PO3) mechanism utilizing the 4-hour time frame and execution on lower time frames. Specifically, it maps out a strict method for defining daily directional bias by using the structural relationship between the 2:00 AM and 6:00 AM candles, identifying the exact zone where the 10:00 AM candle's manipulation ends, and selecting high probability targets.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "9AM NY",
+      "10AM NY",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "daily bias",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 32,
+    "title": "video_32_2_Insane_ICT_Liquidity_Sweep_Trading_Strategy_That",
+    "source": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic",
+    "overview": "This video breaks down a single-timeframe, mechanical trading model based on 15-minute candle formations following a liquidity sweep. The core edge relies on time-based volume (TBV), analyzing internal order flow absorption directly within a single candle without needing higher timeframe bias, multi-timeframe analysis, or complex trend determination.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "volume profile",
+      "orderflow absorption"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [
+      "Valid Arrays: Only use liquidity pools (swing highs/lows) engineered during the current daily cycle. The oldest allowed structural arrays must be formed after 12:00 AM midnight of the overnight session."
+    ],
+    "ltf": []
+  },
+  {
+    "video": 33,
+    "title": "video_33_3_Stupid_Simple_Gold_Trading_Strategy_That_Works_E",
+    "source": "Stupid Simple Gold Trading Strategy That Works Everyday!",
+    "overview": "This strategy provides a highly structured, time-restricted mechanical trading model for gold (XAU/USD) during the Asian session open. It captures systemic expansions driven by algorithmic resets at a specific time, utilizing a 15-minute structural anchor and a 1-minute execution frame.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8PM NY",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 34,
+    "title": "video_34_4_Combining_ICT_Footprint_Chart_To_Take_High_Prob",
+    "source": "Combining ICT & Footprint Chart To Take High Probability Trades",
+    "overview": "This video demonstrates how to combine ICT liquidity sweep concepts with order flow footprint chart analysis. By tracking order imbalanced deltas, points of control, and institutional order book signatures, traders can identify high-probability reversal entries at key levels without relying on standard lower timeframe market structure shifts.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "volume profile",
+      "orderflow absorption",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 35,
+    "title": "video_35_5_Easy_9AM_Candle_PO3_Strategy_That_Actually_Works",
+    "source": "Easy 9AM Candle PO3 Strategy That Actually Works!",
+    "overview": "This video outlines a highly consistent, mechanical trading strategy built around the 8:00 AM 1-hour candle range on Nasdaq futures. The model utilizes lower timeframe structural shifts and breaker blocks to capture high risk-to-reward expansions during the New York market open.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "9AM NY",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "volume profile",
+      "PO3/AMD",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "9AM 1H candle"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 36,
+    "title": "10AM PO3 Trading Setup",
+    "source": "My One Trading Setup For Life - 10AM PO3",
+    "overview": "This video reveals a specific internal day-trading mechanism built entirely around the 4-hour candle power of three (PO3) model\u2014specifically targeting the 10:00 AM New York time candle. This mechanical strategy is designed to isolate institutional accumulation, manipulation, and distribution (AMD) cycles within highly specific daily windows across NQ, Gold, and futures markets.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "9AM NY",
+      "10AM NY",
+      "London session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "CISD",
+      "FVG",
+      "volume profile",
+      "PO3/AMD"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 37,
+    "title": "The 1-Candle Hourly Range Strategy",
+    "source": "one candle is all you need..",
+    "overview": "This strategy provides a rule-based, mechanical approach to trading by focusing entirely on a single hourly candle range to define daily support and resistance boundaries. It eliminates indicators, complex order blocks, and multi-timeframe daily bias tracking, relying instead on algorithmic expansions that occur around the New York market open.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile",
+      "daily bias"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "hourly one-candle range"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 38,
+    "title": "4H Core Trend & SMT Divergence System",
+    "source": "Ultimate ICT Gold Trading Strategy With 73% Winrate..",
+    "overview": "This institutional trading strategy combines 4-hour trend structures with inter-market Smart Money Tool (SMT) divergence to identify high-probability trade setups. By using silver as a correlating asset to validate gold trades, this model filters out false breakouts and identifies precise institutional entry points during key session killzones.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "10AM NY",
+      "London session"
+    ],
+    "assets": [
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "10AM PO3",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 39,
+    "title": "Mechanical 2-Day Daily Bias Strategy",
+    "source": "Best ICT Gold Trading Strategy That Works Everyday! (Insane Winrate)",
+    "overview": "This strategy introduces a purely mechanical method to identify daily market bias using only the price action of the last two days. By removing subjective analysis, this approach establishes a clear directional stance for the third day, using lower-timeframe sweeps to execute trades with high risk-to-reward ratios.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 40,
+    "title": "Advanced AMD & Precision Projection Model",
+    "source": "I Simplified ICT PO3 Trading Strategy.. (High Winrate)",
+    "overview": "This strategy refines the core ICT Power of Three (PO3) model by mapping out precise mathematical targets for both market manipulation and distribution phases. By using standard deviation projections alongside a mechanical daily bias, this approach removes the guesswork from trading institutional accumulation, manipulation, and distribution (AMD) cycles.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "CISD",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "daily bias"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 41,
+    "title": "video_41_ICT_Daily_Bias_Simplified_Strategy",
+    "source": "I Simplified ICT Daily Bias.. (Full Trading Strategy)",
+    "overview": "This video breaks down a simplified multi-timeframe approach to identifying the ICT Daily Bias and pairing it with a specific lower-timeframe execution model. It removes market noise by focusing strictly on where price is delivering from, where it is likely going next (draw on liquidity), and executing on high-volume candle inversions during the New York market open session.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "Judas swing",
+      "daily bias",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 42,
+    "title": "video_42_The_8_AM_One-Candle_Trading_Strategy",
+    "source": "This One Candle Can Change Your Life.. (Stupid Simple Strategy)",
+    "overview": "This highly mechanical strategy strips away the need for traditional daily bias, directional over-analysis, or higher-timeframe macro trends. It relies entirely on a single structural reference block: the 1-Hour chart's 8:00 AM New York candle. The strategy exploits the systematic liquidity expansion that occurs immediately after this initial parameter is established.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "NY open 9:30",
+      "London session"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "order block",
+      "FVG",
+      "volume profile",
+      "daily bias"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "hourly one-candle range",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 43,
+    "title": "video_43_Live_Day_Trading_Session_Inversion_FVG_Focus",
+    "source": "Live Day Trading Making $5,625 (1 Partial TP & 1 Full TP)",
+    "overview": "This document records a live, real-time trading session executed directly inside the Smart Money Cartel community Discord channel. The session demonstrates how to navigate a highly ambiguous macro day\u2014where daily timeframes are trapped within opposing arrays\u2014by executing trades based on lower-timeframe model confluences, 15-minute SMT divergences, and 1-minute volume imbalances.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "NY open 9:30",
+      "London session"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "daily bias",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "4H structure",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 44,
+    "title": "video_44_The_Lazy_Liquidity_Strategy_Mechanical_ORB_Setup",
+    "source": "The Laziest Liquidity Trading Strategy Making $15,000/Month",
+    "overview": "This highly mechanical strategy simplifies the trading process by focusing on an optimized Opening Range Breakout (ORB) model. By using a single 15-minute candle printed during the London session as a fixed structural reference anchor, this strategy eliminates the need for daily bias indicators, higher-timeframe trend analysis, or complex macro variables.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "volume profile",
+      "daily bias",
+      "ORB"
+    ],
+    "ranges": [
+      "opening range"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 45,
+    "title": "video_45_Lower-Timeframe_Inversion_Masterclass",
+    "source": "STOP Using ICT & Trade With This Strategy Instead.. (Stupid Simple)",
+    "overview": "This final strategy masterclass targets the structural inefficiencies of lower-timeframe candle ranges on Nasdaq Futures (NQ). By shifting execution focus from subjective order blocks to objective candle high/low sweeps and multi-timeframe Inversion FVGs, this strategy provides a highly mechanical trading framework.",
+    "steps": 6,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "8AM 1H candle",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 46,
+    "title": "video_46_1_My_Simple_Scalping_Trading_Strategy_To_Make_1087",
+    "source": "My Simple Scalping Trading Strategy To Make $10,870/Month",
+    "overview": "This video outlines a simple scalping strategy based on high-timeframe (HTF) Fair Value Gaps (FVG) and order flow. It emphasizes avoiding complex models like quarterly theory or standard deviations, focusing instead on consistent application of a specific entry model during the 09:30 AM \u2013 11:30 AM New York session.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 47,
+    "title": "video_47_2_Gold_Scalping_Strategy_For_Beginners_FULL_GUIDE",
+    "source": "Gold Scalping Strategy For Beginners (FULL GUIDE)",
+    "overview": "A simplified gold scalping guide focusing on 1-hour key levels (Highs/Lows and FVGs) and 5-minute inversion models. It emphasizes a strict limit of 3 trades per day (Asia, London, New York) and highlights specific risk management rules for gold.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 48,
+    "title": "video_48_3_Life_Of_A_Day_Trader_Living_in_Bali",
+    "source": "Life Of A Day Trader Living in Bali",
+    "overview": "This video is a blend of vlog content and trading strategy. It discusses the lifestyle of a trader in Bali and breaks down the exact trade execution model used to achieve a winning streak in the Discord community.",
+    "steps": 2,
+    "non_strategy": true,
+    "ns_reason": "lifestyle vlog",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 49,
+    "title": "video_49_4_Stupid_ICT_IFVG_Trading_Strategy_That_Works",
+    "source": "Stupid ICT IFVG Trading Strategy That Works",
+    "overview": "This video introduces the \"Inversion Fair Value Gap\" (IFVG) strategy. It focuses on using SMT divergence as an added confluence, specifically for trading NQ and ES.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 50,
+    "title": "video_50_5_Dumbest_ICT_Gold_Trading_Strategy_Makes_10000Mon",
+    "source": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month",
+    "overview": "This strategy focuses specifically on the Asian session (20:00 - 00:00 NY time). It emphasizes using higher timeframe (1-hour) PDAs (Fair Value Gaps/Order Blocks) and a specific entry model based on 5-minute inversion.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 51,
+    "title": "video_51_Midas_Model_5M_Timeframe",
+    "source": "Easy Gold Trading Strategy That Works Every Time! (No Daily Bias Required)",
+    "overview": "This video outlines a 5-minute timeframe trading strategy for gold using a variation of the Midas Model. The strategy centers on identifying liquidity sweeps during the Asian session, followed by identifying and inversing fair value gaps (FVGs) within the dealing range for entry. It is designed for simplicity, without the need for high-timeframe bias analysis.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8PM NY",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "Silver",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "Midas model",
+      "daily bias",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 52,
+    "title": "video_52_Finding_The_Correct_Draw_On_Liquidity",
+    "source": "Finding The Correct Draw On Liquidity With 96% Accuracy..",
+    "overview": "This video reveals a \"secret technique\" to identify the correct \"draw on liquidity\" with 96% accuracy, utilizing the 0.79 Fibonacci retracement level on the 1-minute timeframe within a 15-minute range to determine direction.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session"
+    ],
+    "assets": [
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 53,
+    "title": "video_53_ICT_Trading_Strategy_for_Consistent_Profits",
+    "source": "This Stupid ICT Trading Strategy Makes $1,000 Everyday!",
+    "overview": "This video details a trading model focusing on higher-timeframe Points of Interest (PDAs), specifically 15-minute FVGs, combined with 1-minute SMT divergences and \"W-shape\" inversions for trade entry.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 54,
+    "title": "video_54_Liquidity_Range_Trading_Strategy",
+    "source": "The Only Liquidity Strategy You'll Ever Need",
+    "overview": "This video introduces a range-based trading strategy on the 5-minute timeframe. It focuses on identifying a range high and low (defined by a market structure shift within a pullback) and trading the sweep of these levels.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "volume profile"
+    ],
+    "ranges": [
+      "liquidity range"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 55,
+    "title": "video_55_Gold_Trading_Strategy_High_Winrate",
+    "source": "NEW Gold Trading Strategy That Works Everyday! (High Winrate)",
+    "overview": "This video describes a session-based trading strategy specifically for Gold, focusing on the Asian, London, and New York sessions. It uses 5-minute charts to identify ranges based on structure shifts and targets liquidity sweeps.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 56,
+    "title": "video_56_Midas_Model_Scalping_Strategy",
+    "source": "This Gold Scalping Strategy Works Everyday! (Easy & Profitable)",
+    "overview": "This video explains a simple, mechanical gold scalping strategy called the \"Midas Model,\" suitable for all traders regardless of age. It requires minimal daily commitment (a 2-hour window) and does not rely on a daily market bias.",
+    "steps": 0,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8PM NY"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "Midas model",
+      "daily bias"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 57,
+    "title": "video_57_NQ_Funded_Account_Trading_Strategy",
+    "source": "This Simple NQ Trading Strategy Got Me Funded With $300,000",
+    "overview": "This video outlines a trading strategy for NQ (Nasdaq futures) used to successfully pass funded trading challenges. It combines higher time frame analysis with specific 1-minute entry triggers.",
+    "steps": 0,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 58,
+    "title": "video_58_Midas_Model_Trade_Breakdowns",
+    "source": "The Midas Model A+ Setup - GOLD Trade Breakdown",
+    "overview": "This video provides a deep dive into the Midas Model, clarifying how to identify valid highs and lows to avoid getting faked out, and breaking down recent trade examples.",
+    "steps": 0,
+    "non_strategy": true,
+    "ns_reason": "trade breakdown only",
+    "sessions": [
+      "8PM NY",
+      "NY cutoff 2PM"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "Midas model"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 59,
+    "title": "video_59_Midas_Model_Trade_Breakdowns_Cont",
+    "source": "Use This Gold Trading Strategy To Quit Your Job In 60 Days! (Midas Model)",
+    "overview": "This video serves as a review of the Midas Model, introducing a 5-minute timeframe variation alongside the 1-minute scalping strategy to help traders achieve consistent profits.",
+    "steps": 0,
+    "non_strategy": true,
+    "ns_reason": "trade breakdown only",
+    "sessions": [
+      "8PM NY",
+      "NY open 9:30"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "Midas model"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 60,
+    "title": "video_60_Midas_Model_Trade_Breakdowns_End_of_Week",
+    "source": "The Midas Model A+ Setup - GOLD Trade Breakdown",
+    "overview": "This video breaks down the A+ Midas Model trade taken on a Friday. It reinforces the importance of identifying valid liquidity and using displacement to confirm entries.",
+    "steps": 0,
+    "non_strategy": true,
+    "ns_reason": "trade breakdown only",
+    "sessions": [
+      "8PM NY",
+      "NY cutoff 2PM"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "Midas model"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 61,
+    "title": "video_61_Gold_Trading_Strategy_The_800_PM_900_PM_Judas_Swi",
+    "source": "Give me 20 mins & I'll teach you best GOLD trading strategy..",
+    "overview": "This video outlines a mechanical trading strategy for Gold and AUDJPY, centered around trading \"Judas Swings\" (liquidity sweeps) that occur after 8:00 PM and 9:00 PM (New York time). It also introduces a 5-minute time frame model for trading during the New York session based on obvious liquidity runs and fair value gap inversions.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8PM NY",
+      "NY open 9:30",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "Judas swing"
+    ],
+    "ranges": [
+      "8PM candle/session"
+    ],
+    "htf": [],
+    "ltf": [
+      "5m TF only.",
+      "Mark recent high/low on 15m TF before 8:00 PM or 9:00 PM open."
+    ]
+  },
+  {
+    "video": 62,
+    "title": "video_62_Trend_Continuation_Continuation_Purge_Entry_Model",
+    "source": "This entry model will change how you trade forever.. (20x results)",
+    "overview": "This entry model is designed for trend continuation. It teaches how to enter trades when trading with the trend, specifically avoiding getting \"faked out\" by market structure. It utilizes the \"Continuation Purge\" concept, where price sweeps specific liquidity before continuing its trend.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "Gold",
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "continuation purge",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 63,
+    "title": "video_63_ICT_Liquidity_Sweep_Strategy",
+    "source": "Easy ICT Liquidity Sweep Strategy Made Me $14,512 Today! (Full Trade Breakdown)",
+    "overview": "A trade breakdown of a strategy that resulted in a significant profit. It covers the strategy used for both Forex and Futures (NQ/ES). It focuses on identifying higher time frame (HTF) points of interest (POI) and using lower time frame (LTF) SMT divergence and FVG inversions for entries.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 64,
+    "title": "video_64_ICT_Daily_Bias_Guide",
+    "source": "I Simplified ICT Daily Bias..",
+    "overview": "This video serves as a comprehensive guide to identifying daily bias using four distinct methods, ranging from mechanical to discretionary. The focus is on predicting whether the daily candle will expand bullishly or bearishly.",
+    "steps": 0,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "Judas swing",
+      "daily bias",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 65,
+    "title": "video_65_US30_Trading_Strategy_Judas_Swing",
+    "source": "Best ICT Judas Swing Trading Strategy With 79% Winrate!",
+    "overview": "An easy-to-learn US30 trading strategy based on identifying the most recent high and low on the 15m time frame before the 9:30 AM (New York) open, then trading the sweep of these levels. It is designed to be highly mechanical.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "FVG",
+      "Judas swing",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": [
+      "15-minute."
+    ]
+  },
+  {
+    "video": 66,
+    "title": "video_66_1_Easy_ICT_1_Minute_Trading_Strategy",
+    "source": "Easy ICT 1 Minute Trading Strategy That Works Everyday! (High Winrate)",
+    "overview": "This video outlines a mechanical 1-minute trading strategy focusing on NQ, emphasizing the importance of liquidity sweeps, SMT divergence, and fair value gaps for high-win-rate trades.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 67,
+    "title": "video_67_2_Easy_ICT_Scalping_Strategy",
+    "source": "Easy ICT Scalping Trading Strategy That Makes $1,000/Day",
+    "overview": "This video explains a 1-minute scalping strategy for NQ, emphasizing the use of high-timeframe order flow and 1-minute liquidity sweeps to enter high-probability trades.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "ES",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 68,
+    "title": "video_68_3_7940_Trade_Breakdown",
+    "source": "I Made $7,940 Today Using This Boring ICT Trading Strategy..",
+    "overview": "This video provides a breakdown of a successful trade on GBPUSD, demonstrating how identifying order flow on higher timeframes and using lower-timeframe confirmations leads to high RR trades.",
+    "steps": 5,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "CISD",
+      "FVG",
+      "SMT divergence"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 69,
+    "title": "video_69_4_ICT_Market_Maker_Model",
+    "source": "Make 'F*ck You' Money With This Simple ICT MMXM Strategy",
+    "overview": "This video introduces the Market Maker Sell/Buy Model (MMXM) and teaches how to trade the reversal after liquidity has been swept, focusing on high-probability intraday setups.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "MMXM"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 70,
+    "title": "video_70_5_Simple_ICT_1000Day_Scalping_Strategy",
+    "source": "Simple ICT Trading Strategy Makes $1,000/Day",
+    "overview": "This video covers an intraday strategy for NQ, combining daily bias, liquidity sweeps, and price manipulation at the market open to achieve consistent results.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "Judas swing",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 71,
+    "title": "video_71_1_Why_Youre_Failing_as_a_Trader",
+    "source": "Please Quit Trading Before Its Too Late!",
+    "overview": "This video addresses the psychological and behavioral reasons why most traders fail, emphasizing that success in trading is primarily a matter of internal work and self-mastery rather than just having a \"good\" strategy.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30"
+    ],
+    "entries": [],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 72,
+    "title": "video_72_2_Gold_1-Minute_Scalping_Strategy",
+    "source": "GOLD 1 Minute Trading Strategy That Actually Works..",
+    "overview": "This video outlines a mechanical, 1-minute scalping strategy specifically for Gold, focusing on liquidity sweeps, market structure shifts, and fair value gaps.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8PM NY",
+      "Asia session"
+    ],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "breaker",
+      "FVG",
+      "volume profile",
+      "Midas model",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "8PM candle/session",
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 73,
+    "title": "video_73_3_Simple_Trading_Strategy_for_GBPUSD",
+    "source": "This boring trading strategy made me $6,620 in a few minutes..",
+    "overview": "A detailed breakdown of a trade that earned $6,620, using a strategy based on higher timeframe order flow, SMT (Smart Money Technique) divergence, and liquidity sweeps on the 15-minute timeframe.",
+    "steps": 4,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "order block",
+      "FVG",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 74,
+    "title": "video_74_4_Backtesting_Tutorial",
+    "source": "Increase Your Trading Skills By 276% (Backtesting Tutorial)",
+    "overview": "This video demonstrates how to use FX Replay for effective backtesting, emphasizing that a robust trading edge is built through data collection rather than just guessing.",
+    "steps": 3,
+    "non_strategy": true,
+    "ns_reason": "backtesting tutorial",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "ORB"
+    ],
+    "ranges": [
+      "opening range"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 75,
+    "title": "video_75_5_Mindfulness_for_Traders",
+    "source": "Give me 6 minutes of your life, and I\u2019ll make you a better trader forever",
+    "overview": "A focus on psychological development, arguing that trading success is heavily dependent on a disciplined, focused mindset, which can be improved through mindfulness and meditation.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30"
+    ],
+    "entries": [],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 76,
+    "title": "video_76_Simplified_ICT_PO3_Trading_Strategy",
+    "source": "I Simplified ICT PO3 Trading Strategy...",
+    "overview": "This video presents a simplified version of the ICT Power of 3 trading strategy, which consists of three phases: Accumulation, Manipulation, and Distribution. The author emphasizes the importance of identifying daily bias before executing trades to avoid getting \"faked out.\"",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "PO3/AMD",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [
+      "Daily."
+    ],
+    "ltf": [
+      "15-minute."
+    ]
+  },
+  {
+    "video": 77,
+    "title": "video_77_Simple_ICT_Liquidity_Trading_Strategy",
+    "source": "Simple ICT Liquidity Trading Strategy That Makes $500/Day",
+    "overview": "This video introduces a liquidity trading strategy based on identifying swing highs and lows to determine daily/intraday bias, with the goal of achieving high-accuracy entries.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [
+      "4-hour.",
+      "5-minute (on the next 4-hour candle)."
+    ],
+    "ltf": [
+      "5-minute (on the next 4-hour candle)."
+    ]
+  },
+  {
+    "video": 78,
+    "title": "video_78_Easy_ICT_Judas_Swing_Trading_Strategy",
+    "source": "Easy ICT Judas Swing Trading Strategy That Works! (High Winrate)",
+    "overview": "This video outlines an Asian and London session Judas swing strategy designed for those with busy schedules (like a 9-5 job). It is a mechanical strategy that relies on trading at specific times.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "8AM NY",
+      "8PM NY",
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "US30",
+      "GBPUSD"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "Judas swing"
+    ],
+    "ranges": [
+      "8PM candle/session",
+      "session/daily liquidity"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 79,
+    "title": "video_79_SMC_Doesnt_Work_Anymore_Use_This_Instead",
+    "source": "SMC Doesn't Work Anymore..? Use This Instead!",
+    "overview": "This video addresses frustrations with common Smart Money Concept (SMC) strategies, arguing that price often doesn't respect standard order blocks because the move has already happened. The author introduces a refined entry pattern based on \"inverse\" fair value gaps to improve entry precision.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [
+      "4-hour."
+    ],
+    "ltf": []
+  },
+  {
+    "video": 80,
+    "title": "video_80_Easy_ICT_Trading_Strategy_for_2025",
+    "source": "Use This Easy ICT Trading Strategy In 2025 To Quit Your Job In 60 Days!",
+    "overview": "This video provides a deep dive into the ICT Power of 3 (Accumulation, Manipulation, Distribution) strategy, focusing on its application on higher timeframes (Weekly and Daily) to achieve consistent profitability.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "volume profile",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [
+      "15-minute (for daily bias) or 1-hour (for weekly bias).",
+      "Daily or Weekly."
+    ],
+    "ltf": [
+      "15-minute (for daily bias) or 1-hour (for weekly bias)."
+    ]
+  },
+  {
+    "video": 81,
+    "title": "ICT Power of 3 (1-Minute Scalping)",
+    "source": "How I Make $500/Day Trading ICT Power Of 3! (Insane Winrate)",
+    "overview": "This video introduces a scalping model called \"One Shot, One Kill\" (OSOK) based on the ICT Power of 3 concept. The strategy relies on identifying an intraday bias using the last two 1-hour candles and then taking a specific entry on the 1-minute timeframe during the third candle.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "volume profile",
+      "Judas swing"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 82,
+    "title": "ICT Liquidity Sweep Strategy (2025)",
+    "source": "Best ICT Liquidity Trading Strategy To Use In 2025!",
+    "overview": "This strategy utilizes a 5-step framework based on the daily timeframe for bias and the 15-minute timeframe for entries. The core focus is on liquidity sweeps following the daily candle open.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "order block",
+      "FVG",
+      "daily bias"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 83,
+    "title": "Day Trading for Profit",
+    "source": "How I Made $2,600 In 10 Minutes Day Trading",
+    "overview": "This video breaks down a live trade executed by the creator. It emphasizes building a \"story\" (context) on higher timeframes (daily/1-hour) before executing on a lower timeframe (2-minute) based on liquidity levels.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "draw on liquidity"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 84,
+    "title": "1-Minute Scalping (Inverse FVG)",
+    "source": "Easy ICT 1 Minute Timeframe Trading Strategy That Works! (High Winrate)",
+    "overview": "A detailed 5-step framework for 1-minute trading: Bias, Lower Timeframe Draw on Liquidity (DOL), Opposite Liquidity Sweep, Entry Model (Inverse FVG), and Risk Management.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "FVG",
+      "volume profile",
+      "draw on liquidity"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 85,
+    "title": "1-Minute Scalping (Live Trade)",
+    "source": "How I Made $2,130 In 3 Minutes Day Trading",
+    "overview": "A short recap of a profitable 3-minute live trade, focusing on building a \"story\" and using SMT divergence as a confirmation tool.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "NY open 9:30"
+    ],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "inversion FVG",
+      "liquidity sweep",
+      "MSS",
+      "FVG",
+      "volume profile",
+      "SMT divergence",
+      "draw on liquidity"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 86,
+    "title": "video_86_1_Best_ICT_Trading_Strategy_Quit_Your_Job_In_60_Da",
+    "source": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)",
+    "overview": "This video outlines a strategy based on the \"Power of Three\" concept (Accumulation, Manipulation, Distribution) to determine directional bias using weekly and daily timeframes. It explains how to align lower timeframes to catch expansion moves.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "PO3/AMD",
+      "daily bias"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 87,
+    "title": "video_87_2_How_I_Made_3270_In_5_Minutes_Trading_ICT_Concept",
+    "source": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)",
+    "overview": "A trade breakdown showcasing how experience and logic, rather than a strictly mechanical strategy, are used to execute trades, specifically focusing on reacting to higher-timeframe liquidity sweeps in NASDAQ futures.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "NQ",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "FVG",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 88,
+    "title": "video_88_3_Structure_Liquidity_Easy_Profit",
+    "source": "Structure + Liquidity = Easy Profit",
+    "overview": "This video explains how to trade with the trend by combining structure and liquidity. It introduces the concepts of internal and external range liquidity and provides a 3-timeframe alignment method.",
+    "steps": 3,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30"
+    ],
+    "entries": [
+      "MSS",
+      "CISD",
+      "FVG",
+      "volume profile",
+      "SMT divergence"
+    ],
+    "ranges": [
+      "4H structure"
+    ],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 89,
+    "title": "video_89_4_Easy_ICT_1_Minute_Gold_Trading_Strategy_That_Wor",
+    "source": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)",
+    "overview": "A detailed 1-minute scalping strategy for gold (and indices) based on creating a valid range, identifying a range low and high, and trading the breakout/retest.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [
+      "London session",
+      "Asia session"
+    ],
+    "assets": [
+      "NQ",
+      "Gold",
+      "US30"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  },
+  {
+    "video": 90,
+    "title": "video_90_5_How_I_Make_1000Day_with_ONE_Simple_Crypto_Strate",
+    "source": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]",
+    "overview": "This strategy focuses on 15-minute and above timeframes for trading crypto using range identification, liquidity sweeps, and strict risk management.",
+    "steps": 2,
+    "non_strategy": false,
+    "ns_reason": "",
+    "sessions": [],
+    "assets": [
+      "US30",
+      "Crypto"
+    ],
+    "entries": [
+      "liquidity sweep",
+      "MSS",
+      "volume profile"
+    ],
+    "ranges": [],
+    "htf": [],
+    "ltf": []
+  }
+]

@@ -1,0 +1,3343 @@
+{
+  "total_videos": 90,
+  "unique_families": 14,
+  "non_strategy_count": 7,
+  "family_groups": {
+    "1h_1m_pattern": [
+      {
+        "video": 25,
+        "title": "Video 5: The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)",
+        "source": "The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)"
+      },
+      {
+        "video": 87,
+        "title": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)",
+        "source": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)"
+      }
+    ],
+    "4h_liquidity_mss": [
+      {
+        "video": 49,
+        "title": "Stupid ICT IFVG Trading Strategy That Works",
+        "source": "Stupid ICT IFVG Trading Strategy That Works"
+      },
+      {
+        "video": 62,
+        "title": "Trend Continuation \"Continuation Purge\" Entry Model",
+        "source": "This entry model will change how you trade forever.. (20x results)"
+      },
+      {
+        "video": 63,
+        "title": "ICT Liquidity Sweep Strategy",
+        "source": "Easy ICT Liquidity Sweep Strategy Made Me $14,512 Today! (Full Trade Breakdown)"
+      },
+      {
+        "video": 73,
+        "title": "Simple Trading Strategy for GBPUSD",
+        "source": "This boring trading strategy made me $6,620 in a few minutes.."
+      },
+      {
+        "video": 84,
+        "title": "1-Minute Scalping (Inverse FVG)",
+        "source": "Easy ICT 1 Minute Timeframe Trading Strategy That Works! (High Winrate)"
+      }
+    ],
+    "gold_8pm_one_candle": [
+      {
+        "video": 33,
+        "title": "Stupid Simple Gold Trading Strategy That Works Everyday!",
+        "source": "Stupid Simple Gold Trading Strategy That Works Everyday!"
+      }
+    ],
+    "judas_swing": [
+      {
+        "video": 61,
+        "title": "Gold Trading Strategy: The 8:00 PM & 9:00 PM \"Judas Swing\"",
+        "source": "Give me 20 mins & I'll teach you best GOLD trading strategy.."
+      },
+      {
+        "video": 64,
+        "title": "ICT Daily Bias Guide",
+        "source": "I Simplified ICT Daily Bias.."
+      },
+      {
+        "video": 65,
+        "title": "US30 Trading Strategy (Judas Swing)",
+        "source": "Best ICT Judas Swing Trading Strategy With 79% Winrate!"
+      },
+      {
+        "video": 70,
+        "title": "Simple ICT $1,000/Day Scalping Strategy",
+        "source": "Simple ICT Trading Strategy Makes $1,000/Day"
+      },
+      {
+        "video": 81,
+        "title": "ICT Power of 3 (1-Minute Scalping)",
+        "source": "How I Make $500/Day Trading ICT Power Of 3! (Insane Winrate)"
+      }
+    ],
+    "liquidity_sweep_inversion_fvg": [
+      {
+        "video": 24,
+        "title": "Video 4: The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)",
+        "source": "The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)"
+      },
+      {
+        "video": 53,
+        "title": "ICT Trading Strategy for Consistent Profits",
+        "source": "This Stupid ICT Trading Strategy Makes $1,000 Everyday!"
+      },
+      {
+        "video": 66,
+        "title": "Easy ICT 1 Minute Trading Strategy",
+        "source": "Easy ICT 1 Minute Trading Strategy That Works Everyday! (High Winrate)"
+      },
+      {
+        "video": 85,
+        "title": "1-Minute Scalping (Live Trade)",
+        "source": "How I Made $2,130 In 3 Minutes Day Trading"
+      }
+    ],
+    "liquidity_sweep_mss_entry": [
+      {
+        "video": 4,
+        "title": "Gold Fixed Range Volume Profile Scalping Strategy",
+        "source": "The Easiest Gold Volume Profile Trading Strategy That Works!"
+      },
+      {
+        "video": 18,
+        "title": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)",
+        "source": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)"
+      },
+      {
+        "video": 39,
+        "title": "Mechanical 2-Day Daily Bias Strategy",
+        "source": "Best ICT Gold Trading Strategy That Works Everyday! (Insane Winrate)"
+      },
+      {
+        "video": 52,
+        "title": "Finding The Correct Draw On Liquidity",
+        "source": "Finding The Correct Draw On Liquidity With 96% Accuracy.."
+      },
+      {
+        "video": 54,
+        "title": "Liquidity Range Trading Strategy",
+        "source": "The Only Liquidity Strategy You'll Ever Need"
+      },
+      {
+        "video": 55,
+        "title": "Gold Trading Strategy (High Winrate)",
+        "source": "NEW Gold Trading Strategy That Works Everyday! (High Winrate)"
+      },
+      {
+        "video": 57,
+        "title": "NQ Funded Account Trading Strategy",
+        "source": "This Simple NQ Trading Strategy Got Me Funded With $300,000"
+      },
+      {
+        "video": 67,
+        "title": "Easy ICT Scalping Strategy",
+        "source": "Easy ICT Scalping Trading Strategy That Makes $1,000/Day"
+      },
+      {
+        "video": 68,
+        "title": "$7,940 Trade Breakdown",
+        "source": "I Made $7,940 Today Using This Boring ICT Trading Strategy.."
+      },
+      {
+        "video": 82,
+        "title": "ICT Liquidity Sweep Strategy (2025)",
+        "source": "Best ICT Liquidity Trading Strategy To Use In 2025!"
+      },
+      {
+        "video": 89,
+        "title": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)",
+        "source": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)"
+      },
+      {
+        "video": 90,
+        "title": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]",
+        "source": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]"
+      }
+    ],
+    "midas_model": [
+      {
+        "video": 51,
+        "title": "Midas Model (5M Timeframe)",
+        "source": "Easy Gold Trading Strategy That Works Every Time! (No Daily Bias Required)"
+      },
+      {
+        "video": 56,
+        "title": "Midas Model Scalping Strategy",
+        "source": "This Gold Scalping Strategy Works Everyday! (Easy & Profitable)"
+      },
+      {
+        "video": 58,
+        "title": "Midas Model Trade Breakdowns",
+        "source": "The Midas Model A+ Setup - GOLD Trade Breakdown"
+      },
+      {
+        "video": 59,
+        "title": "Midas Model Trade Breakdowns (Cont.)",
+        "source": "Use This Gold Trading Strategy To Quit Your Job In 60 Days! (Midas Model)"
+      },
+      {
+        "video": 60,
+        "title": "Midas Model Trade Breakdowns (End of Week)",
+        "source": "The Midas Model A+ Setup - GOLD Trade Breakdown"
+      }
+    ],
+    "non_strategy_mindset": [
+      {
+        "video": 71,
+        "title": "Why You're Failing as a Trader",
+        "source": "Please Quit Trading Before Its Too Late!"
+      },
+      {
+        "video": 75,
+        "title": "Mindfulness for Traders",
+        "source": "Give me 6 minutes of your life, and I\u2019ll make you a better trader forever"
+      }
+    ],
+    "non_strategy_tutorial": [
+      {
+        "video": 3,
+        "title": "One-Minute Liquidity Sweep Trading Strategy",
+        "source": "Secret ICT Liquidity Sweep Trading Strategy With Insane Winrate!"
+      },
+      {
+        "video": 5,
+        "title": "Macro Volume Profile and ICT Confluence Strategy",
+        "source": "Volume Profile + ICT = Easy Profit"
+      },
+      {
+        "video": 19,
+        "title": "Become a Profitable Trader in ONE DAY!",
+        "source": "Become a Profitable Trader in ONE DAY!"
+      },
+      {
+        "video": 48,
+        "title": "Life Of A Day Trader Living in Bali",
+        "source": "Life Of A Day Trader Living in Bali"
+      },
+      {
+        "video": 74,
+        "title": "Backtesting Tutorial",
+        "source": "Increase Your Trading Skills By 276% (Backtesting Tutorial)"
+      }
+    ],
+    "one_candle_8am_range": [
+      {
+        "video": 16,
+        "title": "The Easiest Trading Strategy for Beginners in 2026",
+        "source": "The Easiest Trading Strategy for Beginners in 2026"
+      },
+      {
+        "video": 37,
+        "title": "The 1-Candle Hourly Range Strategy",
+        "source": "one candle is all you need.."
+      },
+      {
+        "video": 42,
+        "title": "The 8 AM One-Candle Trading Strategy",
+        "source": "This One Candle Can Change Your Life.. (Stupid Simple Strategy)"
+      },
+      {
+        "video": 45,
+        "title": "Lower-Timeframe Inversion Masterclass",
+        "source": "STOP Using ICT & Trade With This Strategy Instead.. (Stupid Simple)"
+      }
+    ],
+    "orb_lazy_liquidity": [
+      {
+        "video": 44,
+        "title": "The Lazy Liquidity Strategy (Mechanical ORB Setup)",
+        "source": "The Laziest Liquidity Trading Strategy Making $15,000/Month"
+      }
+    ],
+    "orderflow_volume_profile": [
+      {
+        "video": 1,
+        "title": "Orderflow and Volume Profile Day Trading Strategy",
+        "source": "How I Made $14,068 Day Trading With Orderflow"
+      },
+      {
+        "video": 2,
+        "title": "Volume Profile and Orderflow Reversal Strategy",
+        "source": "Volume Profile + Orderflow = Profit"
+      },
+      {
+        "video": 6,
+        "title": "Strategy 1: Fractal-Based Inversion & Order Flow Strategy",
+        "source": "The Only Trading Strategy I'd Use If I Had To Start Over (Stupid Simple)"
+      },
+      {
+        "video": 7,
+        "title": "Strategy 2: Intraday 8 AM Candle Liquidity Strategy",
+        "source": "this trading strategy is stupid but it works like magic.."
+      },
+      {
+        "video": 8,
+        "title": "Strategy 3: Volume Profile Auction & Breakout Strategy",
+        "source": "The Only Volume Profile Strategy You'll Ever Need! (FULL COURSE)"
+      },
+      {
+        "video": 12,
+        "title": "The 8:00 AM Candle Strategy",
+        "source": "This \u201c8AM Candle\u201d Strategy Is Boring, But It Makes F*ck You Money"
+      },
+      {
+        "video": 13,
+        "title": "The 3-Step A+ ICT Gold Strategy",
+        "source": "The 3-Step A+ ICT Gold Strategy (that actually works)"
+      },
+      {
+        "video": 15,
+        "title": "Orderflow Boot Camp Lesson 1: Volume Profile",
+        "source": "Orderflow Boot Camp Lesson 1: Volume Profile"
+      },
+      {
+        "video": 22,
+        "title": "Video 2: I Simplified ICT AMD Trading Strategy..",
+        "source": "I Simplified ICT AMD Trading Strategy.."
+      },
+      {
+        "video": 23,
+        "title": "Video 3: The 4H Pattern Nobody Talks About (step by step)",
+        "source": "The 4H Pattern Nobody Talks About (step by step)"
+      },
+      {
+        "video": 26,
+        "title": "Live Trading NQ - Inverse FVG Scalp Setup",
+        "source": "Live Trading NQ 12/9/25 - Beautiful Win"
+      },
+      {
+        "video": 28,
+        "title": "Multi-Timeframe Highest Inversion FVG Model",
+        "source": "This 'iFVG' Strategy is The Easiest Way to Become Profitable FAST"
+      },
+      {
+        "video": 29,
+        "title": "Time-Based Volume (TBV) Core Strategy",
+        "source": "Give Me 9 Minutes & I'll Teach You My 80% Winrate Trading Strategy"
+      },
+      {
+        "video": 30,
+        "title": "3-Step Time-Based Volume (TBV) Reassessment Model",
+        "source": "My 80% Winrate 3-Step Trading Strategy That Works!"
+      },
+      {
+        "video": 32,
+        "title": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic",
+        "source": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic"
+      },
+      {
+        "video": 34,
+        "title": "Combining ICT & Footprint Chart To Take High Probability Trades",
+        "source": "Combining ICT & Footprint Chart To Take High Probability Trades"
+      },
+      {
+        "video": 38,
+        "title": "4H Core Trend & SMT Divergence System",
+        "source": "Ultimate ICT Gold Trading Strategy With 73% Winrate.."
+      },
+      {
+        "video": 41,
+        "title": "ICT Daily Bias Simplified Strategy",
+        "source": "I Simplified ICT Daily Bias.. (Full Trading Strategy)"
+      },
+      {
+        "video": 43,
+        "title": "Live Day Trading Session (Inversion FVG Focus)",
+        "source": "Live Day Trading Making $5,625 (1 Partial TP & 1 Full TP)"
+      },
+      {
+        "video": 46,
+        "title": "My Simple Scalping Trading Strategy To Make $10,870/Month",
+        "source": "My Simple Scalping Trading Strategy To Make $10,870/Month"
+      },
+      {
+        "video": 50,
+        "title": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month",
+        "source": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month"
+      },
+      {
+        "video": 69,
+        "title": "ICT Market Maker Model",
+        "source": "Make 'F*ck You' Money With This Simple ICT MMXM Strategy"
+      },
+      {
+        "video": 72,
+        "title": "Gold 1-Minute Scalping Strategy",
+        "source": "GOLD 1 Minute Trading Strategy That Actually Works.."
+      },
+      {
+        "video": 77,
+        "title": "Simple ICT Liquidity Trading Strategy",
+        "source": "Simple ICT Liquidity Trading Strategy That Makes $500/Day"
+      },
+      {
+        "video": 78,
+        "title": "Easy ICT Judas Swing Trading Strategy",
+        "source": "Easy ICT Judas Swing Trading Strategy That Works! (High Winrate)"
+      },
+      {
+        "video": 79,
+        "title": "SMC Doesn't Work Anymore..? Use This Instead!",
+        "source": "SMC Doesn't Work Anymore..? Use This Instead!"
+      },
+      {
+        "video": 80,
+        "title": "Easy ICT Trading Strategy for 2025",
+        "source": "Use This Easy ICT Trading Strategy In 2025 To Quit Your Job In 60 Days!"
+      },
+      {
+        "video": 83,
+        "title": "Day Trading for Profit",
+        "source": "How I Made $2,600 In 10 Minutes Day Trading"
+      },
+      {
+        "video": 88,
+        "title": "Structure + Liquidity = Easy Profit",
+        "source": "Structure + Liquidity = Easy Profit"
+      }
+    ],
+    "po3_10am_session": [
+      {
+        "video": 9,
+        "title": "Strategy 4: Daily Power of Three (PO3) Strategy",
+        "source": "I Simplified ICT PO3.. And It Actually Works!"
+      },
+      {
+        "video": 20,
+        "title": "This \"Secret\" One Candle Trading Strategy",
+        "source": ""
+      },
+      {
+        "video": 21,
+        "title": "Video 1: This Trading Strategy Will Change Your Life In 2026",
+        "source": "This Trading Strategy Will Change Your Life In 2026"
+      },
+      {
+        "video": 27,
+        "title": "The Power of 3 (AMD) Silver Bullet Strategy",
+        "source": "This ICT Strategy Is Boring But It Made Me Profitable"
+      },
+      {
+        "video": 31,
+        "title": "One Trading Setup For Life - ICT 10AM PO3",
+        "source": "One Trading Setup For Life - ICT 10AM PO3"
+      },
+      {
+        "video": 36,
+        "title": "10AM PO3 Trading Setup",
+        "source": "My One Trading Setup For Life - 10AM PO3"
+      }
+    ],
+    "po3_9am_candle": [
+      {
+        "video": 11,
+        "title": "ICT + Volume Profile Breakout Strategy",
+        "source": "ICT + Volume Profile = Insane Profit"
+      },
+      {
+        "video": 14,
+        "title": "The One-Candle Trading Strategy",
+        "source": ""
+      },
+      {
+        "video": 35,
+        "title": "Easy 9AM Candle PO3 Strategy That Actually Works!",
+        "source": "Easy 9AM Candle PO3 Strategy That Actually Works!"
+      }
+    ],
+    "po3_amd_daily": [
+      {
+        "video": 17,
+        "title": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)",
+        "source": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)"
+      },
+      {
+        "video": 40,
+        "title": "Advanced AMD & Precision Projection Model",
+        "source": "I Simplified ICT PO3 Trading Strategy.. (High Winrate)"
+      },
+      {
+        "video": 76,
+        "title": "Simplified ICT PO3 Trading Strategy",
+        "source": "I Simplified ICT PO3 Trading Strategy..."
+      },
+      {
+        "video": 86,
+        "title": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)",
+        "source": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)"
+      }
+    ],
+    "volume_profile": [
+      {
+        "video": 10,
+        "title": "Strategy 5: Gold Scalping Failed Auction Strategy",
+        "source": "ICT Not Working? Use This Gold Trading Strategy Instead.."
+      },
+      {
+        "video": 47,
+        "title": "Gold Scalping Strategy For Beginners (FULL GUIDE)",
+        "source": "Gold Scalping Strategy For Beginners (FULL GUIDE)"
+      }
+    ]
+  },
+  "detailed_clusters": {
+    "non_strategy_tutorial": [
+      {
+        "video": 3,
+        "title": "One-Minute Liquidity Sweep Trading Strategy"
+      },
+      {
+        "video": 5,
+        "title": "Macro Volume Profile and ICT Confluence Strategy"
+      },
+      {
+        "video": 19,
+        "title": "Become a Profitable Trader in ONE DAY!"
+      },
+      {
+        "video": 48,
+        "title": "Life Of A Day Trader Living in Bali"
+      },
+      {
+        "video": 74,
+        "title": "Backtesting Tutorial"
+      }
+    ],
+    "liquidity_sweep_inversion_fvg|15m+session_orb|fvg+inversion_fvg": [
+      {
+        "video": 24,
+        "title": "Video 4: The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)"
+      },
+      {
+        "video": 53,
+        "title": "ICT Trading Strategy for Consistent Profits"
+      },
+      {
+        "video": 66,
+        "title": "Easy ICT 1 Minute Trading Strategy"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m+session_orb|fvg": [
+      {
+        "video": 52,
+        "title": "Finding The Correct Draw On Liquidity"
+      },
+      {
+        "video": 67,
+        "title": "Easy ICT Scalping Strategy"
+      }
+    ],
+    "non_strategy_mindset": [
+      {
+        "video": 71,
+        "title": "Why You're Failing as a Trader"
+      },
+      {
+        "video": 75,
+        "title": "Mindfulness for Traders"
+      }
+    ],
+    "1h_1m_pattern|15m+session_orb|cisd+fvg+mss": [
+      {
+        "video": 25,
+        "title": "Video 5: The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)"
+      }
+    ],
+    "1h_1m_pattern|unspecified|fvg": [
+      {
+        "video": 87,
+        "title": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)"
+      }
+    ],
+    "4h_liquidity_mss|15m+4h+session_orb|fvg+inversion_fvg": [
+      {
+        "video": 49,
+        "title": "Stupid ICT IFVG Trading Strategy That Works"
+      }
+    ],
+    "4h_liquidity_mss|15m+4h+session_orb|fvg+inversion_fvg+limit_retest": [
+      {
+        "video": 84,
+        "title": "1-Minute Scalping (Inverse FVG)"
+      }
+    ],
+    "4h_liquidity_mss|15m+4h|breaker+fvg": [
+      {
+        "video": 63,
+        "title": "ICT Liquidity Sweep Strategy"
+      }
+    ],
+    "4h_liquidity_mss|15m+4h|fvg+limit_retest+order_block": [
+      {
+        "video": 73,
+        "title": "Simple Trading Strategy for GBPUSD"
+      }
+    ],
+    "4h_liquidity_mss|4h|fvg+inversion_fvg": [
+      {
+        "video": 62,
+        "title": "Trend Continuation \"Continuation Purge\" Entry Model"
+      }
+    ],
+    "gold_8pm_one_candle|15m+8pm_gold+session_orb|breaker+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 33,
+        "title": "Stupid Simple Gold Trading Strategy That Works Everyday!"
+      }
+    ],
+    "judas_swing|15m+8pm_gold+session_orb|breaker+fvg+limit_retest+mss": [
+      {
+        "video": 61,
+        "title": "Gold Trading Strategy: The 8:00 PM & 9:00 PM \"Judas Swing\""
+      }
+    ],
+    "judas_swing|15m+session_orb|breaker+fvg+mss": [
+      {
+        "video": 65,
+        "title": "US30 Trading Strategy (Judas Swing)"
+      }
+    ],
+    "judas_swing|4h+session_orb|fvg+inversion_fvg+mss": [
+      {
+        "video": 64,
+        "title": "ICT Daily Bias Guide"
+      }
+    ],
+    "judas_swing|hourly_any|mss+order_block": [
+      {
+        "video": 81,
+        "title": "ICT Power of 3 (1-Minute Scalping)"
+      }
+    ],
+    "judas_swing|session_orb|limit_retest": [
+      {
+        "video": 70,
+        "title": "Simple ICT $1,000/Day Scalping Strategy"
+      }
+    ],
+    "liquidity_sweep_inversion_fvg|session_orb|fvg+inversion_fvg+mss": [
+      {
+        "video": 85,
+        "title": "1-Minute Scalping (Live Trade)"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m+session_orb|fvg+limit_retest": [
+      {
+        "video": 57,
+        "title": "NQ Funded Account Trading Strategy"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m+session_orb|fvg+mss+order_block": [
+      {
+        "video": 82,
+        "title": "ICT Liquidity Sweep Strategy (2025)"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m|breaker+cisd+fvg+mss+order_block": [
+      {
+        "video": 39,
+        "title": "Mechanical 2-Day Daily Bias Strategy"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m|cisd+fvg+limit_retest": [
+      {
+        "video": 68,
+        "title": "$7,940 Trade Breakdown"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m|limit_retest+market_on_close": [
+      {
+        "video": 4,
+        "title": "Gold Fixed Range Volume Profile Scalping Strategy"
+      }
+    ],
+    "liquidity_sweep_mss_entry|15m|market_on_close+mss": [
+      {
+        "video": 90,
+        "title": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]"
+      }
+    ],
+    "liquidity_sweep_mss_entry|hourly_any+session_orb|breaker+cisd+fvg+limit_retest+mss": [
+      {
+        "video": 18,
+        "title": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)"
+      }
+    ],
+    "liquidity_sweep_mss_entry|unspecified|breaker+mss": [
+      {
+        "video": 54,
+        "title": "Liquidity Range Trading Strategy"
+      }
+    ],
+    "liquidity_sweep_mss_entry|unspecified|limit_retest+mss": [
+      {
+        "video": 89,
+        "title": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)"
+      }
+    ],
+    "liquidity_sweep_mss_entry|unspecified|mss": [
+      {
+        "video": 55,
+        "title": "Gold Trading Strategy (High Winrate)"
+      }
+    ],
+    "midas_model|15m+8pm_gold|breaker+fvg+mss": [
+      {
+        "video": 56,
+        "title": "Midas Model Scalping Strategy"
+      }
+    ],
+    "midas_model|15m+8pm_gold|fvg+inversion_fvg+mss": [
+      {
+        "video": 58,
+        "title": "Midas Model Trade Breakdowns"
+      }
+    ],
+    "midas_model|15m+8pm_gold|fvg+mss": [
+      {
+        "video": 60,
+        "title": "Midas Model Trade Breakdowns (End of Week)"
+      }
+    ],
+    "midas_model|8pm_gold+session_orb|fvg+mss": [
+      {
+        "video": 59,
+        "title": "Midas Model Trade Breakdowns (Cont.)"
+      }
+    ],
+    "midas_model|8pm_gold|fvg": [
+      {
+        "video": 51,
+        "title": "Midas Model (5M Timeframe)"
+      }
+    ],
+    "one_candle_8am_range|8am_1h+hourly_any+session_orb|breaker+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 42,
+        "title": "The 8 AM One-Candle Trading Strategy"
+      }
+    ],
+    "one_candle_8am_range|8am_1h+hourly_any|breaker+cisd+fvg+market_on_close+mss+order_block": [
+      {
+        "video": 16,
+        "title": "The Easiest Trading Strategy for Beginners in 2026"
+      }
+    ],
+    "one_candle_8am_range|8am_1h+hourly_any|cisd+fvg+market_on_close+mss+order_block": [
+      {
+        "video": 37,
+        "title": "The 1-Candle Hourly Range Strategy"
+      }
+    ],
+    "one_candle_8am_range|8am_1h+session_orb|fvg+inversion_fvg+market_on_close+order_block": [
+      {
+        "video": 45,
+        "title": "Lower-Timeframe Inversion Masterclass"
+      }
+    ],
+    "orb_lazy_liquidity|15m+session_orb|limit_retest+market_on_close": [
+      {
+        "video": 44,
+        "title": "The Lazy Liquidity Strategy (Mechanical ORB Setup)"
+      }
+    ],
+    "orderflow_volume_profile|10am+15m+4h+8am_1h|cisd+fvg+limit_retest+mss+order_block": [
+      {
+        "video": 38,
+        "title": "4H Core Trend & SMT Divergence System"
+      }
+    ],
+    "orderflow_volume_profile|10am+15m+4h|breaker+cisd+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 23,
+        "title": "Video 3: The 4H Pattern Nobody Talks About (step by step)"
+      }
+    ],
+    "orderflow_volume_profile|10am+4h+session_orb|cisd+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 22,
+        "title": "Video 2: I Simplified ICT AMD Trading Strategy.."
+      }
+    ],
+    "orderflow_volume_profile|15m+4h+8am_1h+session_orb|fvg+inversion_fvg": [
+      {
+        "video": 43,
+        "title": "Live Day Trading Session (Inversion FVG Focus)"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h+8pm_gold|breaker+fvg+mss": [
+      {
+        "video": 72,
+        "title": "Gold 1-Minute Scalping Strategy"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h+session_orb|fvg+inversion_fvg+market_on_close": [
+      {
+        "video": 28,
+        "title": "Multi-Timeframe Highest Inversion FVG Model"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h+session_orb|fvg+market_on_close+order_block": [
+      {
+        "video": 6,
+        "title": "Strategy 1: Fractal-Based Inversion & Order Flow Strategy"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h|breaker+fvg+limit_retest+mss": [
+      {
+        "video": 69,
+        "title": "ICT Market Maker Model"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h|cisd+fvg+mss": [
+      {
+        "video": 88,
+        "title": "Structure + Liquidity = Easy Profit"
+      }
+    ],
+    "orderflow_volume_profile|15m+4h|fvg": [
+      {
+        "video": 29,
+        "title": "Time-Based Volume (TBV) Core Strategy"
+      }
+    ],
+    "orderflow_volume_profile|15m+session_orb|fvg+inversion_fvg": [
+      {
+        "video": 46,
+        "title": "My Simple Scalping Trading Strategy To Make $10,870/Month"
+      }
+    ],
+    "orderflow_volume_profile|15m+session_orb|fvg+inversion_fvg+market_on_close+mss+order_block": [
+      {
+        "video": 41,
+        "title": "ICT Daily Bias Simplified Strategy"
+      }
+    ],
+    "orderflow_volume_profile|15m+session_orb|mss": [
+      {
+        "video": 34,
+        "title": "Combining ICT & Footprint Chart To Take High Probability Trades"
+      }
+    ],
+    "orderflow_volume_profile|15m+session_orb|unspecified": [
+      {
+        "video": 32,
+        "title": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic"
+      }
+    ],
+    "orderflow_volume_profile|15m|fvg+limit_retest+market_on_close": [
+      {
+        "video": 30,
+        "title": "3-Step Time-Based Volume (TBV) Reassessment Model"
+      }
+    ],
+    "orderflow_volume_profile|15m|fvg+mss+order_block": [
+      {
+        "video": 80,
+        "title": "Easy ICT Trading Strategy for 2025"
+      }
+    ],
+    "orderflow_volume_profile|4h|breaker+cisd+fvg+limit_retest+mss+order_block": [
+      {
+        "video": 13,
+        "title": "The 3-Step A+ ICT Gold Strategy"
+      }
+    ],
+    "orderflow_volume_profile|4h|fvg+inversion_fvg+limit_retest+mss+order_block": [
+      {
+        "video": 79,
+        "title": "SMC Doesn't Work Anymore..? Use This Instead!"
+      }
+    ],
+    "orderflow_volume_profile|4h|fvg+inversion_fvg+order_block": [
+      {
+        "video": 26,
+        "title": "Live Trading NQ - Inverse FVG Scalp Setup"
+      }
+    ],
+    "orderflow_volume_profile|4h|fvg+mss+order_block": [
+      {
+        "video": 77,
+        "title": "Simple ICT Liquidity Trading Strategy"
+      }
+    ],
+    "orderflow_volume_profile|8am_1h+8pm_gold|fvg+market_on_close+mss+order_block": [
+      {
+        "video": 78,
+        "title": "Easy ICT Judas Swing Trading Strategy"
+      }
+    ],
+    "orderflow_volume_profile|8am_1h+9am_1h+session_orb|cisd+fvg+market_on_close+mss+order_block": [
+      {
+        "video": 7,
+        "title": "Strategy 2: Intraday 8 AM Candle Liquidity Strategy"
+      }
+    ],
+    "orderflow_volume_profile|8am_1h+9am_1h+session_orb|fvg+inversion_fvg+market_on_close+mss": [
+      {
+        "video": 12,
+        "title": "The 8:00 AM Candle Strategy"
+      }
+    ],
+    "orderflow_volume_profile|session_orb|breaker+fvg+limit_retest+order_block": [
+      {
+        "video": 15,
+        "title": "Orderflow Boot Camp Lesson 1: Volume Profile"
+      }
+    ],
+    "orderflow_volume_profile|session_orb|fvg+inversion_fvg+mss": [
+      {
+        "video": 83,
+        "title": "Day Trading for Profit"
+      }
+    ],
+    "orderflow_volume_profile|session_orb|fvg+limit_retest+market_on_close": [
+      {
+        "video": 2,
+        "title": "Volume Profile and Orderflow Reversal Strategy"
+      }
+    ],
+    "orderflow_volume_profile|session_orb|limit_retest+market_on_close": [
+      {
+        "video": 8,
+        "title": "Strategy 3: Volume Profile Auction & Breakout Strategy"
+      }
+    ],
+    "orderflow_volume_profile|session_orb|market_on_close": [
+      {
+        "video": 1,
+        "title": "Orderflow and Volume Profile Day Trading Strategy"
+      }
+    ],
+    "orderflow_volume_profile|unspecified|fvg+inversion_fvg+order_block": [
+      {
+        "video": 50,
+        "title": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month"
+      }
+    ],
+    "po3_10am_session|10am+15m+4h+9am_1h|breaker+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 31,
+        "title": "One Trading Setup For Life - ICT 10AM PO3"
+      }
+    ],
+    "po3_10am_session|10am+15m+4h|breaker+cisd+fvg+limit_retest+mss": [
+      {
+        "video": 9,
+        "title": "Strategy 4: Daily Power of Three (PO3) Strategy"
+      }
+    ],
+    "po3_10am_session|10am+15m+4h|cisd+fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 21,
+        "title": "Video 1: This Trading Strategy Will Change Your Life In 2026"
+      }
+    ],
+    "po3_10am_session|10am+4h+9am_1h|cisd+fvg+inversion_fvg+limit_retest+mss": [
+      {
+        "video": 36,
+        "title": "10AM PO3 Trading Setup"
+      }
+    ],
+    "po3_10am_session|10am+4h|breaker+cisd+fvg+limit_retest+mss": [
+      {
+        "video": 20,
+        "title": "This \"Secret\" One Candle Trading Strategy"
+      }
+    ],
+    "po3_10am_session|10am+4h|fvg+limit_retest+mss+order_block": [
+      {
+        "video": 27,
+        "title": "The Power of 3 (AMD) Silver Bullet Strategy"
+      }
+    ],
+    "po3_9am_candle|8am_1h+9am_1h+hourly_any+session_orb|breaker+limit_retest+market_on_close+mss": [
+      {
+        "video": 35,
+        "title": "Easy 9AM Candle PO3 Strategy That Actually Works!"
+      }
+    ],
+    "po3_9am_candle|8am_1h+9am_1h+session_orb|fvg+inversion_fvg+limit_retest+market_on_close+mss": [
+      {
+        "video": 14,
+        "title": "The One-Candle Trading Strategy"
+      }
+    ],
+    "po3_9am_candle|9am_1h+session_orb|fvg+limit_retest+market_on_close+mss+order_block": [
+      {
+        "video": 11,
+        "title": "ICT + Volume Profile Breakout Strategy"
+      }
+    ],
+    "po3_amd_daily|15m+4h|mss": [
+      {
+        "video": 86,
+        "title": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)"
+      }
+    ],
+    "po3_amd_daily|15m|cisd+fvg+limit_retest+mss+order_block": [
+      {
+        "video": 40,
+        "title": "Advanced AMD & Precision Projection Model"
+      }
+    ],
+    "po3_amd_daily|15m|fvg+mss+order_block": [
+      {
+        "video": 76,
+        "title": "Simplified ICT PO3 Trading Strategy"
+      }
+    ],
+    "po3_amd_daily|8am_1h+8pm_gold+hourly_any|fvg+inversion_fvg+limit_retest+mss+order_block": [
+      {
+        "video": 17,
+        "title": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)"
+      }
+    ],
+    "volume_profile|unspecified|fvg": [
+      {
+        "video": 47,
+        "title": "Gold Scalping Strategy For Beginners (FULL GUIDE)"
+      }
+    ],
+    "volume_profile|unspecified|limit_retest+market_on_close": [
+      {
+        "video": 10,
+        "title": "Strategy 5: Gold Scalping Failed Auction Strategy"
+      }
+    ]
+  },
+  "records": [
+    {
+      "video": 1,
+      "file": "video_01_Orderflow_and_Volume_Profile_Da.md",
+      "title": "Orderflow and Volume Profile Day Trading Strategy",
+      "source": "How I Made $14,068 Day Trading With Orderflow",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "orb_lazy_liquidity"
+      ],
+      "entries": [
+        "market_on_close"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "market_on_close",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 2,
+      "file": "video_02_Volume_Profile_and_Orderflow_Re.md",
+      "title": "Volume Profile and Orderflow Reversal Strategy",
+      "source": "Volume Profile + Orderflow = Profit",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "fvg_entry"
+      ],
+      "entries": [
+        "fvg",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+limit_retest+market_on_close",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 3,
+      "file": "video_03_One-Minute_Liquidity_Sweep_Trad.md",
+      "title": "One-Minute Liquidity Sweep Trading Strategy",
+      "source": "Secret ICT Liquidity Sweep Trading Strategy With Insane Winrate!",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "4h_pattern",
+        "draw_on_liquidity",
+        "backtesting_tutorial"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "non_strategy_tutorial",
+      "entry_sig": "cisd+fvg+inversion_fvg+limit_retest+mss",
+      "range_sig": "15m+4h+session_orb"
+    },
+    {
+      "video": 4,
+      "file": "video_04_Gold_Fixed_Range_Volume_Profile.md",
+      "title": "Gold Fixed Range Volume Profile Scalping Strategy",
+      "source": "The Easiest Gold Volume Profile Trading Strategy That Works!",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss"
+      ],
+      "entries": [
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "limit_retest+market_on_close",
+      "range_sig": "15m"
+    },
+    {
+      "video": 5,
+      "file": "video_05_Macro_Volume_Profile_and_ICT_Co.md",
+      "title": "Macro Volume Profile and ICT Confluence Strategy",
+      "source": "Volume Profile + ICT = Easy Profit",
+      "concepts": [
+        "volume_profile",
+        "inversion_fvg",
+        "breaker_block",
+        "fvg_entry",
+        "backtesting_tutorial"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "breaker",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "non_strategy_tutorial",
+      "entry_sig": "breaker+cisd+fvg+inversion_fvg+limit_retest+market_on_close+mss",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 6,
+      "file": "video_06_Strategy_1_Fractal-Based_Inversion_Order_Flow_Str.md",
+      "title": "Strategy 1: Fractal-Based Inversion & Order Flow Strategy",
+      "source": "The Only Trading Strategy I'd Use If I Had To Start Over (Stupid Simple)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "1h_1m_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "market_on_close"
+      ],
+      "ranges": [
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+market_on_close+order_block",
+      "range_sig": "15m+4h+session_orb"
+    },
+    {
+      "video": 7,
+      "file": "video_07_Strategy_2_Intraday_8_AM_Candle_Liquidity_Strategy.md",
+      "title": "Strategy 2: Intraday 8 AM Candle Liquidity Strategy",
+      "source": "this trading strategy is stupid but it works like magic..",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_9am",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "9am_1h",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "cisd+fvg+market_on_close+mss+order_block",
+      "range_sig": "8am_1h+9am_1h+session_orb"
+    },
+    {
+      "video": 8,
+      "file": "video_08_Strategy_3_Volume_Profile_Auction_Breakout_Strate.md",
+      "title": "Strategy 3: Volume Profile Auction & Breakout Strategy",
+      "source": "The Only Volume Profile Strategy You'll Ever Need! (FULL COURSE)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "orb_lazy_liquidity"
+      ],
+      "entries": [
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "limit_retest+market_on_close",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 9,
+      "file": "video_09_Strategy_4_Daily_Power_of_Three_PO3_Strategy.md",
+      "title": "Strategy 4: Daily Power of Three (PO3) Strategy",
+      "source": "I Simplified ICT PO3.. And It Actually Works!",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "10am",
+        "4h",
+        "15m"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "breaker+cisd+fvg+limit_retest+mss",
+      "range_sig": "10am+15m+4h"
+    },
+    {
+      "video": 10,
+      "file": "video_10_Strategy_5_Gold_Scalping_Failed_Auction_Strategy.md",
+      "title": "Strategy 5: Gold Scalping Failed Auction Strategy",
+      "source": "ICT Not Working? Use This Gold Trading Strategy Instead..",
+      "concepts": [
+        "volume_profile"
+      ],
+      "entries": [
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [],
+      "family": "volume_profile",
+      "entry_sig": "limit_retest+market_on_close",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 11,
+      "file": "video_11_ICT_Volume_Profile_Breakout_St.md",
+      "title": "ICT + Volume Profile Breakout Strategy",
+      "source": "ICT + Volume Profile = Insane Profit",
+      "concepts": [
+        "volume_profile",
+        "po3_9am",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "9am_1h",
+        "session_orb"
+      ],
+      "family": "po3_9am_candle",
+      "entry_sig": "fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "9am_1h+session_orb"
+    },
+    {
+      "video": 12,
+      "file": "video_12_The_800_AM_Candle_Strategy.md",
+      "title": "The 8:00 AM Candle Strategy",
+      "source": "This \u201c8AM Candle\u201d Strategy Is Boring, But It Makes F*ck You Money",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_9am",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "9am_1h",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+market_on_close+mss",
+      "range_sig": "8am_1h+9am_1h+session_orb"
+    },
+    {
+      "video": 13,
+      "file": "video_13_The_3-Step_A_ICT_Gold_Strategy.md",
+      "title": "The 3-Step A+ ICT Gold Strategy",
+      "source": "The 3-Step A+ ICT Gold Strategy (that actually works)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "continuation_purge"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "breaker+cisd+fvg+limit_retest+mss+order_block",
+      "range_sig": "4h"
+    },
+    {
+      "video": 14,
+      "file": "video_14_The_One-Candle_Trading_Strategy.md",
+      "title": "The One-Candle Trading Strategy",
+      "source": "",
+      "concepts": [
+        "volume_profile",
+        "po3_9am",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "daily_bias",
+        "smt_divergence",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "9am_1h",
+        "session_orb"
+      ],
+      "family": "po3_9am_candle",
+      "entry_sig": "fvg+inversion_fvg+limit_retest+market_on_close+mss",
+      "range_sig": "8am_1h+9am_1h+session_orb"
+    },
+    {
+      "video": 15,
+      "file": "video_15_Orderflow_Boot_Camp_Lesson_1_Vo.md",
+      "title": "Orderflow Boot Camp Lesson 1: Volume Profile",
+      "source": "Orderflow Boot Camp Lesson 1: Volume Profile",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "continuation_purge"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "limit_retest"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "breaker+fvg+limit_retest+order_block",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 16,
+      "file": "video_16_The_Easiest_Trading_Strategy_for_Beginners_in_2026.md",
+      "title": "The Easiest Trading Strategy for Beginners in 2026",
+      "source": "The Easiest Trading Strategy for Beginners in 2026",
+      "concepts": [
+        "volume_profile",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "smt_divergence",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "hourly_any"
+      ],
+      "family": "one_candle_8am_range",
+      "entry_sig": "breaker+cisd+fvg+market_on_close+mss+order_block",
+      "range_sig": "8am_1h+hourly_any"
+    },
+    {
+      "video": 17,
+      "file": "video_17_The_1H_Pattern_Nobody_Talks_About_1H_1M_Strategy.md",
+      "title": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)",
+      "source": "The 1H Pattern Nobody Talks About.. (1H, 1M Strategy)",
+      "concepts": [
+        "volume_profile",
+        "po3_daily",
+        "one_candle_8am",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [
+        "8am_1h",
+        "8pm_gold",
+        "hourly_any"
+      ],
+      "family": "po3_amd_daily",
+      "entry_sig": "fvg+inversion_fvg+limit_retest+mss+order_block",
+      "range_sig": "8am_1h+8pm_gold+hourly_any"
+    },
+    {
+      "video": 18,
+      "file": "video_18_The_Only_GOLD_Trading_Strategy_You_Need_In_2026_St.md",
+      "title": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)",
+      "source": "The Only GOLD Trading Strategy You Need In 2026! (Stupid Simple)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "hourly_any",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "breaker+cisd+fvg+limit_retest+mss",
+      "range_sig": "hourly_any+session_orb"
+    },
+    {
+      "video": 19,
+      "file": "video_19_Become_a_Profitable_Trader_in_ONE_DAY.md",
+      "title": "Become a Profitable Trader in ONE DAY!",
+      "source": "Become a Profitable Trader in ONE DAY!",
+      "concepts": [
+        "backtesting_tutorial"
+      ],
+      "entries": [],
+      "ranges": [],
+      "family": "non_strategy_tutorial",
+      "entry_sig": "unspecified",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 20,
+      "file": "video_20_This_Secret_One_Candle_Trading_Strategy.md",
+      "title": "This \"Secret\" One Candle Trading Strategy",
+      "source": "",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_daily",
+        "one_candle_8am",
+        "breaker_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "10am",
+        "4h"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "breaker+cisd+fvg+limit_retest+mss",
+      "range_sig": "10am+4h"
+    },
+    {
+      "video": 21,
+      "file": "video_21_Video_1_This_Trading_Strategy_Will_Change_Your_Lif.md",
+      "title": "Video 1: This Trading Strategy Will Change Your Life In 2026",
+      "source": "This Trading Strategy Will Change Your Life In 2026",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "10am",
+        "4h",
+        "15m"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "cisd+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "10am+15m+4h"
+    },
+    {
+      "video": 22,
+      "file": "video_22_Video_2_I_Simplified_ICT_AMD_Trading_Strategy.md",
+      "title": "Video 2: I Simplified ICT AMD Trading Strategy..",
+      "source": "I Simplified ICT AMD Trading Strategy..",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_10am",
+        "po3_daily",
+        "orb_lazy_liquidity",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "10am",
+        "4h",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "cisd+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "10am+4h+session_orb"
+    },
+    {
+      "video": 23,
+      "file": "video_23_Video_3_The_4H_Pattern_Nobody_Talks_About_step_by.md",
+      "title": "Video 3: The 4H Pattern Nobody Talks About (step by step)",
+      "source": "The 4H Pattern Nobody Talks About (step by step)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_10am",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "10am",
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "breaker+cisd+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "10am+15m+4h"
+    },
+    {
+      "video": 24,
+      "file": "video_24_Video_4_The_Only_ICT_Trading_Strategy_Ill_Be_Using.md",
+      "title": "Video 4: The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)",
+      "source": "The Only ICT Trading Strategy I'll Be Using In 2026! (80% Winrate)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_inversion_fvg",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 25,
+      "file": "video_25_Video_5_The_3-Step_A_ICT_Strategy_That_Works_Every.md",
+      "title": "Video 5: The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)",
+      "source": "The 3-Step A+ ICT Strategy That Works Everyday! (Stupid Simple)",
+      "concepts": [
+        "volume_profile",
+        "fvg_entry",
+        "smt_divergence",
+        "1h_1m_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "fvg",
+        "mss",
+        "cisd"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "1h_1m_pattern",
+      "entry_sig": "cisd+fvg+mss",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 26,
+      "file": "video_26_Live_Trading_NQ_-_Inverse_FVG_Scalp_Setup.md",
+      "title": "Live Trading NQ - Inverse FVG Scalp Setup",
+      "source": "Live Trading NQ 12/9/25 - Beautiful Win",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg"
+      ],
+      "ranges": [
+        "4h"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+order_block",
+      "range_sig": "4h"
+    },
+    {
+      "video": 27,
+      "file": "video_27_The_Power_of_3_AMD_Silver_Bullet_Strategy.md",
+      "title": "The Power of 3 (AMD) Silver Bullet Strategy",
+      "source": "This ICT Strategy Is Boring But It Made Me Profitable",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "4h_pattern"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [
+        "10am",
+        "4h"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "fvg+limit_retest+mss+order_block",
+      "range_sig": "10am+4h"
+    },
+    {
+      "video": 28,
+      "file": "video_28_Multi-Timeframe_Highest_Inversion_FVG_Model.md",
+      "title": "Multi-Timeframe Highest Inversion FVG Model",
+      "source": "This 'iFVG' Strategy is The Easiest Way to Become Profitable FAST",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "4h_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "market_on_close"
+      ],
+      "ranges": [
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+market_on_close",
+      "range_sig": "15m+4h+session_orb"
+    },
+    {
+      "video": 29,
+      "file": "video_29_Time-Based_Volume_TBV_Core_Strategy.md",
+      "title": "Time-Based Volume (TBV) Core Strategy",
+      "source": "Give Me 9 Minutes & I'll Teach You My 80% Winrate Trading Strategy",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "tbv_time_based_volume",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "draw_on_liquidity",
+        "structure_liquidity",
+        "crypto_funding"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 30,
+      "file": "video_30_3-Step_Time-Based_Volume_TBV_Reassessment_Model.md",
+      "title": "3-Step Time-Based Volume (TBV) Reassessment Model",
+      "source": "My 80% Winrate 3-Step Trading Strategy That Works!",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "tbv_time_based_volume",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "draw_on_liquidity",
+        "crypto_funding"
+      ],
+      "entries": [
+        "fvg",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+limit_retest+market_on_close",
+      "range_sig": "15m"
+    },
+    {
+      "video": 31,
+      "file": "video_31_1_One_Trading_Setup_For_Life_-_ICT_10AM_PO3.md",
+      "title": "One Trading Setup For Life - ICT 10AM PO3",
+      "source": "One Trading Setup For Life - ICT 10AM PO3",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_9am",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "smt_divergence",
+        "4h_pattern"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "9am_1h",
+        "10am",
+        "4h",
+        "15m"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "breaker+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "10am+15m+4h+9am_1h"
+    },
+    {
+      "video": 32,
+      "file": "video_32_2_Insane_ICT_Liquidity_Sweep_Trading_Strategy_That.md",
+      "title": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic",
+      "source": "Insane ICT Liquidity Sweep Trading Strategy That Works Like Magic",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "tbv_time_based_volume",
+        "liquidity_sweep_mss",
+        "daily_bias",
+        "crypto_funding"
+      ],
+      "entries": [],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "unspecified",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 33,
+      "file": "video_33_3_Stupid_Simple_Gold_Trading_Strategy_That_Works_E.md",
+      "title": "Stupid Simple Gold Trading Strategy That Works Everyday!",
+      "source": "Stupid Simple Gold Trading Strategy That Works Everyday!",
+      "concepts": [
+        "volume_profile",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "15m",
+        "session_orb"
+      ],
+      "family": "gold_8pm_one_candle",
+      "entry_sig": "breaker+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "15m+8pm_gold+session_orb"
+    },
+    {
+      "video": 34,
+      "file": "video_34_4_Combining_ICT_Footprint_Chart_To_Take_High_Prob.md",
+      "title": "Combining ICT & Footprint Chart To Take High Probability Trades",
+      "source": "Combining ICT & Footprint Chart To Take High Probability Trades",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "smt_divergence"
+      ],
+      "entries": [
+        "mss"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "mss",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 35,
+      "file": "video_35_5_Easy_9AM_Candle_PO3_Strategy_That_Actually_Works.md",
+      "title": "Easy 9AM Candle PO3 Strategy That Actually Works!",
+      "source": "Easy 9AM Candle PO3 Strategy That Actually Works!",
+      "concepts": [
+        "volume_profile",
+        "po3_9am",
+        "po3_daily",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "smt_divergence",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "breaker",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "9am_1h",
+        "hourly_any",
+        "session_orb"
+      ],
+      "family": "po3_9am_candle",
+      "entry_sig": "breaker+limit_retest+market_on_close+mss",
+      "range_sig": "8am_1h+9am_1h+hourly_any+session_orb"
+    },
+    {
+      "video": 36,
+      "file": "video_36_10AM_PO3_Trading_Setup.md",
+      "title": "10AM PO3 Trading Setup",
+      "source": "My One Trading Setup For Life - 10AM PO3",
+      "concepts": [
+        "volume_profile",
+        "po3_10am",
+        "po3_9am",
+        "po3_daily",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "4h_pattern"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "9am_1h",
+        "10am",
+        "4h"
+      ],
+      "family": "po3_10am_session",
+      "entry_sig": "cisd+fvg+inversion_fvg+limit_retest+mss",
+      "range_sig": "10am+4h+9am_1h"
+    },
+    {
+      "video": 37,
+      "file": "video_37_The_1-Candle_Hourly_Range_Strat.md",
+      "title": "The 1-Candle Hourly Range Strategy",
+      "source": "one candle is all you need..",
+      "concepts": [
+        "volume_profile",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "hourly_any"
+      ],
+      "family": "one_candle_8am_range",
+      "entry_sig": "cisd+fvg+market_on_close+mss+order_block",
+      "range_sig": "8am_1h+hourly_any"
+    },
+    {
+      "video": 38,
+      "file": "video_38_4H_Core_Trend_SMT_Divergence_S.md",
+      "title": "4H Core Trend & SMT Divergence System",
+      "source": "Ultimate ICT Gold Trading Strategy With 73% Winrate..",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_10am",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "8am_1h",
+        "10am",
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "cisd+fvg+limit_retest+mss+order_block",
+      "range_sig": "10am+15m+4h+8am_1h"
+    },
+    {
+      "video": 39,
+      "file": "video_39_Mechanical_2-Day_Daily_Bias_Str.md",
+      "title": "Mechanical 2-Day Daily Bias Strategy",
+      "source": "Best ICT Gold Trading Strategy That Works Everyday! (Insane Winrate)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "breaker+cisd+fvg+mss+order_block",
+      "range_sig": "15m"
+    },
+    {
+      "video": 40,
+      "file": "video_40_Advanced_AMD_Precision_Project.md",
+      "title": "Advanced AMD & Precision Projection Model",
+      "source": "I Simplified ICT PO3 Trading Strategy.. (High Winrate)",
+      "concepts": [
+        "volume_profile",
+        "po3_daily",
+        "orb_lazy_liquidity",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "po3_amd_daily",
+      "entry_sig": "cisd+fvg+limit_retest+mss+order_block",
+      "range_sig": "15m"
+    },
+    {
+      "video": 41,
+      "file": "video_41_ICT_Daily_Bias_Simplified_Strategy.md",
+      "title": "ICT Daily Bias Simplified Strategy",
+      "source": "I Simplified ICT Daily Bias.. (Full Trading Strategy)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "judas_swing",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "1h_1m_pattern",
+        "draw_on_liquidity",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg",
+        "mss",
+        "market_on_close"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+market_on_close+mss+order_block",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 42,
+      "file": "video_42_The_8_AM_One-Candle_Trading_Strategy.md",
+      "title": "The 8 AM One-Candle Trading Strategy",
+      "source": "This One Candle Can Change Your Life.. (Stupid Simple Strategy)",
+      "concepts": [
+        "volume_profile",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "breaker",
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "hourly_any",
+        "session_orb"
+      ],
+      "family": "one_candle_8am_range",
+      "entry_sig": "breaker+fvg+limit_retest+market_on_close+mss+order_block",
+      "range_sig": "8am_1h+hourly_any+session_orb"
+    },
+    {
+      "video": 43,
+      "file": "video_43_Live_Day_Trading_Session_Inversion_FVG_Focus.md",
+      "title": "Live Day Trading Session (Inversion FVG Focus)",
+      "source": "Live Day Trading Making $5,625 (1 Partial TP & 1 Full TP)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "daily_bias",
+        "smt_divergence",
+        "4h_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "8am_1h",
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+4h+8am_1h+session_orb"
+    },
+    {
+      "video": 44,
+      "file": "video_44_The_Lazy_Liquidity_Strategy_Mechanical_ORB_Setup.md",
+      "title": "The Lazy Liquidity Strategy (Mechanical ORB Setup)",
+      "source": "The Laziest Liquidity Trading Strategy Making $15,000/Month",
+      "concepts": [
+        "volume_profile",
+        "orb_lazy_liquidity",
+        "daily_bias",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "limit_retest",
+        "market_on_close"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "orb_lazy_liquidity",
+      "entry_sig": "limit_retest+market_on_close",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 45,
+      "file": "video_45_Lower-Timeframe_Inversion_Masterclass.md",
+      "title": "Lower-Timeframe Inversion Masterclass",
+      "source": "STOP Using ICT & Trade With This Strategy Instead.. (Stupid Simple)",
+      "concepts": [
+        "volume_profile",
+        "one_candle_8am",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "session_orb"
+      ],
+      "family": "one_candle_8am_range",
+      "entry_sig": "fvg+inversion_fvg+market_on_close+order_block",
+      "range_sig": "8am_1h+session_orb"
+    },
+    {
+      "video": 46,
+      "file": "video_46_1_My_Simple_Scalping_Trading_Strategy_To_Make_1087.md",
+      "title": "My Simple Scalping Trading Strategy To Make $10,870/Month",
+      "source": "My Simple Scalping Trading Strategy To Make $10,870/Month",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 47,
+      "file": "video_47_2_Gold_Scalping_Strategy_For_Beginners_FULL_GUIDE.md",
+      "title": "Gold Scalping Strategy For Beginners (FULL GUIDE)",
+      "source": "Gold Scalping Strategy For Beginners (FULL GUIDE)",
+      "concepts": [
+        "volume_profile",
+        "fvg_entry"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [],
+      "family": "volume_profile",
+      "entry_sig": "fvg",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 48,
+      "file": "video_48_3_Life_Of_A_Day_Trader_Living_in_Bali.md",
+      "title": "Life Of A Day Trader Living in Bali",
+      "source": "Life Of A Day Trader Living in Bali",
+      "concepts": [
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "structure_liquidity",
+        "backtesting_tutorial",
+        "mindset_only"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "non_strategy_tutorial",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 49,
+      "file": "video_49_4_Stupid_ICT_IFVG_Trading_Strategy_That_Works.md",
+      "title": "Stupid ICT IFVG Trading Strategy That Works",
+      "source": "Stupid ICT IFVG Trading Strategy That Works",
+      "concepts": [
+        "volume_profile",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "4h_liquidity_mss",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+4h+session_orb"
+    },
+    {
+      "video": 50,
+      "file": "video_50_5_Dumbest_ICT_Gold_Trading_Strategy_Makes_10000Mon.md",
+      "title": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month",
+      "source": "Dumbest ICT Gold Trading Strategy Makes $10,000/Month",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg"
+      ],
+      "ranges": [],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+order_block",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 51,
+      "file": "video_51_Midas_Model_5M_Timeframe.md",
+      "title": "Midas Model (5M Timeframe)",
+      "source": "Easy Gold Trading Strategy That Works Every Time! (No Daily Bias Required)",
+      "concepts": [
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "daily_bias",
+        "smt_divergence"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [
+        "8pm_gold"
+      ],
+      "family": "midas_model",
+      "entry_sig": "fvg",
+      "range_sig": "8pm_gold"
+    },
+    {
+      "video": 52,
+      "file": "video_52_Finding_The_Correct_Draw_On_Liquidity.md",
+      "title": "Finding The Correct Draw On Liquidity",
+      "source": "Finding The Correct Draw On Liquidity With 96% Accuracy..",
+      "concepts": [
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "draw_on_liquidity",
+        "crypto_funding"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 53,
+      "file": "video_53_ICT_Trading_Strategy_for_Consistent_Profits.md",
+      "title": "ICT Trading Strategy for Consistent Profits",
+      "source": "This Stupid ICT Trading Strategy Makes $1,000 Everyday!",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_inversion_fvg",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 54,
+      "file": "video_54_Liquidity_Range_Trading_Strategy.md",
+      "title": "Liquidity Range Trading Strategy",
+      "source": "The Only Liquidity Strategy You'll Ever Need",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "mss"
+      ],
+      "ranges": [],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "breaker+mss",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 55,
+      "file": "video_55_Gold_Trading_Strategy_High_Winrate.md",
+      "title": "Gold Trading Strategy (High Winrate)",
+      "source": "NEW Gold Trading Strategy That Works Everyday! (High Winrate)",
+      "concepts": [
+        "liquidity_sweep_mss",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "mss"
+      ],
+      "ranges": [],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "mss",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 56,
+      "file": "video_56_Midas_Model_Scalping_Strategy.md",
+      "title": "Midas Model Scalping Strategy",
+      "source": "This Gold Scalping Strategy Works Everyday! (Easy & Profitable)",
+      "concepts": [
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "15m"
+      ],
+      "family": "midas_model",
+      "entry_sig": "breaker+fvg+mss",
+      "range_sig": "15m+8pm_gold"
+    },
+    {
+      "video": 57,
+      "file": "video_57_NQ_Funded_Account_Trading_Strategy.md",
+      "title": "NQ Funded Account Trading Strategy",
+      "source": "This Simple NQ Trading Strategy Got Me Funded With $300,000",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "smt_divergence"
+      ],
+      "entries": [
+        "fvg",
+        "limit_retest"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "fvg+limit_retest",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 58,
+      "file": "video_58_Midas_Model_Trade_Breakdowns.md",
+      "title": "Midas Model Trade Breakdowns",
+      "source": "The Midas Model A+ Setup - GOLD Trade Breakdown",
+      "concepts": [
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "15m"
+      ],
+      "family": "midas_model",
+      "entry_sig": "fvg+inversion_fvg+mss",
+      "range_sig": "15m+8pm_gold"
+    },
+    {
+      "video": 59,
+      "file": "video_59_Midas_Model_Trade_Breakdowns_Cont.md",
+      "title": "Midas Model Trade Breakdowns (Cont.)",
+      "source": "Use This Gold Trading Strategy To Quit Your Job In 60 Days! (Midas Model)",
+      "concepts": [
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "fvg_entry"
+      ],
+      "entries": [
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "session_orb"
+      ],
+      "family": "midas_model",
+      "entry_sig": "fvg+mss",
+      "range_sig": "8pm_gold+session_orb"
+    },
+    {
+      "video": 60,
+      "file": "video_60_Midas_Model_Trade_Breakdowns_End_of_Week.md",
+      "title": "Midas Model Trade Breakdowns (End of Week)",
+      "source": "The Midas Model A+ Setup - GOLD Trade Breakdown",
+      "concepts": [
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "fvg_entry"
+      ],
+      "entries": [
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "15m"
+      ],
+      "family": "midas_model",
+      "entry_sig": "fvg+mss",
+      "range_sig": "15m+8pm_gold"
+    },
+    {
+      "video": 61,
+      "file": "video_61_Gold_Trading_Strategy_The_800_PM_900_PM_Judas_Swi.md",
+      "title": "Gold Trading Strategy: The 8:00 PM & 9:00 PM \"Judas Swing\"",
+      "source": "Give me 20 mins & I'll teach you best GOLD trading strategy..",
+      "concepts": [
+        "volume_profile",
+        "judas_swing",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "15m",
+        "session_orb"
+      ],
+      "family": "judas_swing",
+      "entry_sig": "breaker+fvg+limit_retest+mss",
+      "range_sig": "15m+8pm_gold+session_orb"
+    },
+    {
+      "video": 62,
+      "file": "video_62_Trend_Continuation_Continuation_Purge_Entry_Model.md",
+      "title": "Trend Continuation \"Continuation Purge\" Entry Model",
+      "source": "This entry model will change how you trade forever.. (20x results)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "continuation_purge",
+        "structure_liquidity",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "4h"
+      ],
+      "family": "4h_liquidity_mss",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "4h"
+    },
+    {
+      "video": 63,
+      "file": "video_63_ICT_Liquidity_Sweep_Strategy.md",
+      "title": "ICT Liquidity Sweep Strategy",
+      "source": "Easy ICT Liquidity Sweep Strategy Made Me $14,512 Today! (Full Trade Breakdown)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "smt_divergence",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "breaker",
+        "fvg"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "4h_liquidity_mss",
+      "entry_sig": "breaker+fvg",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 64,
+      "file": "video_64_ICT_Daily_Bias_Guide.md",
+      "title": "ICT Daily Bias Guide",
+      "source": "I Simplified ICT Daily Bias..",
+      "concepts": [
+        "judas_swing",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "4h",
+        "session_orb"
+      ],
+      "family": "judas_swing",
+      "entry_sig": "fvg+inversion_fvg+mss",
+      "range_sig": "4h+session_orb"
+    },
+    {
+      "video": 65,
+      "file": "video_65_US30_Trading_Strategy_Judas_Swing.md",
+      "title": "US30 Trading Strategy (Judas Swing)",
+      "source": "Best ICT Judas Swing Trading Strategy With 79% Winrate!",
+      "concepts": [
+        "judas_swing",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "judas_swing",
+      "entry_sig": "breaker+fvg+mss",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 66,
+      "file": "video_66_1_Easy_ICT_1_Minute_Trading_Strategy.md",
+      "title": "Easy ICT 1 Minute Trading Strategy",
+      "source": "Easy ICT 1 Minute Trading Strategy That Works Everyday! (High Winrate)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_inversion_fvg",
+      "entry_sig": "fvg+inversion_fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 67,
+      "file": "video_67_2_Easy_ICT_Scalping_Strategy.md",
+      "title": "Easy ICT Scalping Strategy",
+      "source": "Easy ICT Scalping Trading Strategy That Makes $1,000/Day",
+      "concepts": [
+        "orderflow_absorption",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "smt_divergence"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "fvg",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 68,
+      "file": "video_68_3_7940_Trade_Breakdown.md",
+      "title": "$7,940 Trade Breakdown",
+      "source": "I Made $7,940 Today Using This Boring ICT Trading Strategy..",
+      "concepts": [
+        "orderflow_absorption",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "smt_divergence",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "fvg",
+        "cisd",
+        "limit_retest"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "cisd+fvg+limit_retest",
+      "range_sig": "15m"
+    },
+    {
+      "video": 69,
+      "file": "video_69_4_ICT_Market_Maker_Model.md",
+      "title": "ICT Market Maker Model",
+      "source": "Make 'F*ck You' Money With This Simple ICT MMXM Strategy",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "mmxm",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "4h_pattern",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "breaker+fvg+limit_retest+mss",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 70,
+      "file": "video_70_5_Simple_ICT_1000Day_Scalping_Strategy.md",
+      "title": "Simple ICT $1,000/Day Scalping Strategy",
+      "source": "Simple ICT Trading Strategy Makes $1,000/Day",
+      "concepts": [
+        "judas_swing",
+        "liquidity_sweep_mss",
+        "daily_bias"
+      ],
+      "entries": [
+        "limit_retest"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "judas_swing",
+      "entry_sig": "limit_retest",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 71,
+      "file": "video_71_1_Why_Youre_Failing_as_a_Trader.md",
+      "title": "Why You're Failing as a Trader",
+      "source": "Please Quit Trading Before Its Too Late!",
+      "concepts": [
+        "mindset_only"
+      ],
+      "entries": [],
+      "ranges": [],
+      "family": "non_strategy_mindset",
+      "entry_sig": "unspecified",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 72,
+      "file": "video_72_2_Gold_1-Minute_Scalping_Strategy.md",
+      "title": "Gold 1-Minute Scalping Strategy",
+      "source": "GOLD 1 Minute Trading Strategy That Actually Works..",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "midas_model",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "breaker_block",
+        "fvg_entry",
+        "4h_pattern",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "breaker",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "8pm_gold",
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "breaker+fvg+mss",
+      "range_sig": "15m+4h+8pm_gold"
+    },
+    {
+      "video": 73,
+      "file": "video_73_3_Simple_Trading_Strategy_for_GBPUSD.md",
+      "title": "Simple Trading Strategy for GBPUSD",
+      "source": "This boring trading strategy made me $6,620 in a few minutes..",
+      "concepts": [
+        "orderflow_absorption",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "4h_liquidity_mss",
+      "entry_sig": "fvg+limit_retest+order_block",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 74,
+      "file": "video_74_4_Backtesting_Tutorial.md",
+      "title": "Backtesting Tutorial",
+      "source": "Increase Your Trading Skills By 276% (Backtesting Tutorial)",
+      "concepts": [
+        "orb_lazy_liquidity",
+        "backtesting_tutorial"
+      ],
+      "entries": [],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "non_strategy_tutorial",
+      "entry_sig": "unspecified",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 75,
+      "file": "video_75_5_Mindfulness_for_Traders.md",
+      "title": "Mindfulness for Traders",
+      "source": "Give me 6 minutes of your life, and I\u2019ll make you a better trader forever",
+      "concepts": [
+        "mindset_only"
+      ],
+      "entries": [],
+      "ranges": [],
+      "family": "non_strategy_mindset",
+      "entry_sig": "unspecified",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 76,
+      "file": "video_76_Simplified_ICT_PO3_Trading_Strategy.md",
+      "title": "Simplified ICT PO3 Trading Strategy",
+      "source": "I Simplified ICT PO3 Trading Strategy...",
+      "concepts": [
+        "volume_profile",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "po3_amd_daily",
+      "entry_sig": "fvg+mss+order_block",
+      "range_sig": "15m"
+    },
+    {
+      "video": 77,
+      "file": "video_77_Simple_ICT_Liquidity_Trading_Strategy.md",
+      "title": "Simple ICT Liquidity Trading Strategy",
+      "source": "Simple ICT Liquidity Trading Strategy That Makes $500/Day",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "4h_pattern",
+        "crypto_funding"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "4h"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+mss+order_block",
+      "range_sig": "4h"
+    },
+    {
+      "video": 78,
+      "file": "video_78_Easy_ICT_Judas_Swing_Trading_Strategy.md",
+      "title": "Easy ICT Judas Swing Trading Strategy",
+      "source": "Easy ICT Judas Swing Trading Strategy That Works! (High Winrate)",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "judas_swing",
+        "one_candle_8am",
+        "one_candle_8pm",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "gbpusd_range"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss",
+        "market_on_close"
+      ],
+      "ranges": [
+        "8am_1h",
+        "8pm_gold"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+market_on_close+mss+order_block",
+      "range_sig": "8am_1h+8pm_gold"
+    },
+    {
+      "video": 79,
+      "file": "video_79_SMC_Doesnt_Work_Anymore_Use_This_Instead.md",
+      "title": "SMC Doesn't Work Anymore..? Use This Instead!",
+      "source": "SMC Doesn't Work Anymore..? Use This Instead!",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "order_block",
+        "fvg_entry",
+        "4h_pattern"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "order_block",
+        "fvg",
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+limit_retest+mss+order_block",
+      "range_sig": "4h"
+    },
+    {
+      "video": 80,
+      "file": "video_80_Easy_ICT_Trading_Strategy_for_2025.md",
+      "title": "Easy ICT Trading Strategy for 2025",
+      "source": "Use This Easy ICT Trading Strategy In 2025 To Quit Your Job In 60 Days!",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias",
+        "mindset_only"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+mss+order_block",
+      "range_sig": "15m"
+    },
+    {
+      "video": 81,
+      "file": "video_81_ICT_Power_of_3_1-Minute_Scalpin.md",
+      "title": "ICT Power of 3 (1-Minute Scalping)",
+      "source": "How I Make $500/Day Trading ICT Power Of 3! (Insane Winrate)",
+      "concepts": [
+        "volume_profile",
+        "judas_swing",
+        "liquidity_sweep_mss",
+        "order_block",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "order_block",
+        "mss"
+      ],
+      "ranges": [
+        "hourly_any"
+      ],
+      "family": "judas_swing",
+      "entry_sig": "mss+order_block",
+      "range_sig": "hourly_any"
+    },
+    {
+      "video": 82,
+      "file": "video_82_ICT_Liquidity_Sweep_Strategy_20.md",
+      "title": "ICT Liquidity Sweep Strategy (2025)",
+      "source": "Best ICT Liquidity Trading Strategy To Use In 2025!",
+      "concepts": [
+        "liquidity_sweep_mss",
+        "order_block",
+        "fvg_entry",
+        "daily_bias"
+      ],
+      "entries": [
+        "order_block",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "15m",
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "fvg+mss+order_block",
+      "range_sig": "15m+session_orb"
+    },
+    {
+      "video": 83,
+      "file": "video_83_Day_Trading_for_Profit.md",
+      "title": "Day Trading for Profit",
+      "source": "How I Made $2,600 In 10 Minutes Day Trading",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "fvg+inversion_fvg+mss",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 84,
+      "file": "video_84_1-Minute_Scalping_Inverse_FVG.md",
+      "title": "1-Minute Scalping (Inverse FVG)",
+      "source": "Easy ICT 1 Minute Timeframe Trading Strategy That Works! (High Winrate)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "limit_retest"
+      ],
+      "ranges": [
+        "4h",
+        "15m",
+        "session_orb"
+      ],
+      "family": "4h_liquidity_mss",
+      "entry_sig": "fvg+inversion_fvg+limit_retest",
+      "range_sig": "15m+4h+session_orb"
+    },
+    {
+      "video": 85,
+      "file": "video_85_1-Minute_Scalping_Live_Trade.md",
+      "title": "1-Minute Scalping (Live Trade)",
+      "source": "How I Made $2,130 In 3 Minutes Day Trading",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "inversion_fvg",
+        "fvg_entry",
+        "smt_divergence",
+        "draw_on_liquidity"
+      ],
+      "entries": [
+        "inversion_fvg",
+        "fvg",
+        "mss"
+      ],
+      "ranges": [
+        "session_orb"
+      ],
+      "family": "liquidity_sweep_inversion_fvg",
+      "entry_sig": "fvg+inversion_fvg+mss",
+      "range_sig": "session_orb"
+    },
+    {
+      "video": 86,
+      "file": "video_86_1_Best_ICT_Trading_Strategy_Quit_Your_Job_In_60_Da.md",
+      "title": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)",
+      "source": "Best ICT Trading Strategy! (Quit Your Job In 60 Days!)",
+      "concepts": [
+        "po3_daily",
+        "liquidity_sweep_mss",
+        "daily_bias",
+        "4h_pattern",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "mss"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "po3_amd_daily",
+      "entry_sig": "mss",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 87,
+      "file": "video_87_2_How_I_Made_3270_In_5_Minutes_Trading_ICT_Concept.md",
+      "title": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)",
+      "source": "How I Made $3,270 In 5 Minutes Trading ICT Concepts (FULL BREAKDOWN)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "fvg_entry",
+        "1h_1m_pattern"
+      ],
+      "entries": [
+        "fvg"
+      ],
+      "ranges": [],
+      "family": "1h_1m_pattern",
+      "entry_sig": "fvg",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 88,
+      "file": "video_88_3_Structure_Liquidity_Easy_Profit.md",
+      "title": "Structure + Liquidity = Easy Profit",
+      "source": "Structure + Liquidity = Easy Profit",
+      "concepts": [
+        "orderflow_absorption",
+        "volume_profile",
+        "fvg_entry",
+        "smt_divergence",
+        "4h_pattern",
+        "structure_liquidity"
+      ],
+      "entries": [
+        "fvg",
+        "mss",
+        "cisd"
+      ],
+      "ranges": [
+        "4h",
+        "15m"
+      ],
+      "family": "orderflow_volume_profile",
+      "entry_sig": "cisd+fvg+mss",
+      "range_sig": "15m+4h"
+    },
+    {
+      "video": 89,
+      "file": "video_89_4_Easy_ICT_1_Minute_Gold_Trading_Strategy_That_Wor.md",
+      "title": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)",
+      "source": "Easy ICT 1 Minute Gold Trading Strategy That Works! (Insane Accuracy)",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss"
+      ],
+      "entries": [
+        "mss",
+        "limit_retest"
+      ],
+      "ranges": [],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "limit_retest+mss",
+      "range_sig": "unspecified"
+    },
+    {
+      "video": 90,
+      "file": "video_90_5_How_I_Make_1000Day_with_ONE_Simple_Crypto_Strate.md",
+      "title": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]",
+      "source": "How I Make $1,000/Day with ONE Simple Crypto Strategy [100x Trading Tutorial]",
+      "concepts": [
+        "volume_profile",
+        "liquidity_sweep_mss",
+        "crypto_funding"
+      ],
+      "entries": [
+        "mss",
+        "market_on_close"
+      ],
+      "ranges": [
+        "15m"
+      ],
+      "family": "liquidity_sweep_mss_entry",
+      "entry_sig": "market_on_close+mss",
+      "range_sig": "15m"
+    }
+  ]
+}

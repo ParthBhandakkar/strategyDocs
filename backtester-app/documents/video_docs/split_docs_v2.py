@@ -1,8 +1,8 @@
 import os
 import re
 
-batch_dir = "/Users/parthbhandakkar/Desktop/WorkZera/Projects/TradeBot/ytLearning/backtester-app/documents/video_docs"
-out_dir = os.path.join(batch_dir, "individual")
+batch_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "batches")
+out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "individual")
 os.makedirs(out_dir, exist_ok=True)
 
 batch_files = [f for f in os.listdir(batch_dir) if f.startswith("batch_") and f.endswith(".md")]
