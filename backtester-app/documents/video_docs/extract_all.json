@@ -569,8 +569,8 @@
     "source": "Become a Profitable Trader in ONE DAY!",
     "overview": "This presentation focuses entirely on the critical psychology and identity architecture required to achieve long-term trading success. It challenges the common misconception that profitability depends on finding the perfect technical indicator or entry strategy. Instead, it demonstrates that true consistency is an identity-driven process. To succeed, a trader must shift their underlying identity so that following rules and managing risk becomes completely natural.",
     "steps": 4,
-    "non_strategy": false,
-    "ns_reason": "",
+    "non_strategy": true,
+    "ns_reason": "mindset",
     "sessions": [],
     "assets": [
       "US30"
@@ -2093,8 +2093,8 @@
     "source": "Please Quit Trading Before Its Too Late!",
     "overview": "This video addresses the psychological and behavioral reasons why most traders fail, emphasizing that success in trading is primarily a matter of internal work and self-mastery rather than just having a \"good\" strategy.",
     "steps": 3,
-    "non_strategy": false,
-    "ns_reason": "",
+    "non_strategy": true,
+    "ns_reason": "mindset",
     "sessions": [],
     "assets": [
       "US30"
@@ -2191,8 +2191,8 @@
     "source": "Give me 6 minutes of your life, and I\u2019ll make you a better trader forever",
     "overview": "A focus on psychological development, arguing that trading success is heavily dependent on a disciplined, focused mindset, which can be improved through mindfulness and meditation.",
     "steps": 3,
-    "non_strategy": false,
-    "ns_reason": "",
+    "non_strategy": true,
+    "ns_reason": "mindset",
     "sessions": [],
     "assets": [
       "US30"

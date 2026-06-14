@@ -33,7 +33,6 @@ CONCEPT_PATTERNS = [
     ("structure_liquidity", r"structure.*liquidity|liquidity range"),
     ("crypto_funding", r"crypto|bitcoin|funding rate|100x"),
     ("gbpusd_range", r"gbpusd|gbp/usd"),
-    ("backtesting_tutorial", r"backtest"),
     ("mindset_only", r"mindfulness|failing as a trader|quit trading|life of a day trader"),
 ]
 
@@ -92,27 +91,40 @@ def extract_steps_summary(content: str) -> str:
     return m.group(0)[:3000] if m else content[:3000]
 
 
+def is_backtesting_tutorial(content: str) -> bool:
+    """Match backtesting tool tutorials only, not strategies that mention backtesting."""
+    lower = content.lower()
+    return bool(
+        re.search(
+            r"backtesting tutorial|fx replay for effective backtesting|"
+            r"increase your trading skills.*backtest|"
+            r"demonstrates how to use fx replay|"
+            r"setting up the session.*fx replay",
+            lower,
+        )
+    )
+
+
 def classify_strategy(content: str) -> dict:
     full = content.lower()
-    steps = extract_steps_summary(content).lower()
     combined = full
 
     concepts = match_tags(combined, CONCEPT_PATTERNS)
     entries = match_tags(combined, ENTRY_PATTERNS)
     ranges = match_tags(combined, RANGE_PATTERNS)
 
-    # Determine primary family
+    # Determine primary family (specific families before broad VP+orderflow)
     family = "other"
-    if "backtesting_tutorial" in concepts:
+    if is_backtesting_tutorial(content):
         family = "non_strategy_tutorial"
     elif "mindset_only" in concepts and len([c for c in concepts if c not in ("mindset_only",)]) < 2:
         family = "non_strategy_mindset"
-    elif "orderflow_absorption" in concepts and "volume_profile" in concepts:
-        family = "orderflow_volume_profile"
     elif "tbv_time_based_volume" in concepts:
         family = "time_based_volume"
     elif "midas_model" in concepts:
         family = "midas_model"
+    elif "mmxm" in concepts:
+        family = "mmxm"
     elif "po3_10am" in concepts or ("po3_daily" in concepts and "10am" in ranges):
         family = "po3_10am_session"
     elif "po3_9am" in concepts:
@@ -127,30 +139,30 @@ def classify_strategy(content: str) -> dict:
         family = "one_candle_8am_range"
     elif "orb_lazy_liquidity" in concepts:
         family = "orb_lazy_liquidity"
-    elif "mmxm" in concepts:
-        family = "mmxm"
+    elif "continuation_purge" in concepts:
+        family = "continuation_purge"
+    elif "inversion_fvg" in concepts or "inversion_fvg" in entries:
+        family = "liquidity_sweep_inversion_fvg"
     elif "4h_pattern" in concepts or ("4h" in ranges and "liquidity_sweep_mss" in concepts):
         family = "4h_liquidity_mss"
     elif "1h_1m_pattern" in concepts:
         family = "1h_1m_pattern"
-    elif "inversion_fvg" in concepts or "inversion_fvg" in entries:
-        family = "liquidity_sweep_inversion_fvg"
     elif "liquidity_sweep_mss" in concepts:
         family = "liquidity_sweep_mss_entry"
     elif "daily_bias" in concepts:
         family = "daily_bias_framework"
     elif "smt_divergence" in concepts:
         family = "smt_divergence"
-    elif "continuation_purge" in concepts:
-        family = "continuation_purge"
-    elif "volume_profile" in concepts:
-        family = "volume_profile"
+    elif "structure_liquidity" in concepts:
+        family = "structure_liquidity"
     elif "crypto_funding" in concepts:
         family = "crypto_strategy"
     elif "gbpusd_range" in concepts:
         family = "gbpusd_range"
-    elif "structure_liquidity" in concepts:
-        family = "structure_liquidity"
+    elif "orderflow_absorption" in concepts and "volume_profile" in concepts:
+        family = "orderflow_volume_profile"
+    elif "volume_profile" in concepts:
+        family = "volume_profile"
 
     # Entry signature for sub-clustering
     entry_sig = "+".join(sorted(set(entries))) or "unspecified"

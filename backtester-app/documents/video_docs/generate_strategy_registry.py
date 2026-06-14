@@ -152,6 +152,47 @@ def write_csv() -> None:
     print(f"Wrote {CSV_PATH} ({len(rows)} rows)")
 
 
+def build_largest_families_section() -> str:
+    """Build duplicate-family summary from VIDEOS so counts stay in sync."""
+    cluster_info: dict[str, dict] = {}
+    for r in VIDEOS:
+        cid = r[5]
+        if not cid or r[4] != "strategy":
+            continue
+        info = cluster_info.setdefault(
+            cid, {"name": r[6], "videos": [], "canonical": None}
+        )
+        info["videos"].append(r[0])
+        if r[7] == "CODE-CANONICAL":
+            info["canonical"] = r[0]
+
+    ranked = sorted(cluster_info.items(), key=lambda x: -len(x[1]["videos"]))
+    notes = {
+        "H": "Hyperparams: entry TF (1M vs 5M), Silver Bullet -1.0 vs -2/-2.5, daily bias gate.",
+        "K": "Hyperparams: HTF bias framing, SMT filter, session window.",
+        "F": "Hyperparams: IFVG vs breaker vs 2M CISD, 9:30 filter.",
+        "M": "Videos 58-60 are teaching repeats only.",
+        "C": "Videos **04** and **10** are exact duplicates — code once.",
+    }
+    lines = ["## Largest duplicate families\n"]
+    n = 0
+    for cid, info in ranked:
+        count = len(info["videos"])
+        if count < 2:
+            continue
+        n += 1
+        canon = info["canonical"] if info["canonical"] is not None else "?"
+        note = notes.get(cid, "")
+        suffix = f" {note}" if note else ""
+        lines.append(
+            f"{n}. **{cid} — {info['name']}** ({count} videos): "
+            f"Use video **{canon}** as canonical.{suffix}\n"
+        )
+        if n >= 5:
+            break
+    return "\n".join(lines)
+
+
 def write_findings() -> None:
   canonical = [r for r in VIDEOS if r[7] == "CODE-CANONICAL"]
   skip = [r for r in VIDEOS if r[7] in ("SKIP", "DUPLICATE-SKIP")]
@@ -197,15 +238,9 @@ Generated from Faiz SMC individual video docs in `individual/`.
     members = [str(v) for v in clusters.get(cid, [])]
     md += f"| `{mod}` | {cid} | **{vid}** | {', '.join(members)} |\n"
 
+  md += build_largest_families_section()
+
   md += """
-## Largest duplicate families
-
-1. **H — 10AM 4H PO3/AMD** (12 videos): Use video **31** as canonical. Hyperparams: entry TF (1M vs 5M), Silver Bullet -1.0 vs -2/-2.5, daily bias gate.
-2. **K — Post-9:30 IFVG ladder** (14 videos): Use video **28** as canonical. Hyperparams: HTF bias framing, SMT filter, session window.
-3. **F — 8AM one-candle sweep** (8 videos): Use video **42** as canonical. Hyperparams: IFVG vs breaker vs 2M CISD, 9:30 filter.
-4. **M — Gold Judas/Midas 8-9PM** (8 videos): Use video **56** as canonical. Videos 58-60 are teaching repeats only.
-5. **C — Gold London VP** (2 videos): Videos **04** and **10** are exact duplicates — code once.
-
 ## Non-strategy videos (do not code)
 
 | Video | Title | Reason |

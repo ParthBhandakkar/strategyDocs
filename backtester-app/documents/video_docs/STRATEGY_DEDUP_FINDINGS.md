@@ -46,14 +46,17 @@ Generated from Faiz SMC individual video docs in `individual/`.
 | `4h_swing_liquidity` | U | **77** | 77 |
 | `forex_session_judas` | V | **78** | 78 |
 | `osok_1h_po3` | W | **81** | 81 |
-
 ## Largest duplicate families
 
-1. **H — 10AM 4H PO3/AMD** (12 videos): Use video **31** as canonical. Hyperparams: entry TF (1M vs 5M), Silver Bullet -1.0 vs -2/-2.5, daily bias gate.
-2. **K — Post-9:30 IFVG ladder** (14 videos): Use video **28** as canonical. Hyperparams: HTF bias framing, SMT filter, session window.
-3. **F — 8AM one-candle sweep** (8 videos): Use video **42** as canonical. Hyperparams: IFVG vs breaker vs 2M CISD, 9:30 filter.
-4. **M — Gold Judas/Midas 8-9PM** (8 videos): Use video **56** as canonical. Videos 58-60 are teaching repeats only.
-5. **C — Gold London VP** (2 videos): Videos **04** and **10** are exact duplicates — code once.
+1. **K — Post-9:30 IFVG Ladder** (14 videos): Use video **28** as canonical. Hyperparams: HTF bias framing, SMT filter, session window.
+
+2. **H — 10AM 4H PO3 / AMD** (12 videos): Use video **31** as canonical. Hyperparams: entry TF (1M vs 5M), Silver Bullet -1.0 vs -2/-2.5, daily bias gate.
+
+3. **F — 8AM One-Candle Sweep** (8 videos): Use video **42** as canonical. Hyperparams: IFVG vs breaker vs 2M CISD, 9:30 filter.
+
+4. **M — Gold Judas / Midas 8-9PM** (5 videos): Use video **56** as canonical. Videos 58-60 are teaching repeats only.
+
+5. **I — HTF Trend + SMT + CISD** (4 videos): Use video **13** as canonical.
 
 ## Non-strategy videos (do not code)
 

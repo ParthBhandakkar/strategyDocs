@@ -542,11 +542,11 @@ Always cycle from 1-minute to 5-minute charts to find the highest-timeframe inve
 
 Prioritize sharp, clean V-shaped recoveries and avoid slow, grinding consolidations inside your target zones.
 
-<ElicitationsGroup message="To further develop your edge with these ICT concepts:">
-``
-<Elicitation label="Explain the mechanics of SMT Divergence" query="Can you detail exactly how to spot and validate SMT divergence between NQ and ES futures, including candle body versus wick rules?"/>
-<Elicitation label="Break down the Change in State of Delivery (CISD)" query="What are the precise structural conditions required to confirm a Change in State of Delivery (CISD) on a 1-minute timeframe?"/>
-</ElicitationsGroup>
+**Suggested follow-ups:**
+
+- Explain the mechanics of SMT Divergence: how to spot and validate SMT divergence between NQ and ES futures, including candle body versus wick rules.
+- Break down the Change in State of Delivery (CISD): the precise structural conditions required to confirm a CISD on a 1-minute timeframe.
+
 This Trading Strategy Will Change Your Life In 2026
 Faiz SMC · 17K views
 I Simplified ICT AMD Trading Strategy..

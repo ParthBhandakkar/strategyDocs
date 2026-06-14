@@ -91,6 +91,13 @@ def extract(path: Path, content: str) -> dict:
     lower = content.lower()
     if re.search(r"backtest(ing)?\s+tutorial|increase your trading skills.*backtest", lower):
         non_strategy, ns_reason = True, "backtesting tutorial"
+    elif re.search(
+        r"become a profitable trader in one day|please quit trading|"
+        r"failing as a trader|mindfulness for traders|"
+        r"give me 6 minutes of your life",
+        lower,
+    ):
+        non_strategy, ns_reason = True, "mindset"
     elif re.search(r"mindfulness|meditat|quit trading|failing as a trader", lower) and steps < 3:
         non_strategy, ns_reason = True, "mindset"
     elif re.search(r"life of a day trader", lower):
