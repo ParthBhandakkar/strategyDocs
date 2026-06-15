@@ -188,3 +188,23 @@ class MT5Client:
     def close(self):
         """Close the HTTP client."""
         self._client.close()
+
+
+from backtester.connectors.local_history_client import (  # noqa: E402
+    DEFAULT_HISTORY_PATH,
+    LocalHistoryClient,
+)
+from backtester.connectors.synthetic_client import SyntheticDataClient  # noqa: E402
+from backtester.connectors.data_client_factory import (  # noqa: E402
+    default_history_path,
+    get_data_client,
+)
+
+__all__ = [
+    "MT5Client",
+    "LocalHistoryClient",
+    "SyntheticDataClient",
+    "DEFAULT_HISTORY_PATH",
+    "default_history_path",
+    "get_data_client",
+]
