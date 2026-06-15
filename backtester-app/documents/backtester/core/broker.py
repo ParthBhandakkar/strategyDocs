@@ -42,8 +42,26 @@ class SimulatedBroker:
             self.pip_value = 0.1
         elif "XAG" in sym or "SILVER" in sym:
             self.pip_value = 0.01
+        elif "BTC" in sym or "ETH" in sym:
+            self.pip_value = 1.0
         else:
             self.pip_value = 0.0001
+        self._symbol = sym
+
+    def get_usd_per_pip(self, lot_size: float) -> float:
+        """USD value of one pip for the current symbol at given lot size."""
+        sym = getattr(self, "_symbol", "EURUSD")
+        # Standard lot = 100k units; mini = 10k; micro = 1k
+        contract_units = lot_size * 100_000
+        if "JPY" in sym:
+            return contract_units * self.pip_value / 100.0
+        if "XAU" in sym or "GOLD" in sym:
+            return lot_size * 100 * self.pip_value
+        if "XAG" in sym or "SILVER" in sym:
+            return lot_size * 5000 * self.pip_value
+        if "BTC" in sym or "ETH" in sym:
+            return lot_size * self.pip_value
+        return contract_units * self.pip_value
 
     def execute_signal(
         self,
@@ -66,9 +84,8 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
-        lot_size = risk_amount / (pip_distance * pip_value_per_lot)
+        pip_value_per_lot = self.get_usd_per_pip(1.0)
+        lot_size = risk_amount / (pip_distance * pip_value_per_lot) if pip_value_per_lot > 0 else 0.01
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
         # Apply spread and slippage
@@ -98,6 +115,9 @@ class SimulatedBroker:
         self._next_trade_id += 1
 
         # Create position
+        trade.metadata["lot_size"] = lot_size
+        trade.metadata["commission"] = commission
+
         position = Position(trade=trade, lot_size=lot_size)
         self.open_positions.append(position)
 

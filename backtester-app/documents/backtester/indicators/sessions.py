@@ -1,11 +1,18 @@
 """
-Session Boundaries — Asia, London, New York killzones.
+Session boundaries — Asia, London, New York killzones.
+Uses America/New_York timezone (DST-aware).
 """
 from __future__ import annotations
-from dataclasses import dataclass, field
-from datetime import datetime, time, timedelta
+
+from dataclasses import dataclass
+from datetime import datetime, time, timedelta, timezone
 from typing import Optional
+from zoneinfo import ZoneInfo
+
 from backtester.core import Bar
+
+NY_TZ = ZoneInfo("America/New_York")
+
 
 @dataclass
 class SessionRange:
@@ -13,9 +20,10 @@ class SessionRange:
     start_time: datetime = None
     end_time: datetime = None
     high: float = 0.0
-    low: float = float('inf')
+    low: float = float("inf")
     open_price: float = 0.0
     close_price: float = 0.0
+
 
 SESSIONS = {
     "asia": {"start": time(20, 0), "end": time(0, 0), "cross": True},
@@ -24,21 +32,28 @@ SESSIONS = {
     "london_killzone": {"start": time(3, 0), "end": time(5, 0), "cross": False},
     "ny_killzone": {"start": time(7, 0), "end": time(11, 0), "cross": False},
     "ny_am": {"start": time(9, 30), "end": time(12, 0), "cross": False},
+    "ny_pm": {"start": time(12, 0), "end": time(14, 0), "cross": False},
 }
 
 RESTRICTED_HOURS = {
     "ny_lunch": {"start": time(12, 0), "end": time(13, 30)},
 }
 
+
 def get_ny_time(utc_time: datetime) -> datetime:
-    return utc_time - timedelta(hours=5)
+    """Convert UTC (or naive-as-UTC) datetime to New York local time."""
+    if utc_time.tzinfo is None:
+        utc_time = utc_time.replace(tzinfo=timezone.utc)
+    return utc_time.astimezone(NY_TZ)
+
 
 def is_restricted_hour(utc_time: datetime) -> bool:
     ny = get_ny_time(utc_time)
-    for _, r in RESTRICTED_HOURS.items():
+    for r in RESTRICTED_HOURS.values():
         if r["start"] <= ny.time() <= r["end"]:
             return True
     return False
+
 
 def is_in_session(utc_time: datetime, session_name: str) -> bool:
     ny = get_ny_time(utc_time)
@@ -49,8 +64,16 @@ def is_in_session(utc_time: datetime, session_name: str) -> bool:
         return ny.time() >= s["start"] or ny.time() <= s["end"]
     return s["start"] <= ny.time() <= s["end"]
 
+
 def is_in_killzone(utc_time: datetime, kz: str = "ny_killzone") -> bool:
     return is_in_session(utc_time, kz)
+
+
+def is_post_ny_open(utc_time: datetime) -> bool:
+    """True after 9:30 AM NY (cash open / developing VP start)."""
+    ny = get_ny_time(utc_time)
+    return ny.time() >= time(9, 30)
+
 
 def get_candle_at_time(bars: list[Bar], hour: int, minute: int = 0) -> Optional[Bar]:
     for bar in reversed(bars):
@@ -59,15 +82,22 @@ def get_candle_at_time(bars: list[Bar], hour: int, minute: int = 0) -> Optional[
             return bar
     return None
 
+
 def get_session_range(bars: list[Bar], session_name: str) -> Optional[SessionRange]:
     sb = [b for b in bars if is_in_session(b.time, session_name)]
     if not sb:
         return None
-    sr = SessionRange(name=session_name, start_time=sb[0].time, end_time=sb[-1].time,
-                      open_price=sb[0].open, close_price=sb[-1].close)
+    sr = SessionRange(
+        name=session_name,
+        start_time=sb[0].time,
+        end_time=sb[-1].time,
+        open_price=sb[0].open,
+        close_price=sb[-1].close,
+    )
     sr.high = max(b.high for b in sb)
     sr.low = min(b.low for b in sb)
     return sr
+
 
 def get_previous_day_high_low(bars: list[Bar], utc_time: datetime) -> tuple[float, float]:
     target = get_ny_time(utc_time).date() - timedelta(days=1)
