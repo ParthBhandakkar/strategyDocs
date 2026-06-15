@@ -1,0 +1,1 @@
+[IST 15-Jun-2026 18:30:00] - Bootstrapped folder-based backtester pipeline: Exness CSV connector, main_backtester CLI, Video #1 vp_orderflow_absorption strategy; removed legacy flat s*.py and MT5 server artifacts.

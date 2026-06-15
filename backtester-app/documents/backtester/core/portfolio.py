@@ -1,5 +1,5 @@
 """
-Portfolio Manager — tracks equity, drawdown, and generates equity curve.
+Portfolio Manager — consistent USD PnL model with commission.
 """
 
 from __future__ import annotations
@@ -7,6 +7,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from . import BacktestConfig, BacktestResult, Trade
+from .broker import SimulatedBroker
 
 
 class Portfolio:
@@ -19,22 +20,23 @@ class Portfolio:
         self.equity_curve: list[dict] = []
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
+        self._total_commission = 0.0
 
-    def on_trade_closed(self, trade: Trade):
-        """Update portfolio when a trade is closed."""
-        self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
-        self.balance += pnl_usd
+    def on_commission(self, commission: float):
+        self._total_commission += commission
+        self.balance -= commission
+
+    def on_trade_closed(self, trade: Trade, broker: SimulatedBroker):
+        """Update portfolio using lot-based USD PnL."""
+        pos_lot = trade.metadata.get("lot_size", 0.01)
+        pip_value_per_lot = broker.pip_value_per_lot_usd(trade.symbol)
+        pnl_usd = trade.pnl_pips * pip_value_per_lot * pos_lot
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        trade.metadata["lot_size"] = pos_lot
+        self.balance += pnl_usd
+        self.trades.append(trade)
 
     def record_equity(self, timestamp: datetime):
-        """Record a point on the equity curve."""
         self.equity_curve.append({
             "time": timestamp.isoformat(),
             "equity": round(self.balance, 2),
@@ -43,11 +45,11 @@ class Portfolio:
             self._peak_equity = self.balance
 
     def get_result(self) -> BacktestResult:
-        """Generate the final backtest result with computed statistics."""
         result = BacktestResult(
             config=self.config,
             trades=self.trades,
             equity_curve=self.equity_curve,
         )
         result.compute_stats()
+        result.total_pnl = round(self.balance - self.initial_balance, 2)
         return result
