@@ -128,7 +128,14 @@ class Trade:
     steps: list[StepRecord] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
 
-    def close(self, exit_time: datetime, exit_price: float, pip_value: float = 0.0001):
+    def close(
+        self,
+        exit_time: datetime,
+        exit_price: float,
+        pip_value: float = 0.0001,
+        lot_size: float = 0.01,
+        pip_value_usd_per_lot: float = 10.0,
+    ):
         """Close the trade and calculate PnL."""
         self.exit_time = exit_time
         self.exit_price = exit_price
@@ -145,6 +152,11 @@ class Trade:
         risk = abs(self.entry_price - self.stop_loss)
         if risk > 0:
             self.risk_reward_achieved = round(self.pnl / risk, 2)
+
+        pnl_usd = self.pnl_pips * pip_value_usd_per_lot * lot_size
+        commission = float(self.metadata.get("commission", 0.0))
+        self.metadata["pnl_usd"] = round(pnl_usd - commission, 2)
+        self.metadata["lot_size"] = lot_size
 
 
 @dataclass
@@ -233,17 +245,19 @@ class BacktestResult:
         if self.total_trades == 0:
             return
 
-        winners = [t for t in self.trades if t.pnl > 0]
-        losers = [t for t in self.trades if t.pnl <= 0]
+        winners = [t for t in self.trades if float(t.metadata.get("pnl_usd", 0)) > 0]
+        losers = [t for t in self.trades if float(t.metadata.get("pnl_usd", 0)) <= 0]
         self.winning_trades = len(winners)
         self.losing_trades = len(losers)
         self.win_rate = round(self.winning_trades / self.total_trades * 100, 2)
 
-        gross_profit = sum(t.pnl for t in winners) if winners else 0
-        gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
+        gross_profit = sum(float(t.metadata.get("pnl_usd", 0)) for t in winners) if winners else 0
+        gross_loss = abs(sum(float(t.metadata.get("pnl_usd", 0)) for t in losers)) if losers else 0
         self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = sum(
+            float(t.metadata.get("pnl_usd", 0.0)) for t in self.trades
+        )
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )
