@@ -1,0 +1,21 @@
+strategy_id: s001_vp_orderflow_absorption
+module: vp_orderflow_absorption
+video_number: 1
+cluster: A
+asset_focus_hint: [XAUUSD, GBPUSD, EURUSD]
+
+backtest_defaults:
+  initial_balance: 10000.0
+  risk_per_trade: 0.01
+  spread_pips: 1.0
+  slippage_pips: 0.5
+  commission_per_lot: 7.0
+
+required_timeframes: [D1, M1]
+min_trades_for_ranking: 10
+
+parameters:
+  min_wick_volume_ratio: 1.5
+  cluster_lookback: 8
+  proximity_pips: 15
+  default_rr: 1.0
