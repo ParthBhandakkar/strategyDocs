@@ -13,7 +13,7 @@ from typing import Optional
 from backtester.core import Bar
 from backtester.core.timeframes import TF, tf_to_minutes, sort_timeframes
 from backtester.core.events import MarketEvent
-from backtester.connectors import MT5Client
+from backtester.connectors import MT5Client  # noqa: F401 — protocol-compatible client
 
 
 class MultiTimeframeDataFeed:
