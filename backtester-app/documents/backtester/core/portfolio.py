@@ -1,5 +1,6 @@
 """
 Portfolio Manager — tracks equity, drawdown, and generates equity curve.
+Uses a consistent USD PnL model based on lot size and pip value.
 """
 
 from __future__ import annotations
@@ -7,6 +8,17 @@ from __future__ import annotations
 from datetime import datetime
 
 from . import BacktestConfig, BacktestResult, Trade
+
+
+def trade_pnl_usd(trade: Trade) -> float:
+    lot_size = float(trade.metadata.get("lot_size", 0.01))
+    pip_value = float(trade.metadata.get("pip_value", 0.0001))
+    pip_value_per_lot = float(trade.metadata.get("pip_value_per_lot", 10.0))
+    commission = float(trade.metadata.get("commission", 0.0))
+    if pip_value <= 0:
+        return -commission
+    pips = trade.pnl / pip_value
+    return round(pips * pip_value_per_lot * lot_size - commission, 2)
 
 
 class Portfolio:
@@ -22,23 +34,19 @@ class Portfolio:
 
     def on_trade_closed(self, trade: Trade):
         """Update portfolio when a trade is closed."""
+        pnl_usd = trade_pnl_usd(trade)
+        trade.metadata["pnl_usd"] = pnl_usd
         self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
         self.balance += pnl_usd
-        trade.metadata["pnl_usd"] = round(pnl_usd, 2)
 
     def record_equity(self, timestamp: datetime):
         """Record a point on the equity curve."""
-        self.equity_curve.append({
-            "time": timestamp.isoformat(),
-            "equity": round(self.balance, 2),
-        })
+        self.equity_curve.append(
+            {
+                "time": timestamp.isoformat(),
+                "equity": round(self.balance, 2),
+            }
+        )
         if self.balance > self._peak_equity:
             self._peak_equity = self.balance
 
