@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from backtester.strategies.registry import get_strategy
 from backtester.core import BacktestConfig
 from backtester.core.engine import BacktestEngine
-from backtester.connectors import MT5Client
+from backtester.connectors import get_data_client
 
 router = APIRouter()
 
@@ -49,7 +49,7 @@ async def run_backtest(req: BacktestRequest):
         risk_per_trade=req.risk_per_trade,
     )
     
-    client = MT5Client()
+    client = get_data_client()
     strategy = StratClass()
     engine = BacktestEngine(config, strategy, client)
     
