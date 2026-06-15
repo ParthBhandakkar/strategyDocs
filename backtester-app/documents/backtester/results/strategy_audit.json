@@ -1,0 +1,494 @@
+{
+  "summary": {
+    "total_csv_videos": 90,
+    "backtestable_videos": 75,
+    "unique_canonical_modules": 22,
+    "coded_modules": 14,
+    "implemented_modules": 5,
+    "backtested_modules": 1,
+    "missing_module_files": 8,
+    "stub_only_modules": 9,
+    "not_backtested_implemented": 4
+  },
+  "modules": [
+    {
+      "module": "vp_orderflow_absorption",
+      "cluster": "A",
+      "canonical_video": 1,
+      "title": "Orderflow and Volume Profile Day Trading Strategy",
+      "strategy_file": "s001_orderflow_volume_profile.py",
+      "strategy_id": "s001_orderflow_volume_profile",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "gold_london_vp_failed_auction",
+      "cluster": "C",
+      "canonical_video": 4,
+      "title": "Gold Fixed Range Volume Profile Scalping Strategy",
+      "strategy_file": "s004_volume_profile_auction.py",
+      "strategy_id": "s004_volume_profile_auction",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "multi_vp_ict",
+      "cluster": "D",
+      "canonical_video": 5,
+      "title": "Macro Volume Profile and ICT Confluence Strategy",
+      "strategy_file": "s005_macro_volume_profile.py",
+      "strategy_id": "s005_macro_volume_profile",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "htf_fvg_inversion",
+      "cluster": "E",
+      "canonical_video": 6,
+      "title": "Fractal-Based Inversion Order Flow Strategy",
+      "strategy_file": "s006_fractal_inversion_orderflow.py",
+      "strategy_id": "s006_fractal_inversion_orderflow",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "vp_failed_auction_generic",
+      "cluster": "G",
+      "canonical_video": 8,
+      "title": "Volume Profile Auction Breakout Strategy",
+      "strategy_file": "s008_volume_profile_auction_breakout.py",
+      "strategy_id": "s008_volume_profile_auction_breakout",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "htf_trend_smt_cisd",
+      "cluster": "I",
+      "canonical_video": 13,
+      "title": "The 3-Step A+ ICT Gold Strategy",
+      "strategy_file": "s013_800am_candle.py",
+      "strategy_id": "s013_800am_candle",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "hourly_po3_fib",
+      "cluster": "J",
+      "canonical_video": 17,
+      "title": "1H Pattern Nobody Talks About",
+      "strategy_file": "s017_1h_pattern.py",
+      "strategy_id": "s017_1h_pattern",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "ifvg_inversion_ladder",
+      "cluster": "K",
+      "canonical_video": 28,
+      "title": "Multi-Timeframe Highest Inversion FVG Model",
+      "strategy_file": "s028_mtf_high_inversion_fvg.py",
+      "strategy_id": "s028_mtf_high_inversion_fvg",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "tbv_absorption",
+      "cluster": "L",
+      "canonical_video": 29,
+      "title": "Time-Based Volume (TBV) Core Strategy",
+      "strategy_file": "s029_time_based_volume_tbv.py",
+      "strategy_id": "s029_time_based_volume_tbv",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "po3_10am_4h",
+      "cluster": "H",
+      "canonical_video": 31,
+      "title": "One Trading Setup For Life - ICT 10AM PO3",
+      "strategy_file": "s031_10am_po3.py",
+      "strategy_id": "s031_10am_po3",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "daily_bias_judas",
+      "cluster": "N",
+      "canonical_video": 39,
+      "title": "Mechanical 2-Day Daily Bias Strategy",
+      "strategy_file": "s039_mechanical_2day_daily_bias.py",
+      "strategy_id": "s039_mechanical_2day_daily_bias",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "one_candle_8am",
+      "cluster": "F",
+      "canonical_video": 42,
+      "title": "8 AM One-Candle Trading Strategy",
+      "strategy_file": "s042_8am_one_candle.py",
+      "strategy_id": "s042_8am_one_candle",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "london_orb",
+      "cluster": "O",
+      "canonical_video": 44,
+      "title": "Lazy Liquidity / Mechanical ORB",
+      "strategy_file": "s044_lazy_liquidity_orb.py",
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "session_dol_fib",
+      "cluster": "P",
+      "canonical_video": 52,
+      "title": "Finding Correct Draw on Liquidity",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "range_sweep_mss",
+      "cluster": "Q",
+      "canonical_video": 54,
+      "title": "Liquidity Range Trading Strategy",
+      "strategy_file": "s054_range_sweep_mss.py",
+      "strategy_id": "s054_range_sweep_mss",
+      "coded": true,
+      "implemented": true,
+      "backtested": true
+    },
+    {
+      "module": "gold_judas_8pm",
+      "cluster": "M",
+      "canonical_video": 56,
+      "title": "Midas Model Scalping Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "continuation_purge",
+      "cluster": "R",
+      "canonical_video": 62,
+      "title": "Continuation Purge Entry Model",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "us30_judas",
+      "cluster": "S",
+      "canonical_video": 65,
+      "title": "US30 Judas Swing Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "mmxm",
+      "cluster": "T",
+      "canonical_video": 69,
+      "title": "ICT Market Maker Model (MMXM)",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "4h_swing_liquidity",
+      "cluster": "U",
+      "canonical_video": 77,
+      "title": "Simple ICT Liquidity Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "forex_session_judas",
+      "cluster": "V",
+      "canonical_video": 78,
+      "title": "Easy Judas Swing Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "osok_1h_po3",
+      "cluster": "W",
+      "canonical_video": 81,
+      "title": "ICT Power of 3 1-Minute Scalping (OSOK)",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    }
+  ],
+  "missing_files": [
+    {
+      "module": "session_dol_fib",
+      "cluster": "P",
+      "canonical_video": 52,
+      "title": "Finding Correct Draw on Liquidity",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "gold_judas_8pm",
+      "cluster": "M",
+      "canonical_video": 56,
+      "title": "Midas Model Scalping Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "continuation_purge",
+      "cluster": "R",
+      "canonical_video": 62,
+      "title": "Continuation Purge Entry Model",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "us30_judas",
+      "cluster": "S",
+      "canonical_video": 65,
+      "title": "US30 Judas Swing Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "mmxm",
+      "cluster": "T",
+      "canonical_video": 69,
+      "title": "ICT Market Maker Model (MMXM)",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "4h_swing_liquidity",
+      "cluster": "U",
+      "canonical_video": 77,
+      "title": "Simple ICT Liquidity Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "forex_session_judas",
+      "cluster": "V",
+      "canonical_video": 78,
+      "title": "Easy Judas Swing Strategy",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "osok_1h_po3",
+      "cluster": "W",
+      "canonical_video": 81,
+      "title": "ICT Power of 3 1-Minute Scalping (OSOK)",
+      "strategy_file": null,
+      "strategy_id": null,
+      "coded": false,
+      "implemented": false,
+      "backtested": false
+    }
+  ],
+  "stubs": [
+    {
+      "module": "vp_orderflow_absorption",
+      "cluster": "A",
+      "canonical_video": 1,
+      "title": "Orderflow and Volume Profile Day Trading Strategy",
+      "strategy_file": "s001_orderflow_volume_profile.py",
+      "strategy_id": "s001_orderflow_volume_profile",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "multi_vp_ict",
+      "cluster": "D",
+      "canonical_video": 5,
+      "title": "Macro Volume Profile and ICT Confluence Strategy",
+      "strategy_file": "s005_macro_volume_profile.py",
+      "strategy_id": "s005_macro_volume_profile",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "vp_failed_auction_generic",
+      "cluster": "G",
+      "canonical_video": 8,
+      "title": "Volume Profile Auction Breakout Strategy",
+      "strategy_file": "s008_volume_profile_auction_breakout.py",
+      "strategy_id": "s008_volume_profile_auction_breakout",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "hourly_po3_fib",
+      "cluster": "J",
+      "canonical_video": 17,
+      "title": "1H Pattern Nobody Talks About",
+      "strategy_file": "s017_1h_pattern.py",
+      "strategy_id": "s017_1h_pattern",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "ifvg_inversion_ladder",
+      "cluster": "K",
+      "canonical_video": 28,
+      "title": "Multi-Timeframe Highest Inversion FVG Model",
+      "strategy_file": "s028_mtf_high_inversion_fvg.py",
+      "strategy_id": "s028_mtf_high_inversion_fvg",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "tbv_absorption",
+      "cluster": "L",
+      "canonical_video": 29,
+      "title": "Time-Based Volume (TBV) Core Strategy",
+      "strategy_file": "s029_time_based_volume_tbv.py",
+      "strategy_id": "s029_time_based_volume_tbv",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "po3_10am_4h",
+      "cluster": "H",
+      "canonical_video": 31,
+      "title": "One Trading Setup For Life - ICT 10AM PO3",
+      "strategy_file": "s031_10am_po3.py",
+      "strategy_id": "s031_10am_po3",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "daily_bias_judas",
+      "cluster": "N",
+      "canonical_video": 39,
+      "title": "Mechanical 2-Day Daily Bias Strategy",
+      "strategy_file": "s039_mechanical_2day_daily_bias.py",
+      "strategy_id": "s039_mechanical_2day_daily_bias",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    },
+    {
+      "module": "one_candle_8am",
+      "cluster": "F",
+      "canonical_video": 42,
+      "title": "8 AM One-Candle Trading Strategy",
+      "strategy_file": "s042_8am_one_candle.py",
+      "strategy_id": "s042_8am_one_candle",
+      "coded": true,
+      "implemented": false,
+      "backtested": false
+    }
+  ],
+  "needs_backtest": [
+    {
+      "module": "gold_london_vp_failed_auction",
+      "cluster": "C",
+      "canonical_video": 4,
+      "title": "Gold Fixed Range Volume Profile Scalping Strategy",
+      "strategy_file": "s004_volume_profile_auction.py",
+      "strategy_id": "s004_volume_profile_auction",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "htf_fvg_inversion",
+      "cluster": "E",
+      "canonical_video": 6,
+      "title": "Fractal-Based Inversion Order Flow Strategy",
+      "strategy_file": "s006_fractal_inversion_orderflow.py",
+      "strategy_id": "s006_fractal_inversion_orderflow",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "htf_trend_smt_cisd",
+      "cluster": "I",
+      "canonical_video": 13,
+      "title": "The 3-Step A+ ICT Gold Strategy",
+      "strategy_file": "s013_800am_candle.py",
+      "strategy_id": "s013_800am_candle",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    },
+    {
+      "module": "london_orb",
+      "cluster": "O",
+      "canonical_video": 44,
+      "title": "Lazy Liquidity / Mechanical ORB",
+      "strategy_file": "s044_lazy_liquidity_orb.py",
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "coded": true,
+      "implemented": true,
+      "backtested": false
+    }
+  ]
+}
