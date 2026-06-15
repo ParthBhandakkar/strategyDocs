@@ -13,7 +13,7 @@ from typing import Optional
 from backtester.core import Bar
 from backtester.core.timeframes import TF, tf_to_minutes, sort_timeframes
 from backtester.core.events import MarketEvent
-from backtester.connectors import MT5Client
+from backtester.connectors.data_client import DataClient
 
 
 class MultiTimeframeDataFeed:
@@ -25,7 +25,7 @@ class MultiTimeframeDataFeed:
 
     def __init__(
         self,
-        client: MT5Client,
+        client: DataClient,
         symbol: str,
         timeframes: list[TF],
         start: datetime,

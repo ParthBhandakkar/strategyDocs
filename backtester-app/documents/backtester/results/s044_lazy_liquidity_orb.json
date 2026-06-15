@@ -1,0 +1,4105 @@
+{
+  "config": {
+    "strategy_id": "s044_lazy_liquidity_orb",
+    "symbol": "GBPUSD",
+    "start_date": "2024-01-01T00:00:00+00:00",
+    "end_date": "2024-02-29T00:00:00+00:00",
+    "initial_balance": 10000.0,
+    "risk_per_trade": 0.01
+  },
+  "stats": {
+    "total_trades": 59,
+    "winning_trades": 32,
+    "losing_trades": 27,
+    "win_rate": 54.24,
+    "profit_factor": 4.73,
+    "max_drawdown": 300.0,
+    "max_drawdown_pct": 3.0,
+    "total_pnl": 0.19,
+    "sharpe_ratio": 4.29,
+    "avg_rr": 0.72,
+    "avg_trade_duration_mins": 146.7
+  },
+  "equity_curve": [
+    {
+      "time": "2024-01-01T06:45:00+00:00",
+      "equity": 10000.0
+    },
+    {
+      "time": "2024-01-01T13:45:00+00:00",
+      "equity": 9900.0
+    },
+    {
+      "time": "2024-01-01T20:45:00+00:00",
+      "equity": 9900.0
+    },
+    {
+      "time": "2024-01-02T03:45:00+00:00",
+      "equity": 9900.0
+    },
+    {
+      "time": "2024-01-02T10:45:00+00:00",
+      "equity": 9900.0
+    },
+    {
+      "time": "2024-01-02T17:45:00+00:00",
+      "equity": 10094.0
+    },
+    {
+      "time": "2024-01-03T00:45:00+00:00",
+      "equity": 10094.0
+    },
+    {
+      "time": "2024-01-03T07:45:00+00:00",
+      "equity": 10094.0
+    },
+    {
+      "time": "2024-01-03T14:45:00+00:00",
+      "equity": 9994.0
+    },
+    {
+      "time": "2024-01-03T21:45:00+00:00",
+      "equity": 9994.0
+    },
+    {
+      "time": "2024-01-04T04:45:00+00:00",
+      "equity": 9994.0
+    },
+    {
+      "time": "2024-01-04T11:45:00+00:00",
+      "equity": 9894.0
+    },
+    {
+      "time": "2024-01-04T18:45:00+00:00",
+      "equity": 9894.0
+    },
+    {
+      "time": "2024-01-05T01:45:00+00:00",
+      "equity": 9894.0
+    },
+    {
+      "time": "2024-01-05T08:45:00+00:00",
+      "equity": 9894.0
+    },
+    {
+      "time": "2024-01-05T15:45:00+00:00",
+      "equity": 10074.0
+    },
+    {
+      "time": "2024-01-05T22:45:00+00:00",
+      "equity": 10074.0
+    },
+    {
+      "time": "2024-01-06T05:45:00+00:00",
+      "equity": 10074.0
+    },
+    {
+      "time": "2024-01-06T12:45:00+00:00",
+      "equity": 10252.0
+    },
+    {
+      "time": "2024-01-06T19:45:00+00:00",
+      "equity": 10252.0
+    },
+    {
+      "time": "2024-01-07T02:45:00+00:00",
+      "equity": 10252.0
+    },
+    {
+      "time": "2024-01-07T09:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-07T16:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-07T23:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-08T06:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-08T13:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-08T20:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-09T03:45:00+00:00",
+      "equity": 10437.0
+    },
+    {
+      "time": "2024-01-09T10:45:00+00:00",
+      "equity": 10337.0
+    },
+    {
+      "time": "2024-01-09T17:45:00+00:00",
+      "equity": 10337.0
+    },
+    {
+      "time": "2024-01-10T00:45:00+00:00",
+      "equity": 10337.0
+    },
+    {
+      "time": "2024-01-10T07:45:00+00:00",
+      "equity": 10337.0
+    },
+    {
+      "time": "2024-01-10T14:45:00+00:00",
+      "equity": 10532.0
+    },
+    {
+      "time": "2024-01-10T21:45:00+00:00",
+      "equity": 10532.0
+    },
+    {
+      "time": "2024-01-11T04:45:00+00:00",
+      "equity": 10532.0
+    },
+    {
+      "time": "2024-01-11T11:45:00+00:00",
+      "equity": 10532.0
+    },
+    {
+      "time": "2024-01-11T18:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-12T01:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-12T08:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-12T15:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-12T22:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-13T05:45:00+00:00",
+      "equity": 10432.0
+    },
+    {
+      "time": "2024-01-13T12:45:00+00:00",
+      "equity": 10623.0
+    },
+    {
+      "time": "2024-01-13T19:45:00+00:00",
+      "equity": 10623.0
+    },
+    {
+      "time": "2024-01-14T02:45:00+00:00",
+      "equity": 10623.0
+    },
+    {
+      "time": "2024-01-14T09:45:00+00:00",
+      "equity": 10623.0
+    },
+    {
+      "time": "2024-01-14T16:45:00+00:00",
+      "equity": 10815.0
+    },
+    {
+      "time": "2024-01-14T23:45:00+00:00",
+      "equity": 10815.0
+    },
+    {
+      "time": "2024-01-15T06:45:00+00:00",
+      "equity": 10815.0
+    },
+    {
+      "time": "2024-01-15T13:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-15T20:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-16T03:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-16T10:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-16T17:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-17T00:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-17T07:45:00+00:00",
+      "equity": 11008.0
+    },
+    {
+      "time": "2024-01-17T14:45:00+00:00",
+      "equity": 11201.0
+    },
+    {
+      "time": "2024-01-17T21:45:00+00:00",
+      "equity": 11201.0
+    },
+    {
+      "time": "2024-01-18T04:45:00+00:00",
+      "equity": 11201.0
+    },
+    {
+      "time": "2024-01-18T11:45:00+00:00",
+      "equity": 11392.0
+    },
+    {
+      "time": "2024-01-18T18:45:00+00:00",
+      "equity": 11392.0
+    },
+    {
+      "time": "2024-01-19T01:45:00+00:00",
+      "equity": 11392.0
+    },
+    {
+      "time": "2024-01-19T08:45:00+00:00",
+      "equity": 11392.0
+    },
+    {
+      "time": "2024-01-19T15:45:00+00:00",
+      "equity": 11588.0
+    },
+    {
+      "time": "2024-01-19T22:45:00+00:00",
+      "equity": 11588.0
+    },
+    {
+      "time": "2024-01-20T05:45:00+00:00",
+      "equity": 11588.0
+    },
+    {
+      "time": "2024-01-20T12:45:00+00:00",
+      "equity": 11488.0
+    },
+    {
+      "time": "2024-01-20T19:45:00+00:00",
+      "equity": 11488.0
+    },
+    {
+      "time": "2024-01-21T02:45:00+00:00",
+      "equity": 11488.0
+    },
+    {
+      "time": "2024-01-21T09:45:00+00:00",
+      "equity": 11680.0
+    },
+    {
+      "time": "2024-01-21T16:45:00+00:00",
+      "equity": 11680.0
+    },
+    {
+      "time": "2024-01-21T23:45:00+00:00",
+      "equity": 11680.0
+    },
+    {
+      "time": "2024-01-22T06:45:00+00:00",
+      "equity": 11680.0
+    },
+    {
+      "time": "2024-01-22T13:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-22T20:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-23T03:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-23T10:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-23T17:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-24T00:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-24T07:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-24T14:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-24T21:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-25T04:45:00+00:00",
+      "equity": 11580.0
+    },
+    {
+      "time": "2024-01-25T11:45:00+00:00",
+      "equity": 11480.0
+    },
+    {
+      "time": "2024-01-25T18:45:00+00:00",
+      "equity": 11480.0
+    },
+    {
+      "time": "2024-01-26T01:45:00+00:00",
+      "equity": 11480.0
+    },
+    {
+      "time": "2024-01-26T08:45:00+00:00",
+      "equity": 11480.0
+    },
+    {
+      "time": "2024-01-26T15:45:00+00:00",
+      "equity": 11664.0
+    },
+    {
+      "time": "2024-01-26T22:45:00+00:00",
+      "equity": 11664.0
+    },
+    {
+      "time": "2024-01-27T05:45:00+00:00",
+      "equity": 11664.0
+    },
+    {
+      "time": "2024-01-27T12:45:00+00:00",
+      "equity": 11847.0
+    },
+    {
+      "time": "2024-01-27T19:45:00+00:00",
+      "equity": 11847.0
+    },
+    {
+      "time": "2024-01-28T02:45:00+00:00",
+      "equity": 11847.0
+    },
+    {
+      "time": "2024-01-28T09:45:00+00:00",
+      "equity": 11847.0
+    },
+    {
+      "time": "2024-01-28T16:45:00+00:00",
+      "equity": 11847.0
+    },
+    {
+      "time": "2024-01-28T23:45:00+00:00",
+      "equity": 12044.0
+    },
+    {
+      "time": "2024-01-29T06:45:00+00:00",
+      "equity": 12044.0
+    },
+    {
+      "time": "2024-01-29T13:45:00+00:00",
+      "equity": 12237.0
+    },
+    {
+      "time": "2024-01-29T20:45:00+00:00",
+      "equity": 12237.0
+    },
+    {
+      "time": "2024-01-30T03:45:00+00:00",
+      "equity": 12237.0
+    },
+    {
+      "time": "2024-01-30T10:45:00+00:00",
+      "equity": 12432.0
+    },
+    {
+      "time": "2024-01-30T17:45:00+00:00",
+      "equity": 12432.0
+    },
+    {
+      "time": "2024-01-31T00:45:00+00:00",
+      "equity": 12432.0
+    },
+    {
+      "time": "2024-01-31T07:45:00+00:00",
+      "equity": 12432.0
+    },
+    {
+      "time": "2024-01-31T14:45:00+00:00",
+      "equity": 12627.0
+    },
+    {
+      "time": "2024-01-31T21:45:00+00:00",
+      "equity": 12627.0
+    },
+    {
+      "time": "2024-02-01T04:45:00+00:00",
+      "equity": 12627.0
+    },
+    {
+      "time": "2024-02-01T11:45:00+00:00",
+      "equity": 12627.0
+    },
+    {
+      "time": "2024-02-01T18:45:00+00:00",
+      "equity": 12821.0
+    },
+    {
+      "time": "2024-02-02T01:45:00+00:00",
+      "equity": 12821.0
+    },
+    {
+      "time": "2024-02-02T08:45:00+00:00",
+      "equity": 12721.0
+    },
+    {
+      "time": "2024-02-02T15:45:00+00:00",
+      "equity": 12721.0
+    },
+    {
+      "time": "2024-02-02T22:45:00+00:00",
+      "equity": 12721.0
+    },
+    {
+      "time": "2024-02-03T05:45:00+00:00",
+      "equity": 12721.0
+    },
+    {
+      "time": "2024-02-03T12:45:00+00:00",
+      "equity": 12721.0
+    },
+    {
+      "time": "2024-02-03T19:45:00+00:00",
+      "equity": 12916.0
+    },
+    {
+      "time": "2024-02-04T02:45:00+00:00",
+      "equity": 12916.0
+    },
+    {
+      "time": "2024-02-04T09:45:00+00:00",
+      "equity": 13106.0
+    },
+    {
+      "time": "2024-02-04T16:45:00+00:00",
+      "equity": 13106.0
+    },
+    {
+      "time": "2024-02-04T23:45:00+00:00",
+      "equity": 13106.0
+    },
+    {
+      "time": "2024-02-05T06:45:00+00:00",
+      "equity": 13106.0
+    },
+    {
+      "time": "2024-02-05T13:45:00+00:00",
+      "equity": 13302.0
+    },
+    {
+      "time": "2024-02-05T20:45:00+00:00",
+      "equity": 13302.0
+    },
+    {
+      "time": "2024-02-06T03:45:00+00:00",
+      "equity": 13302.0
+    },
+    {
+      "time": "2024-02-06T10:45:00+00:00",
+      "equity": 13202.0
+    },
+    {
+      "time": "2024-02-06T17:45:00+00:00",
+      "equity": 13202.0
+    },
+    {
+      "time": "2024-02-07T00:45:00+00:00",
+      "equity": 13202.0
+    },
+    {
+      "time": "2024-02-07T07:45:00+00:00",
+      "equity": 13202.0
+    },
+    {
+      "time": "2024-02-07T14:45:00+00:00",
+      "equity": 13102.0
+    },
+    {
+      "time": "2024-02-07T21:45:00+00:00",
+      "equity": 13102.0
+    },
+    {
+      "time": "2024-02-08T04:45:00+00:00",
+      "equity": 13102.0
+    },
+    {
+      "time": "2024-02-08T11:45:00+00:00",
+      "equity": 13002.0
+    },
+    {
+      "time": "2024-02-08T18:45:00+00:00",
+      "equity": 13002.0
+    },
+    {
+      "time": "2024-02-09T01:45:00+00:00",
+      "equity": 13002.0
+    },
+    {
+      "time": "2024-02-09T08:45:00+00:00",
+      "equity": 13002.0
+    },
+    {
+      "time": "2024-02-09T15:45:00+00:00",
+      "equity": 13194.0
+    },
+    {
+      "time": "2024-02-09T22:45:00+00:00",
+      "equity": 13194.0
+    },
+    {
+      "time": "2024-02-10T05:45:00+00:00",
+      "equity": 13194.0
+    },
+    {
+      "time": "2024-02-10T12:45:00+00:00",
+      "equity": 13382.0
+    },
+    {
+      "time": "2024-02-10T19:45:00+00:00",
+      "equity": 13382.0
+    },
+    {
+      "time": "2024-02-11T02:45:00+00:00",
+      "equity": 13382.0
+    },
+    {
+      "time": "2024-02-11T09:45:00+00:00",
+      "equity": 13563.0
+    },
+    {
+      "time": "2024-02-11T16:45:00+00:00",
+      "equity": 13563.0
+    },
+    {
+      "time": "2024-02-11T23:45:00+00:00",
+      "equity": 13563.0
+    },
+    {
+      "time": "2024-02-12T06:45:00+00:00",
+      "equity": 13563.0
+    },
+    {
+      "time": "2024-02-12T13:45:00+00:00",
+      "equity": 13746.0
+    },
+    {
+      "time": "2024-02-12T20:45:00+00:00",
+      "equity": 13746.0
+    },
+    {
+      "time": "2024-02-13T03:45:00+00:00",
+      "equity": 13746.0
+    },
+    {
+      "time": "2024-02-13T10:45:00+00:00",
+      "equity": 13918.0
+    },
+    {
+      "time": "2024-02-13T17:45:00+00:00",
+      "equity": 13918.0
+    },
+    {
+      "time": "2024-02-14T00:45:00+00:00",
+      "equity": 13918.0
+    },
+    {
+      "time": "2024-02-14T07:45:00+00:00",
+      "equity": 13918.0
+    },
+    {
+      "time": "2024-02-14T14:45:00+00:00",
+      "equity": 13818.0
+    },
+    {
+      "time": "2024-02-14T21:45:00+00:00",
+      "equity": 13818.0
+    },
+    {
+      "time": "2024-02-15T04:45:00+00:00",
+      "equity": 13818.0
+    },
+    {
+      "time": "2024-02-15T11:45:00+00:00",
+      "equity": 13818.0
+    },
+    {
+      "time": "2024-02-15T18:45:00+00:00",
+      "equity": 13818.0
+    },
+    {
+      "time": "2024-02-16T01:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-16T08:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-16T15:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-16T22:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-17T05:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-17T12:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-17T19:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-18T02:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-18T09:45:00+00:00",
+      "equity": 14013.0
+    },
+    {
+      "time": "2024-02-18T16:45:00+00:00",
+      "equity": 14203.0
+    },
+    {
+      "time": "2024-02-18T23:45:00+00:00",
+      "equity": 14203.0
+    },
+    {
+      "time": "2024-02-19T06:45:00+00:00",
+      "equity": 14203.0
+    },
+    {
+      "time": "2024-02-19T13:45:00+00:00",
+      "equity": 14393.0
+    },
+    {
+      "time": "2024-02-19T20:45:00+00:00",
+      "equity": 14393.0
+    },
+    {
+      "time": "2024-02-20T03:45:00+00:00",
+      "equity": 14393.0
+    },
+    {
+      "time": "2024-02-20T10:45:00+00:00",
+      "equity": 14293.0
+    },
+    {
+      "time": "2024-02-20T17:45:00+00:00",
+      "equity": 14293.0
+    },
+    {
+      "time": "2024-02-21T00:45:00+00:00",
+      "equity": 14293.0
+    },
+    {
+      "time": "2024-02-21T07:45:00+00:00",
+      "equity": 14293.0
+    },
+    {
+      "time": "2024-02-21T14:45:00+00:00",
+      "equity": 14193.0
+    },
+    {
+      "time": "2024-02-21T21:45:00+00:00",
+      "equity": 14193.0
+    },
+    {
+      "time": "2024-02-22T04:45:00+00:00",
+      "equity": 14193.0
+    },
+    {
+      "time": "2024-02-22T11:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-22T18:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-23T01:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-23T08:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-23T15:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-23T22:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-24T05:45:00+00:00",
+      "equity": 14093.0
+    },
+    {
+      "time": "2024-02-24T12:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-24T19:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-25T02:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-25T09:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-25T16:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-25T23:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-26T06:45:00+00:00",
+      "equity": 14281.0
+    },
+    {
+      "time": "2024-02-26T13:45:00+00:00",
+      "equity": 14471.0
+    },
+    {
+      "time": "2024-02-26T20:45:00+00:00",
+      "equity": 14471.0
+    },
+    {
+      "time": "2024-02-27T03:45:00+00:00",
+      "equity": 14471.0
+    },
+    {
+      "time": "2024-02-27T10:45:00+00:00",
+      "equity": 14371.0
+    },
+    {
+      "time": "2024-02-27T17:45:00+00:00",
+      "equity": 14371.0
+    },
+    {
+      "time": "2024-02-28T00:45:00+00:00",
+      "equity": 14371.0
+    },
+    {
+      "time": "2024-02-28T07:45:00+00:00",
+      "equity": 14371.0
+    },
+    {
+      "time": "2024-02-28T14:45:00+00:00",
+      "equity": 14271.0
+    },
+    {
+      "time": "2024-02-28T21:45:00+00:00",
+      "equity": 14271.0
+    },
+    {
+      "time": "2024-02-29T00:00:00+00:00",
+      "equity": 14271.0
+    }
+  ],
+  "trades": [
+    {
+      "id": 1,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-01T08:30:00+00:00",
+      "entry_price": 1.2692800000000002,
+      "stop_loss": 1.26599,
+      "take_profit": 1.27556,
+      "exit_time": "2024-01-01T10:00:00+00:00",
+      "exit_price": 1.26599,
+      "pnl": -0.00329,
+      "pnl_pips": -32.9,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-01T08:00:00+00:00",
+          "price_level": 1.26647,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.26853, Low: 1.26599"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-01T08:30:00+00:00",
+          "price_level": 1.26918,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-01T08:30:00+00:00",
+          "price_level": 1.2692800000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.26928, SL: 1.26599, TP: 1.27556"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-01T10:00:00+00:00",
+          "price_level": 1.26599,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.26599"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-02T08:45:00+00:00",
+      "entry_price": 1.29001,
+      "stop_loss": 1.28467,
+      "take_profit": 1.3003899999999997,
+      "exit_time": "2024-01-02T11:45:00+00:00",
+      "exit_price": 1.3003899999999997,
+      "pnl": 0.01038,
+      "pnl_pips": 103.8,
+      "rr_achieved": 1.94,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-02T08:00:00+00:00",
+          "price_level": 1.28587,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.28825, Low: 1.28467"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-02T08:45:00+00:00",
+          "price_level": 1.28991,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-02T08:45:00+00:00",
+          "price_level": 1.29001,
+          "timeframe": "",
+          "description": "LONG entry at 1.29001, SL: 1.28467, TP: 1.30039"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-02T10:45:00+00:00",
+          "price_level": 1.29001,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.29001"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-02T11:45:00+00:00",
+          "price_level": 1.3003899999999997,
+          "timeframe": "",
+          "description": "Take profit reached at 1.30039"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-03T08:45:00+00:00",
+      "entry_price": 1.3377299999999999,
+      "stop_loss": 1.34212,
+      "take_profit": 1.3292500000000003,
+      "exit_time": "2024-01-03T11:00:00+00:00",
+      "exit_price": 1.34212,
+      "pnl": -0.00439,
+      "pnl_pips": -43.9,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-03T08:00:00+00:00",
+          "price_level": 1.34058,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.34212, Low: 1.33956"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-03T08:45:00+00:00",
+          "price_level": 1.33783,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-03T08:45:00+00:00",
+          "price_level": 1.3377299999999999,
+          "timeframe": "",
+          "description": "SHORT entry at 1.33773, SL: 1.34212, TP: 1.32925"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-03T11:00:00+00:00",
+          "price_level": 1.34212,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.34212"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-04T08:45:00+00:00",
+      "entry_price": 1.3804800000000002,
+      "stop_loss": 1.37834,
+      "take_profit": 1.38446,
+      "exit_time": "2024-01-04T09:00:00+00:00",
+      "exit_price": 1.37834,
+      "pnl": -0.00214,
+      "pnl_pips": -21.4,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-04T08:00:00+00:00",
+          "price_level": 1.37922,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.37988, Low: 1.37834"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-04T08:45:00+00:00",
+          "price_level": 1.38038,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-04T08:45:00+00:00",
+          "price_level": 1.3804800000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.38048, SL: 1.37834, TP: 1.38446"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-04T09:00:00+00:00",
+          "price_level": 1.37834,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.37834"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-05T08:15:00+00:00",
+      "entry_price": 1.41342,
+      "stop_loss": 1.41491,
+      "take_profit": 1.4107400000000005,
+      "exit_time": "2024-01-05T09:30:00+00:00",
+      "exit_price": 1.4107400000000005,
+      "pnl": 0.00268,
+      "pnl_pips": 26.8,
+      "rr_achieved": 1.8,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-05T08:00:00+00:00",
+          "price_level": 1.41484,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.41491, Low: 1.41357"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-05T08:15:00+00:00",
+          "price_level": 1.41352,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-05T08:15:00+00:00",
+          "price_level": 1.41342,
+          "timeframe": "",
+          "description": "SHORT entry at 1.41342, SL: 1.41491, TP: 1.41074"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-05T09:15:00+00:00",
+          "price_level": 1.41342,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.41342"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-05T09:30:00+00:00",
+          "price_level": 1.4107400000000005,
+          "timeframe": "",
+          "description": "Take profit reached at 1.41074"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-06T08:30:00+00:00",
+      "entry_price": 1.4491700000000003,
+      "stop_loss": 1.44778,
+      "take_profit": 1.45165,
+      "exit_time": "2024-01-06T08:45:00+00:00",
+      "exit_price": 1.45165,
+      "pnl": 0.00248,
+      "pnl_pips": 24.8,
+      "rr_achieved": 1.78,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-06T08:00:00+00:00",
+          "price_level": 1.44788,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.44901, Low: 1.44778"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-06T08:30:00+00:00",
+          "price_level": 1.44907,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-06T08:30:00+00:00",
+          "price_level": 1.4491700000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.44917, SL: 1.44778, TP: 1.45165"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-06T08:45:00+00:00",
+          "price_level": 1.45165,
+          "timeframe": "",
+          "description": "Take profit reached at 1.45165"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-07T08:15:00+00:00",
+      "entry_price": 1.4824300000000001,
+      "stop_loss": 1.48045,
+      "take_profit": 1.4860899999999997,
+      "exit_time": "2024-01-07T09:15:00+00:00",
+      "exit_price": 1.4860899999999997,
+      "pnl": 0.00366,
+      "pnl_pips": 36.6,
+      "rr_achieved": 1.85,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-07T08:00:00+00:00",
+          "price_level": 1.48117,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.48153, Low: 1.48045"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-07T08:15:00+00:00",
+          "price_level": 1.48233,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-07T08:15:00+00:00",
+          "price_level": 1.4824300000000001,
+          "timeframe": "",
+          "description": "LONG entry at 1.48243, SL: 1.48045, TP: 1.48609"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-07T09:00:00+00:00",
+          "price_level": 1.4824300000000001,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.48243"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-07T09:15:00+00:00",
+          "price_level": 1.4860899999999997,
+          "timeframe": "",
+          "description": "Take profit reached at 1.48609"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-08T08:15:00+00:00",
+      "entry_price": 1.5049199999999998,
+      "stop_loss": 1.5057,
+      "take_profit": 1.50366,
+      "exit_time": "2024-01-08T08:30:00+00:00",
+      "exit_price": 1.5049199999999998,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-08T08:00:00+00:00",
+          "price_level": 1.50556,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.50570, Low: 1.50549"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-08T08:15:00+00:00",
+          "price_level": 1.50502,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-08T08:15:00+00:00",
+          "price_level": 1.5049199999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.50492, SL: 1.50570, TP: 1.50366"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-08T08:15:00+00:00",
+          "price_level": 1.5049199999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.50492"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-08T08:30:00+00:00",
+          "price_level": 1.5049199999999998,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.50492"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-09T08:45:00+00:00",
+      "entry_price": 1.5109600000000003,
+      "stop_loss": 1.50756,
+      "take_profit": 1.5174600000000003,
+      "exit_time": "2024-01-09T10:30:00+00:00",
+      "exit_price": 1.50756,
+      "pnl": -0.0034,
+      "pnl_pips": -34.0,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-09T08:00:00+00:00",
+          "price_level": 1.50951,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.51064, Low: 1.50756"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-09T08:45:00+00:00",
+          "price_level": 1.51086,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-09T08:45:00+00:00",
+          "price_level": 1.5109600000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.51096, SL: 1.50756, TP: 1.51746"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-09T10:30:00+00:00",
+          "price_level": 1.50756,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.50756"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-10T08:15:00+00:00",
+      "entry_price": 1.5012500000000002,
+      "stop_loss": 1.49565,
+      "take_profit": 1.51215,
+      "exit_time": "2024-01-10T12:30:00+00:00",
+      "exit_price": 1.51215,
+      "pnl": 0.0109,
+      "pnl_pips": 109.0,
+      "rr_achieved": 1.95,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-10T08:00:00+00:00",
+          "price_level": 1.49885,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.49977, Low: 1.49565"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-10T08:15:00+00:00",
+          "price_level": 1.50115,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-10T08:15:00+00:00",
+          "price_level": 1.5012500000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.50125, SL: 1.49565, TP: 1.51215"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-10T09:45:00+00:00",
+          "price_level": 1.5012500000000002,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.50125"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-10T12:30:00+00:00",
+          "price_level": 1.51215,
+          "timeframe": "",
+          "description": "Take profit reached at 1.51215"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-11T08:15:00+00:00",
+      "entry_price": 1.5249800000000002,
+      "stop_loss": 1.52035,
+      "take_profit": 1.5339399999999999,
+      "exit_time": "2024-01-11T14:00:00+00:00",
+      "exit_price": 1.52035,
+      "pnl": -0.00463,
+      "pnl_pips": -46.3,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-11T08:00:00+00:00",
+          "price_level": 1.52357,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.52409, Low: 1.52035"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-11T08:15:00+00:00",
+          "price_level": 1.52488,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-11T08:15:00+00:00",
+          "price_level": 1.5249800000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.52498, SL: 1.52035, TP: 1.53394"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-11T14:00:00+00:00",
+          "price_level": 1.52035,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.52035"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-12T08:30:00+00:00",
+      "entry_price": 1.5345900000000001,
+      "stop_loss": 1.53333,
+      "take_profit": 1.5368099999999996,
+      "exit_time": "2024-01-12T09:15:00+00:00",
+      "exit_price": 1.5345900000000001,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-12T08:00:00+00:00",
+          "price_level": 1.53428,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.53440, Low: 1.53333"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-12T08:30:00+00:00",
+          "price_level": 1.53449,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-12T08:30:00+00:00",
+          "price_level": 1.5345900000000001,
+          "timeframe": "",
+          "description": "LONG entry at 1.53459, SL: 1.53333, TP: 1.53681"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-12T09:00:00+00:00",
+          "price_level": 1.5345900000000001,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.53459"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-12T09:15:00+00:00",
+          "price_level": 1.5345900000000001,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.53459"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-13T09:00:00+00:00",
+      "entry_price": 1.5995700000000002,
+      "stop_loss": 1.59636,
+      "take_profit": 1.6056899999999998,
+      "exit_time": "2024-01-13T11:00:00+00:00",
+      "exit_price": 1.6056899999999998,
+      "pnl": 0.00612,
+      "pnl_pips": 61.2,
+      "rr_achieved": 1.91,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-13T08:00:00+00:00",
+          "price_level": 1.5986,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.59933, Low: 1.59636"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-13T09:00:00+00:00",
+          "price_level": 1.59947,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-13T09:00:00+00:00",
+          "price_level": 1.5995700000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.59957, SL: 1.59636, TP: 1.60569"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-13T10:00:00+00:00",
+          "price_level": 1.5995700000000002,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.59957"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-13T11:00:00+00:00",
+          "price_level": 1.6056899999999998,
+          "timeframe": "",
+          "description": "Take profit reached at 1.60569"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-14T10:00:00+00:00",
+      "entry_price": 1.6546000000000003,
+      "stop_loss": 1.65099,
+      "take_profit": 1.6615200000000003,
+      "exit_time": "2024-01-14T13:15:00+00:00",
+      "exit_price": 1.6615200000000003,
+      "pnl": 0.00692,
+      "pnl_pips": 69.2,
+      "rr_achieved": 1.92,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-14T08:00:00+00:00",
+          "price_level": 1.65228,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.65312, Low: 1.65099"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-14T10:00:00+00:00",
+          "price_level": 1.6545,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-14T10:00:00+00:00",
+          "price_level": 1.6546000000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.65460, SL: 1.65099, TP: 1.66152"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-14T12:15:00+00:00",
+          "price_level": 1.6546000000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.65460"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-14T13:15:00+00:00",
+          "price_level": 1.6615200000000003,
+          "timeframe": "",
+          "description": "Take profit reached at 1.66152"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-15T08:15:00+00:00",
+      "entry_price": 1.6921200000000003,
+      "stop_loss": 1.68794,
+      "take_profit": 1.7001800000000002,
+      "exit_time": "2024-01-15T09:30:00+00:00",
+      "exit_price": 1.7001800000000002,
+      "pnl": 0.00806,
+      "pnl_pips": 80.6,
+      "rr_achieved": 1.93,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-15T08:00:00+00:00",
+          "price_level": 1.68985,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.69011, Low: 1.68794"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-15T08:15:00+00:00",
+          "price_level": 1.69202,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-15T08:15:00+00:00",
+          "price_level": 1.6921200000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.69212, SL: 1.68794, TP: 1.70018"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-15T09:15:00+00:00",
+          "price_level": 1.6921200000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.69212"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-15T09:30:00+00:00",
+          "price_level": 1.7001800000000002,
+          "timeframe": "",
+          "description": "Take profit reached at 1.70018"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-16T08:30:00+00:00",
+      "entry_price": 1.7652299999999999,
+      "stop_loss": 1.76855,
+      "take_profit": 1.75889,
+      "exit_time": "2024-01-16T10:00:00+00:00",
+      "exit_price": 1.7652299999999999,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-16T08:00:00+00:00",
+          "price_level": 1.76655,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.76855, Low: 1.76535"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-16T08:30:00+00:00",
+          "price_level": 1.76533,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-16T08:30:00+00:00",
+          "price_level": 1.7652299999999999,
+          "timeframe": "",
+          "description": "SHORT entry at 1.76523, SL: 1.76855, TP: 1.75889"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-16T09:15:00+00:00",
+          "price_level": 1.7652299999999999,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.76523"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-16T10:00:00+00:00",
+          "price_level": 1.7652299999999999,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.76523"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-17T08:30:00+00:00",
+      "entry_price": 1.8163700000000003,
+      "stop_loss": 1.81232,
+      "take_profit": 1.8241700000000003,
+      "exit_time": "2024-01-17T12:15:00+00:00",
+      "exit_price": 1.8241700000000003,
+      "pnl": 0.0078,
+      "pnl_pips": 78.0,
+      "rr_achieved": 1.93,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-17T08:00:00+00:00",
+          "price_level": 1.81388,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.81453, Low: 1.81232"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-17T08:30:00+00:00",
+          "price_level": 1.81627,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-17T08:30:00+00:00",
+          "price_level": 1.8163700000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.81637, SL: 1.81232, TP: 1.82417"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-17T11:30:00+00:00",
+          "price_level": 1.8163700000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.81637"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-17T12:15:00+00:00",
+          "price_level": 1.8241700000000003,
+          "timeframe": "",
+          "description": "Take profit reached at 1.82417"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-18T08:15:00+00:00",
+      "entry_price": 1.8745100000000001,
+      "stop_loss": 1.8712,
+      "take_profit": 1.8808299999999998,
+      "exit_time": "2024-01-18T10:00:00+00:00",
+      "exit_price": 1.8808299999999998,
+      "pnl": 0.00632,
+      "pnl_pips": 63.2,
+      "rr_achieved": 1.91,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-18T08:00:00+00:00",
+          "price_level": 1.87375,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.87376, Low: 1.87120"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-18T08:15:00+00:00",
+          "price_level": 1.87441,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-18T08:15:00+00:00",
+          "price_level": 1.8745100000000001,
+          "timeframe": "",
+          "description": "LONG entry at 1.87451, SL: 1.87120, TP: 1.88083"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-18T09:30:00+00:00",
+          "price_level": 1.8745100000000001,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.87451"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-18T10:00:00+00:00",
+          "price_level": 1.8808299999999998,
+          "timeframe": "",
+          "description": "Take profit reached at 1.88083"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-19T08:15:00+00:00",
+      "entry_price": 1.9730100000000002,
+      "stop_loss": 1.96602,
+      "take_profit": 1.9866899999999996,
+      "exit_time": "2024-01-19T13:00:00+00:00",
+      "exit_price": 1.9866899999999996,
+      "pnl": 0.01368,
+      "pnl_pips": 136.8,
+      "rr_achieved": 1.96,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-19T08:00:00+00:00",
+          "price_level": 1.96992,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.97053, Low: 1.96602"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-19T08:15:00+00:00",
+          "price_level": 1.97291,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-19T08:15:00+00:00",
+          "price_level": 1.9730100000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.97301, SL: 1.96602, TP: 1.98669"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-19T12:30:00+00:00",
+          "price_level": 1.9730100000000002,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.97301"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-19T13:00:00+00:00",
+          "price_level": 1.9866899999999996,
+          "timeframe": "",
+          "description": "Take profit reached at 1.98669"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-20T08:15:00+00:00",
+      "entry_price": 2.03261,
+      "stop_loss": 2.03587,
+      "take_profit": 2.0263899999999992,
+      "exit_time": "2024-01-20T08:30:00+00:00",
+      "exit_price": 2.03587,
+      "pnl": -0.00326,
+      "pnl_pips": -32.6,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-20T08:00:00+00:00",
+          "price_level": 2.03524,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.03587, Low: 2.03430"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-20T08:15:00+00:00",
+          "price_level": 2.03271,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-20T08:15:00+00:00",
+          "price_level": 2.03261,
+          "timeframe": "",
+          "description": "SHORT entry at 2.03261, SL: 2.03587, TP: 2.02639"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-20T08:30:00+00:00",
+          "price_level": 2.03587,
+          "timeframe": "",
+          "description": "Stop loss triggered at 2.03587"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-21T08:15:00+00:00",
+      "entry_price": 2.08045,
+      "stop_loss": 2.07671,
+      "take_profit": 2.0876300000000008,
+      "exit_time": "2024-01-21T09:15:00+00:00",
+      "exit_price": 2.0876300000000008,
+      "pnl": 0.00718,
+      "pnl_pips": 71.8,
+      "rr_achieved": 1.92,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-21T08:00:00+00:00",
+          "price_level": 2.07926,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.07956, Low: 2.07671"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-21T08:15:00+00:00",
+          "price_level": 2.08035,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-21T08:15:00+00:00",
+          "price_level": 2.08045,
+          "timeframe": "",
+          "description": "LONG entry at 2.08045, SL: 2.07671, TP: 2.08763"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-21T09:00:00+00:00",
+          "price_level": 2.08045,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.08045"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-21T09:15:00+00:00",
+          "price_level": 2.0876300000000008,
+          "timeframe": "",
+          "description": "Take profit reached at 2.08763"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-22T08:30:00+00:00",
+      "entry_price": 2.12887,
+      "stop_loss": 2.13209,
+      "take_profit": 2.12273,
+      "exit_time": "2024-01-22T09:45:00+00:00",
+      "exit_price": 2.13209,
+      "pnl": -0.00322,
+      "pnl_pips": -32.2,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-22T08:00:00+00:00",
+          "price_level": 2.13115,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.13209, Low: 2.13089"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-22T08:30:00+00:00",
+          "price_level": 2.12897,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-22T08:30:00+00:00",
+          "price_level": 2.12887,
+          "timeframe": "",
+          "description": "SHORT entry at 2.12887, SL: 2.13209, TP: 2.12273"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-22T09:45:00+00:00",
+          "price_level": 2.13209,
+          "timeframe": "",
+          "description": "Stop loss triggered at 2.13209"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-23T08:45:00+00:00",
+      "entry_price": 2.1879299999999997,
+      "stop_loss": 2.18205,
+      "take_profit": 2.19939,
+      "exit_time": "2024-01-23T15:30:00+00:00",
+      "exit_price": 2.1879299999999997,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-23T08:00:00+00:00",
+          "price_level": 2.18612,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.18726, Low: 2.18205"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-23T08:45:00+00:00",
+          "price_level": 2.18783,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-23T08:45:00+00:00",
+          "price_level": 2.1879299999999997,
+          "timeframe": "",
+          "description": "LONG entry at 2.18793, SL: 2.18205, TP: 2.19939"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-23T12:00:00+00:00",
+          "price_level": 2.1879299999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.18793"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-23T15:30:00+00:00",
+          "price_level": 2.1879299999999997,
+          "timeframe": "",
+          "description": "Stop loss triggered at 2.18793"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-24T09:15:00+00:00",
+      "entry_price": 2.2234800000000003,
+      "stop_loss": 2.22635,
+      "take_profit": 2.2180400000000002,
+      "exit_time": "2024-01-24T11:00:00+00:00",
+      "exit_price": 2.2234800000000003,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-24T08:00:00+00:00",
+          "price_level": 2.22633,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.22635, Low: 2.22392"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-24T09:15:00+00:00",
+          "price_level": 2.22358,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-24T09:15:00+00:00",
+          "price_level": 2.2234800000000003,
+          "timeframe": "",
+          "description": "SHORT entry at 2.22348, SL: 2.22635, TP: 2.21804"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-24T10:00:00+00:00",
+          "price_level": 2.2234800000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.22348"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-24T11:00:00+00:00",
+          "price_level": 2.2234800000000003,
+          "timeframe": "",
+          "description": "Stop loss triggered at 2.22348"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-25T08:15:00+00:00",
+      "entry_price": 2.2662899999999997,
+      "stop_loss": 2.26266,
+      "take_profit": 2.27325,
+      "exit_time": "2024-01-25T08:45:00+00:00",
+      "exit_price": 2.26266,
+      "pnl": -0.00363,
+      "pnl_pips": -36.3,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-25T08:00:00+00:00",
+          "price_level": 2.26379,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.26385, Low: 2.26266"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-25T08:15:00+00:00",
+          "price_level": 2.26619,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-25T08:15:00+00:00",
+          "price_level": 2.2662899999999997,
+          "timeframe": "",
+          "description": "LONG entry at 2.26629, SL: 2.26266, TP: 2.27325"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-01-25T08:45:00+00:00",
+          "price_level": 2.26266,
+          "timeframe": "",
+          "description": "Stop loss triggered at 2.26266"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-26T08:15:00+00:00",
+      "entry_price": 2.2733499999999998,
+      "stop_loss": 2.27148,
+      "take_profit": 2.27679,
+      "exit_time": "2024-01-26T09:00:00+00:00",
+      "exit_price": 2.27679,
+      "pnl": 0.00344,
+      "pnl_pips": 34.4,
+      "rr_achieved": 1.84,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-26T08:00:00+00:00",
+          "price_level": 2.27224,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.27274, Low: 2.27148"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-26T08:15:00+00:00",
+          "price_level": 2.27325,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-26T08:15:00+00:00",
+          "price_level": 2.2733499999999998,
+          "timeframe": "",
+          "description": "LONG entry at 2.27335, SL: 2.27148, TP: 2.27679"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-26T08:45:00+00:00",
+          "price_level": 2.2733499999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.27335"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-26T09:00:00+00:00",
+          "price_level": 2.27679,
+          "timeframe": "",
+          "description": "Take profit reached at 2.27679"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-01-27T08:15:00+00:00",
+      "entry_price": 2.26463,
+      "stop_loss": 2.26285,
+      "take_profit": 2.267890000000001,
+      "exit_time": "2024-01-27T10:00:00+00:00",
+      "exit_price": 2.267890000000001,
+      "pnl": 0.00326,
+      "pnl_pips": 32.6,
+      "rr_achieved": 1.83,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-27T08:00:00+00:00",
+          "price_level": 2.26312,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.26372, Low: 2.26285"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-27T08:15:00+00:00",
+          "price_level": 2.26453,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-27T08:15:00+00:00",
+          "price_level": 2.26463,
+          "timeframe": "",
+          "description": "LONG entry at 2.26463, SL: 2.26285, TP: 2.26789"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-27T09:45:00+00:00",
+          "price_level": 2.26463,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.26463"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-27T10:00:00+00:00",
+          "price_level": 2.267890000000001,
+          "timeframe": "",
+          "description": "Take profit reached at 2.26789"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-28T09:15:00+00:00",
+      "entry_price": 2.2050300000000003,
+      "stop_loss": 2.21462,
+      "take_profit": 2.18615,
+      "exit_time": "2024-01-28T22:30:00+00:00",
+      "exit_price": 2.18615,
+      "pnl": 0.01888,
+      "pnl_pips": 188.8,
+      "rr_achieved": 1.97,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-28T08:00:00+00:00",
+          "price_level": 2.21376,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.21462, Low: 2.20830"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-28T09:15:00+00:00",
+          "price_level": 2.20513,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-28T09:15:00+00:00",
+          "price_level": 2.2050300000000003,
+          "timeframe": "",
+          "description": "SHORT entry at 2.20503, SL: 2.21462, TP: 2.18615"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-28T19:30:00+00:00",
+          "price_level": 2.2050300000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.20503"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-28T22:30:00+00:00",
+          "price_level": 2.18615,
+          "timeframe": "",
+          "description": "Take profit reached at 2.18615"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-29T08:30:00+00:00",
+      "entry_price": 2.1444,
+      "stop_loss": 2.1485,
+      "take_profit": 2.1365,
+      "exit_time": "2024-01-29T10:15:00+00:00",
+      "exit_price": 2.1365,
+      "pnl": 0.0079,
+      "pnl_pips": 79.0,
+      "rr_achieved": 1.93,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-29T08:00:00+00:00",
+          "price_level": 2.14673,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.14850, Low: 2.14630"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-29T08:30:00+00:00",
+          "price_level": 2.1445,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-29T08:30:00+00:00",
+          "price_level": 2.1444,
+          "timeframe": "",
+          "description": "SHORT entry at 2.14440, SL: 2.14850, TP: 2.13650"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-29T09:15:00+00:00",
+          "price_level": 2.1444,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.14440"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-29T10:15:00+00:00",
+          "price_level": 2.1365,
+          "timeframe": "",
+          "description": "Take profit reached at 2.13650"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-30T08:15:00+00:00",
+      "entry_price": 2.07046,
+      "stop_loss": 2.07616,
+      "take_profit": 2.0593600000000003,
+      "exit_time": "2024-01-30T09:45:00+00:00",
+      "exit_price": 2.0593600000000003,
+      "pnl": 0.0111,
+      "pnl_pips": 111.0,
+      "rr_achieved": 1.95,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-30T08:00:00+00:00",
+          "price_level": 2.07488,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 2.07616, Low: 2.07415"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-30T08:15:00+00:00",
+          "price_level": 2.07056,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-30T08:15:00+00:00",
+          "price_level": 2.07046,
+          "timeframe": "",
+          "description": "SHORT entry at 2.07046, SL: 2.07616, TP: 2.05936"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-30T09:30:00+00:00",
+          "price_level": 2.07046,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 2.07046"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-30T09:45:00+00:00",
+          "price_level": 2.0593600000000003,
+          "timeframe": "",
+          "description": "Take profit reached at 2.05936"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-01-31T08:15:00+00:00",
+      "entry_price": 1.9643399999999998,
+      "stop_loss": 1.9705,
+      "take_profit": 1.95232,
+      "exit_time": "2024-01-31T11:30:00+00:00",
+      "exit_price": 1.95232,
+      "pnl": 0.01202,
+      "pnl_pips": 120.2,
+      "rr_achieved": 1.95,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-01-31T08:00:00+00:00",
+          "price_level": 1.96912,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.97050, Low: 1.96901"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-01-31T08:15:00+00:00",
+          "price_level": 1.96444,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-01-31T08:15:00+00:00",
+          "price_level": 1.9643399999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.96434, SL: 1.97050, TP: 1.95232"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-01-31T09:00:00+00:00",
+          "price_level": 1.9643399999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.96434"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-01-31T11:30:00+00:00",
+          "price_level": 1.95232,
+          "timeframe": "",
+          "description": "Take profit reached at 1.95232"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-01T08:45:00+00:00",
+      "entry_price": 1.8773399999999998,
+      "stop_loss": 1.88265,
+      "take_profit": 1.8670200000000001,
+      "exit_time": "2024-02-01T12:15:00+00:00",
+      "exit_price": 1.8670200000000001,
+      "pnl": 0.01032,
+      "pnl_pips": 103.2,
+      "rr_achieved": 1.94,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-01T08:00:00+00:00",
+          "price_level": 1.87947,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.88265, Low: 1.87881"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-01T08:45:00+00:00",
+          "price_level": 1.87744,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-01T08:45:00+00:00",
+          "price_level": 1.8773399999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.87734, SL: 1.88265, TP: 1.86702"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-01T11:30:00+00:00",
+          "price_level": 1.8773399999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.87734"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-01T12:15:00+00:00",
+          "price_level": 1.8670200000000001,
+          "timeframe": "",
+          "description": "Take profit reached at 1.86702"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-02T08:15:00+00:00",
+      "entry_price": 1.8178599999999998,
+      "stop_loss": 1.82156,
+      "take_profit": 1.81076,
+      "exit_time": "2024-02-02T08:45:00+00:00",
+      "exit_price": 1.82156,
+      "pnl": -0.0037,
+      "pnl_pips": -37.0,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-02T08:00:00+00:00",
+          "price_level": 1.82076,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.82156, Low: 1.82032"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-02T08:15:00+00:00",
+          "price_level": 1.81796,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-02T08:15:00+00:00",
+          "price_level": 1.8178599999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.81786, SL: 1.82156, TP: 1.81076"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-02T08:45:00+00:00",
+          "price_level": 1.82156,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.82156"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-03T08:15:00+00:00",
+      "entry_price": 1.7682299999999997,
+      "stop_loss": 1.7741,
+      "take_profit": 1.7567899999999999,
+      "exit_time": "2024-02-03T16:45:00+00:00",
+      "exit_price": 1.7567899999999999,
+      "pnl": 0.01144,
+      "pnl_pips": 114.4,
+      "rr_achieved": 1.95,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-03T08:00:00+00:00",
+          "price_level": 1.77135,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.77410, Low: 1.77061"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-03T08:15:00+00:00",
+          "price_level": 1.76833,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-03T08:15:00+00:00",
+          "price_level": 1.7682299999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.76823, SL: 1.77410, TP: 1.75679"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-03T10:45:00+00:00",
+          "price_level": 1.7682299999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.76823"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-03T16:45:00+00:00",
+          "price_level": 1.7567899999999999,
+          "timeframe": "",
+          "description": "Take profit reached at 1.75679"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-04T08:45:00+00:00",
+      "entry_price": 1.70921,
+      "stop_loss": 1.71224,
+      "take_profit": 1.7034500000000004,
+      "exit_time": "2024-02-04T09:45:00+00:00",
+      "exit_price": 1.7034500000000004,
+      "pnl": 0.00576,
+      "pnl_pips": 57.6,
+      "rr_achieved": 1.9,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-04T08:00:00+00:00",
+          "price_level": 1.71097,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.71224, Low: 1.71092"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-04T08:45:00+00:00",
+          "price_level": 1.70931,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-04T08:45:00+00:00",
+          "price_level": 1.70921,
+          "timeframe": "",
+          "description": "SHORT entry at 1.70921, SL: 1.71224, TP: 1.70345"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-04T09:30:00+00:00",
+          "price_level": 1.70921,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.70921"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-04T09:45:00+00:00",
+          "price_level": 1.7034500000000004,
+          "timeframe": "",
+          "description": "Take profit reached at 1.70345"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-05T08:30:00+00:00",
+      "entry_price": 1.6363799999999997,
+      "stop_loss": 1.64331,
+      "take_profit": 1.6228199999999997,
+      "exit_time": "2024-02-05T10:15:00+00:00",
+      "exit_price": 1.6228199999999997,
+      "pnl": 0.01356,
+      "pnl_pips": 135.6,
+      "rr_achieved": 1.96,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-05T08:00:00+00:00",
+          "price_level": 1.63941,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.64331, Low: 1.63913"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-05T08:30:00+00:00",
+          "price_level": 1.63648,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-05T08:30:00+00:00",
+          "price_level": 1.6363799999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.63638, SL: 1.64331, TP: 1.62282"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-05T09:30:00+00:00",
+          "price_level": 1.6363799999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.63638"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-05T10:15:00+00:00",
+          "price_level": 1.6228199999999997,
+          "timeframe": "",
+          "description": "Take profit reached at 1.62282"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-06T08:15:00+00:00",
+      "entry_price": 1.5943899999999998,
+      "stop_loss": 1.59651,
+      "take_profit": 1.5904499999999997,
+      "exit_time": "2024-02-06T08:45:00+00:00",
+      "exit_price": 1.59651,
+      "pnl": -0.00212,
+      "pnl_pips": -21.2,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-06T08:00:00+00:00",
+          "price_level": 1.59574,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.59651, Low: 1.59486"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-06T08:15:00+00:00",
+          "price_level": 1.59449,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-06T08:15:00+00:00",
+          "price_level": 1.5943899999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.59439, SL: 1.59651, TP: 1.59045"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-06T08:45:00+00:00",
+          "price_level": 1.59651,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.59651"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-02-07T08:30:00+00:00",
+      "entry_price": 1.5261600000000002,
+      "stop_loss": 1.5237,
+      "take_profit": 1.5307799999999998,
+      "exit_time": "2024-02-07T08:45:00+00:00",
+      "exit_price": 1.5237,
+      "pnl": -0.00246,
+      "pnl_pips": -24.6,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-07T08:00:00+00:00",
+          "price_level": 1.52455,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.52594, Low: 1.52370"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-07T08:30:00+00:00",
+          "price_level": 1.52606,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-07T08:30:00+00:00",
+          "price_level": 1.5261600000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.52616, SL: 1.52370, TP: 1.53078"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-07T08:45:00+00:00",
+          "price_level": 1.5237,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.52370"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-08T08:15:00+00:00",
+      "entry_price": 1.4805999999999997,
+      "stop_loss": 1.48271,
+      "take_profit": 1.4766799999999998,
+      "exit_time": "2024-02-08T08:45:00+00:00",
+      "exit_price": 1.48271,
+      "pnl": -0.00211,
+      "pnl_pips": -21.1,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-08T08:00:00+00:00",
+          "price_level": 1.48241,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.48271, Low: 1.48170"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-08T08:15:00+00:00",
+          "price_level": 1.4807,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-08T08:15:00+00:00",
+          "price_level": 1.4805999999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.48060, SL: 1.48271, TP: 1.47668"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-08T08:45:00+00:00",
+          "price_level": 1.48271,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.48271"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-09T08:15:00+00:00",
+      "entry_price": 1.4321199999999998,
+      "stop_loss": 1.43589,
+      "take_profit": 1.42488,
+      "exit_time": "2024-02-09T10:00:00+00:00",
+      "exit_price": 1.42488,
+      "pnl": 0.00724,
+      "pnl_pips": 72.4,
+      "rr_achieved": 1.92,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-09T08:00:00+00:00",
+          "price_level": 1.43477,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.43589, Low: 1.43457"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-09T08:15:00+00:00",
+          "price_level": 1.43222,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-09T08:15:00+00:00",
+          "price_level": 1.4321199999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.43212, SL: 1.43589, TP: 1.42488"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-09T09:15:00+00:00",
+          "price_level": 1.4321199999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.43212"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-09T10:00:00+00:00",
+          "price_level": 1.42488,
+          "timeframe": "",
+          "description": "Take profit reached at 1.42488"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-10T08:15:00+00:00",
+      "entry_price": 1.3863199999999998,
+      "stop_loss": 1.38889,
+      "take_profit": 1.38148,
+      "exit_time": "2024-02-10T12:15:00+00:00",
+      "exit_price": 1.38148,
+      "pnl": 0.00484,
+      "pnl_pips": 48.4,
+      "rr_achieved": 1.88,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-10T08:00:00+00:00",
+          "price_level": 1.38761,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.38889, Low: 1.38712"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-10T08:15:00+00:00",
+          "price_level": 1.38642,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-10T08:15:00+00:00",
+          "price_level": 1.3863199999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.38632, SL: 1.38889, TP: 1.38148"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-10T10:00:00+00:00",
+          "price_level": 1.3863199999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.38632"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-10T12:15:00+00:00",
+          "price_level": 1.38148,
+          "timeframe": "",
+          "description": "Take profit reached at 1.38148"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-11T08:45:00+00:00",
+      "entry_price": 1.3377599999999998,
+      "stop_loss": 1.33935,
+      "take_profit": 1.33488,
+      "exit_time": "2024-02-11T09:15:00+00:00",
+      "exit_price": 1.33488,
+      "pnl": 0.00288,
+      "pnl_pips": 28.8,
+      "rr_achieved": 1.81,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-11T08:00:00+00:00",
+          "price_level": 1.33912,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.33935, Low: 1.33823"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-11T08:45:00+00:00",
+          "price_level": 1.33786,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-11T08:45:00+00:00",
+          "price_level": 1.3377599999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.33776, SL: 1.33935, TP: 1.33488"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-11T09:00:00+00:00",
+          "price_level": 1.3377599999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.33776"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-11T09:15:00+00:00",
+          "price_level": 1.33488,
+          "timeframe": "",
+          "description": "Take profit reached at 1.33488"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-12T08:30:00+00:00",
+      "entry_price": 1.2895199999999998,
+      "stop_loss": 1.2913,
+      "take_profit": 1.2862600000000002,
+      "exit_time": "2024-02-12T10:30:00+00:00",
+      "exit_price": 1.2862600000000002,
+      "pnl": 0.00326,
+      "pnl_pips": 32.6,
+      "rr_achieved": 1.83,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-12T08:00:00+00:00",
+          "price_level": 1.29007,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.29130, Low: 1.28974"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-12T08:30:00+00:00",
+          "price_level": 1.28962,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-12T08:30:00+00:00",
+          "price_level": 1.2895199999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.28952, SL: 1.29130, TP: 1.28626"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-12T10:15:00+00:00",
+          "price_level": 1.2895199999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.28952"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-12T10:30:00+00:00",
+          "price_level": 1.2862600000000002,
+          "timeframe": "",
+          "description": "Take profit reached at 1.28626"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-13T08:15:00+00:00",
+      "entry_price": 1.2712699999999997,
+      "stop_loss": 1.27234,
+      "take_profit": 1.2694299999999996,
+      "exit_time": "2024-02-13T08:30:00+00:00",
+      "exit_price": 1.2694299999999996,
+      "pnl": 0.00184,
+      "pnl_pips": 18.4,
+      "rr_achieved": 1.72,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-13T08:00:00+00:00",
+          "price_level": 1.2723,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.27234, Low: 1.27224"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-13T08:15:00+00:00",
+          "price_level": 1.27137,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-13T08:15:00+00:00",
+          "price_level": 1.2712699999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.27127, SL: 1.27234, TP: 1.26943"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-13T08:30:00+00:00",
+          "price_level": 1.2694299999999996,
+          "timeframe": "",
+          "description": "Take profit reached at 1.26943"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-02-14T08:15:00+00:00",
+      "entry_price": 1.2529200000000003,
+      "stop_loss": 1.25082,
+      "take_profit": 1.25682,
+      "exit_time": "2024-02-14T08:45:00+00:00",
+      "exit_price": 1.25082,
+      "pnl": -0.0021,
+      "pnl_pips": -21.0,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-14T08:00:00+00:00",
+          "price_level": 1.25122,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.25197, Low: 1.25082"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-14T08:15:00+00:00",
+          "price_level": 1.25282,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-14T08:15:00+00:00",
+          "price_level": 1.2529200000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.25292, SL: 1.25082, TP: 1.25682"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-14T08:45:00+00:00",
+          "price_level": 1.25082,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.25082"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-15T08:15:00+00:00",
+      "entry_price": 1.2151599999999998,
+      "stop_loss": 1.22133,
+      "take_profit": 1.20312,
+      "exit_time": "2024-02-15T19:00:00+00:00",
+      "exit_price": 1.20312,
+      "pnl": 0.01204,
+      "pnl_pips": 120.4,
+      "rr_achieved": 1.95,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-15T08:00:00+00:00",
+          "price_level": 1.21926,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.22133, Low: 1.21910"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-15T08:15:00+00:00",
+          "price_level": 1.21526,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-15T08:15:00+00:00",
+          "price_level": 1.2151599999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.21516, SL: 1.22133, TP: 1.20312"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-15T12:45:00+00:00",
+          "price_level": 1.2151599999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.21516"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-15T19:00:00+00:00",
+          "price_level": 1.20312,
+          "timeframe": "",
+          "description": "Take profit reached at 1.20312"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-16T08:15:00+00:00",
+      "entry_price": 1.18101,
+      "stop_loss": 1.1834,
+      "take_profit": 1.1765300000000003,
+      "exit_time": "2024-02-16T09:45:00+00:00",
+      "exit_price": 1.18101,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-16T08:00:00+00:00",
+          "price_level": 1.18251,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.18340, Low: 1.18250"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-16T08:15:00+00:00",
+          "price_level": 1.18111,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-16T08:15:00+00:00",
+          "price_level": 1.18101,
+          "timeframe": "",
+          "description": "SHORT entry at 1.18101, SL: 1.18340, TP: 1.17653"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-16T09:00:00+00:00",
+          "price_level": 1.18101,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.18101"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-16T09:45:00+00:00",
+          "price_level": 1.18101,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.18101"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-02-17T08:45:00+00:00",
+      "entry_price": 1.1819500000000003,
+      "stop_loss": 1.17968,
+      "take_profit": 1.18619,
+      "exit_time": "2024-02-17T09:45:00+00:00",
+      "exit_price": 1.1819500000000003,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-17T08:00:00+00:00",
+          "price_level": 1.18013,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.18092, Low: 1.17968"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-17T08:45:00+00:00",
+          "price_level": 1.18185,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-17T08:45:00+00:00",
+          "price_level": 1.1819500000000003,
+          "timeframe": "",
+          "description": "LONG entry at 1.18195, SL: 1.17968, TP: 1.18619"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-17T09:15:00+00:00",
+          "price_level": 1.1819500000000003,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.18195"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-17T09:45:00+00:00",
+          "price_level": 1.1819500000000003,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.18195"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-18T08:15:00+00:00",
+      "entry_price": 1.1718099999999998,
+      "stop_loss": 1.17495,
+      "take_profit": 1.1658300000000001,
+      "exit_time": "2024-02-18T13:00:00+00:00",
+      "exit_price": 1.1658300000000001,
+      "pnl": 0.00598,
+      "pnl_pips": 59.8,
+      "rr_achieved": 1.9,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-18T08:00:00+00:00",
+          "price_level": 1.1732,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.17495, Low: 1.17262"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-18T08:15:00+00:00",
+          "price_level": 1.17191,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-18T08:15:00+00:00",
+          "price_level": 1.1718099999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.17181, SL: 1.17495, TP: 1.16583"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-18T10:45:00+00:00",
+          "price_level": 1.1718099999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.17181"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-18T13:00:00+00:00",
+          "price_level": 1.1658300000000001,
+          "timeframe": "",
+          "description": "Take profit reached at 1.16583"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-19T08:15:00+00:00",
+      "entry_price": 1.1372299999999997,
+      "stop_loss": 1.14029,
+      "take_profit": 1.1314099999999998,
+      "exit_time": "2024-02-19T10:45:00+00:00",
+      "exit_price": 1.1314099999999998,
+      "pnl": 0.00582,
+      "pnl_pips": 58.2,
+      "rr_achieved": 1.9,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-19T08:00:00+00:00",
+          "price_level": 1.13932,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.14029, Low: 1.13904"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-19T08:15:00+00:00",
+          "price_level": 1.13733,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-19T08:15:00+00:00",
+          "price_level": 1.1372299999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.13723, SL: 1.14029, TP: 1.13141"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-19T09:00:00+00:00",
+          "price_level": 1.1372299999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.13723"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-19T10:45:00+00:00",
+          "price_level": 1.1314099999999998,
+          "timeframe": "",
+          "description": "Take profit reached at 1.13141"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-20T08:15:00+00:00",
+      "entry_price": 1.1301899999999998,
+      "stop_loss": 1.13297,
+      "take_profit": 1.12493,
+      "exit_time": "2024-02-20T10:30:00+00:00",
+      "exit_price": 1.13297,
+      "pnl": -0.00278,
+      "pnl_pips": -27.8,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-20T08:00:00+00:00",
+          "price_level": 1.13235,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.13297, Low: 1.13101"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-20T08:15:00+00:00",
+          "price_level": 1.13029,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-20T08:15:00+00:00",
+          "price_level": 1.1301899999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.13019, SL: 1.13297, TP: 1.12493"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-20T10:30:00+00:00",
+          "price_level": 1.13297,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.13297"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-02-21T08:15:00+00:00",
+      "entry_price": 1.1235800000000002,
+      "stop_loss": 1.12144,
+      "take_profit": 1.1275600000000001,
+      "exit_time": "2024-02-21T08:45:00+00:00",
+      "exit_price": 1.12144,
+      "pnl": -0.00214,
+      "pnl_pips": -21.4,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-21T08:00:00+00:00",
+          "price_level": 1.12316,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.12318, Low: 1.12144"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-21T08:15:00+00:00",
+          "price_level": 1.12348,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-21T08:15:00+00:00",
+          "price_level": 1.1235800000000002,
+          "timeframe": "",
+          "description": "LONG entry at 1.12358, SL: 1.12144, TP: 1.12756"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-21T08:45:00+00:00",
+          "price_level": 1.12144,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.12144"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-22T08:45:00+00:00",
+      "entry_price": 1.1069999999999998,
+      "stop_loss": 1.10883,
+      "take_profit": 1.10364,
+      "exit_time": "2024-02-22T09:15:00+00:00",
+      "exit_price": 1.10883,
+      "pnl": -0.00183,
+      "pnl_pips": -18.3,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-22T08:00:00+00:00",
+          "price_level": 1.10785,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.10883, Low: 1.10775"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-22T08:45:00+00:00",
+          "price_level": 1.1071,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-22T08:45:00+00:00",
+          "price_level": 1.1069999999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.10700, SL: 1.10883, TP: 1.10364"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-22T09:15:00+00:00",
+          "price_level": 1.10883,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.10883"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-23T08:15:00+00:00",
+      "entry_price": 1.1011799999999998,
+      "stop_loss": 1.10449,
+      "take_profit": 1.0948600000000002,
+      "exit_time": "2024-02-23T15:45:00+00:00",
+      "exit_price": 1.1011799999999998,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-23T08:00:00+00:00",
+          "price_level": 1.10206,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.10449, Low: 1.10140"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-23T08:15:00+00:00",
+          "price_level": 1.10128,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-23T08:15:00+00:00",
+          "price_level": 1.1011799999999998,
+          "timeframe": "",
+          "description": "SHORT entry at 1.10118, SL: 1.10449, TP: 1.09486"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-23T13:15:00+00:00",
+          "price_level": 1.1011799999999998,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.10118"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-23T15:45:00+00:00",
+          "price_level": 1.1011799999999998,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.10118"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "LONG",
+      "entry_time": "2024-02-24T08:30:00+00:00",
+      "entry_price": 1.0919400000000001,
+      "stop_loss": 1.08951,
+      "take_profit": 1.0964999999999998,
+      "exit_time": "2024-02-24T12:00:00+00:00",
+      "exit_price": 1.0964999999999998,
+      "pnl": 0.00456,
+      "pnl_pips": 45.6,
+      "rr_achieved": 1.88,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-24T08:00:00+00:00",
+          "price_level": 1.09119,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.09147, Low: 1.08951"
+        },
+        {
+          "step_name": "Bullish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-24T08:30:00+00:00",
+          "price_level": 1.09184,
+          "timeframe": "M15",
+          "description": "Body closed above anchor high."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-24T08:30:00+00:00",
+          "price_level": 1.0919400000000001,
+          "timeframe": "",
+          "description": "LONG entry at 1.09194, SL: 1.08951, TP: 1.09650"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-24T10:30:00+00:00",
+          "price_level": 1.0919400000000001,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.09194"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-24T12:00:00+00:00",
+          "price_level": 1.0964999999999998,
+          "timeframe": "",
+          "description": "Take profit reached at 1.09650"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-25T09:45:00+00:00",
+      "entry_price": 1.0895699999999997,
+      "stop_loss": 1.09288,
+      "take_profit": 1.0832499999999996,
+      "exit_time": "2024-02-25T14:30:00+00:00",
+      "exit_price": 1.0895699999999997,
+      "pnl": 0.0,
+      "pnl_pips": 0.0,
+      "rr_achieved": 0.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-25T08:00:00+00:00",
+          "price_level": 1.09221,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.09288, Low: 1.09014"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-25T09:45:00+00:00",
+          "price_level": 1.08967,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-25T09:45:00+00:00",
+          "price_level": 1.0895699999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.08957, SL: 1.09288, TP: 1.08325"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-25T13:45:00+00:00",
+          "price_level": 1.0895699999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.08957"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-25T14:30:00+00:00",
+          "price_level": 1.0895699999999997,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.08957"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-26T08:30:00+00:00",
+      "entry_price": 1.0798099999999997,
+      "stop_loss": 1.08274,
+      "take_profit": 1.0742499999999997,
+      "exit_time": "2024-02-26T11:15:00+00:00",
+      "exit_price": 1.0742499999999997,
+      "pnl": 0.00556,
+      "pnl_pips": 55.6,
+      "rr_achieved": 1.9,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-26T08:00:00+00:00",
+          "price_level": 1.08015,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.08274, Low: 1.07995"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-26T08:30:00+00:00",
+          "price_level": 1.07991,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-26T08:30:00+00:00",
+          "price_level": 1.0798099999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.07981, SL: 1.08274, TP: 1.07425"
+        },
+        {
+          "step_name": "Stop Loss to Breakeven",
+          "step_number": 50,
+          "timestamp": "2024-02-26T09:45:00+00:00",
+          "price_level": 1.0798099999999997,
+          "timeframe": "",
+          "description": "SL moved to breakeven at 1.07981"
+        },
+        {
+          "step_name": "Take Profit Hit",
+          "step_number": 100,
+          "timestamp": "2024-02-26T11:15:00+00:00",
+          "price_level": 1.0742499999999997,
+          "timeframe": "",
+          "description": "Take profit reached at 1.07425"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-27T08:15:00+00:00",
+      "entry_price": 1.0741399999999999,
+      "stop_loss": 1.07496,
+      "take_profit": 1.0728000000000004,
+      "exit_time": "2024-02-27T08:45:00+00:00",
+      "exit_price": 1.07496,
+      "pnl": -0.00082,
+      "pnl_pips": -8.2,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-27T08:00:00+00:00",
+          "price_level": 1.07474,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.07496, Low: 1.07435"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-27T08:15:00+00:00",
+          "price_level": 1.07424,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-27T08:15:00+00:00",
+          "price_level": 1.0741399999999999,
+          "timeframe": "",
+          "description": "SHORT entry at 1.07414, SL: 1.07496, TP: 1.07280"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-27T08:45:00+00:00",
+          "price_level": 1.07496,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.07496"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "strategy_id": "s044_lazy_liquidity_orb",
+      "symbol": "GBPUSD",
+      "direction": "SHORT",
+      "entry_time": "2024-02-28T08:15:00+00:00",
+      "entry_price": 1.0717099999999997,
+      "stop_loss": 1.07396,
+      "take_profit": 1.0675099999999997,
+      "exit_time": "2024-02-28T10:00:00+00:00",
+      "exit_price": 1.07396,
+      "pnl": -0.00225,
+      "pnl_pips": -22.5,
+      "rr_achieved": -1.0,
+      "status": "CLOSED",
+      "steps": [
+        {
+          "step_name": "Isolate Anchor",
+          "step_number": 1,
+          "timestamp": "2024-02-28T08:00:00+00:00",
+          "price_level": 1.07344,
+          "timeframe": "M15",
+          "description": "3:00 AM anchor established. High: 1.07396, Low: 1.07297"
+        },
+        {
+          "step_name": "Bearish Breakout",
+          "step_number": 2,
+          "timestamp": "2024-02-28T08:15:00+00:00",
+          "price_level": 1.07181,
+          "timeframe": "M15",
+          "description": "Body closed below anchor low."
+        },
+        {
+          "step_name": "Trade Entry",
+          "step_number": 98,
+          "timestamp": "2024-02-28T08:15:00+00:00",
+          "price_level": 1.0717099999999997,
+          "timeframe": "",
+          "description": "SHORT entry at 1.07171, SL: 1.07396, TP: 1.06751"
+        },
+        {
+          "step_name": "Stop Loss Hit",
+          "step_number": 99,
+          "timestamp": "2024-02-28T10:00:00+00:00",
+          "price_level": 1.07396,
+          "timeframe": "",
+          "description": "Stop loss triggered at 1.07396"
+        }
+      ]
+    }
+  ],
+  "run_metadata": {
+    "run_at": "2026-06-15T15:08:23.595888+00:00",
+    "data_source": "synthetic"
+  }
+}
