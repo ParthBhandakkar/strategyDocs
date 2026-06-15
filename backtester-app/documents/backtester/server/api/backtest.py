@@ -9,7 +9,7 @@ from pydantic import BaseModel
 from backtester.strategies.registry import get_strategy
 from backtester.core import BacktestConfig
 from backtester.core.engine import BacktestEngine
-from backtester.connectors import MT5Client
+from backtester.connectors import get_data_client, default_history_path
 
 router = APIRouter()
 
@@ -49,7 +49,7 @@ async def run_backtest(req: BacktestRequest):
         risk_per_trade=req.risk_per_trade,
     )
     
-    client = MT5Client()
+    client = get_data_client()
     strategy = StratClass()
     engine = BacktestEngine(config, strategy, client)
     
@@ -60,7 +60,10 @@ async def run_backtest(req: BacktestRequest):
         run_id = f"run_{int(datetime.now().timestamp())}"
         
         # Store in memory
-        _RESULTS[run_id] = result.to_dict()
+        payload = result.to_dict()
+        payload["data_source"] = "local_history"
+        payload["history_path"] = default_history_path()
+        _RESULTS[run_id] = payload
         
         return {
             "run_id": run_id,
