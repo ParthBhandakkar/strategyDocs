@@ -129,7 +129,7 @@ class Trade:
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def close(self, exit_time: datetime, exit_price: float, pip_value: float = 0.0001):
-        """Close the trade and calculate PnL."""
+        """Close the trade and calculate price-based PnL."""
         self.exit_time = exit_time
         self.exit_price = exit_price
         self.status = TradeStatus.CLOSED
@@ -145,6 +145,21 @@ class Trade:
         risk = abs(self.entry_price - self.stop_loss)
         if risk > 0:
             self.risk_reward_achieved = round(self.pnl / risk, 2)
+
+    def close_with_lot_pnl(
+        self,
+        exit_time: datetime,
+        exit_price: float,
+        lot_size: float,
+        pip_value: float,
+        pip_value_per_lot: float,
+    ):
+        """Close trade and store consistent USD PnL in metadata."""
+        self.close(exit_time, exit_price, pip_value)
+        pnl_usd = self.pnl_pips * pip_value_per_lot * lot_size
+        self.metadata["lot_size"] = lot_size
+        self.metadata["pnl_usd"] = round(pnl_usd, 2)
+        self.pnl = pnl_usd
 
 
 @dataclass
@@ -243,7 +258,7 @@ class BacktestResult:
         gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
         self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = round(sum(t.metadata.get("pnl_usd", t.pnl) for t in self.trades), 2)
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )
