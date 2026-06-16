@@ -1,7 +1,5 @@
-"""
-Strategy Registry - Auto-imports all strategy modules.
-"""
+"""Folder-based strategy package."""
 
-from .registry import STRATEGY_REGISTRY
+from .registry import discover_strategies, get_strategy
 
-__all__ = ["STRATEGY_REGISTRY"]
+__all__ = ["discover_strategies", "get_strategy"]

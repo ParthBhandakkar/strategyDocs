@@ -1,49 +1,60 @@
 """
-Strategy Registry — Automatically discovers and registers all strategies in this directory.
+Folder-based strategy discovery.
 """
 
+from __future__ import annotations
+
 import importlib
-import inspect
-import pkgutil
+import logging
+from pathlib import Path
 from typing import Type
 
-from .base import BaseStrategy
+from backtester.strategies.base import BaseStrategy
 
-_REGISTRY: dict[str, Type[BaseStrategy]] = {}
+logger = logging.getLogger(__name__)
+
+SKIP_DIRS = {"base", "registry", "__pycache__"}
 
 
-def load_all_strategies():
-    """Dynamically import all modules in this package and register subclasses of BaseStrategy."""
-    import backtester.strategies as strats_pkg
-    
-    for _, module_name, _ in pkgutil.iter_modules(strats_pkg.__path__):
-        if module_name in ["base", "registry"]:
+def discover_strategies() -> dict[str, Type[BaseStrategy]]:
+    strategies: dict[str, Type[BaseStrategy]] = {}
+    root = Path(__file__).resolve().parent
+
+    for folder in sorted(root.iterdir()):
+        if not folder.is_dir() or folder.name in SKIP_DIRS:
             continue
-            
+        init_file = folder / "__init__.py"
+        if not init_file.exists():
+            logger.warning("Skipping strategy folder without __init__.py: %s", folder.name)
+            continue
+        module_name = f"backtester.strategies.{folder.name}"
         try:
-            # Import the module
-            module = importlib.import_module(f"backtester.strategies.{module_name}")
-            
-            # Find all classes that inherit from BaseStrategy (but are not BaseStrategy itself)
-            for name, obj in inspect.getmembers(module, inspect.isclass):
-                if issubclass(obj, BaseStrategy) and obj is not BaseStrategy:
-                    # Instantiate briefly to get the ID, or assume it's set on the class
-                    strat_id = getattr(obj, "id", None)
-                    if strat_id and strat_id != "base_strategy":
-                        _REGISTRY[strat_id] = obj
-        except Exception as e:
-            print(f"Error loading strategy module {module_name}: {e}")
+            module = importlib.import_module(module_name)
+            strategy_cls = getattr(module, "Strategy", None)
+            if strategy_cls is None:
+                logger.error("Strategy folder %s missing Strategy export", folder.name)
+                continue
+            instance = strategy_cls()
+            strategy_id = getattr(instance, "id", "")
+            if not strategy_id:
+                logger.error("Strategy in %s missing id", folder.name)
+                continue
+            strategies[strategy_id] = strategy_cls
+        except Exception as exc:
+            logger.exception("Failed importing strategy folder %s: %s", folder.name, exc)
+            raise
+
+    return strategies
 
 
-def get_all_strategies() -> list[Type[BaseStrategy]]:
-    """Return all registered strategy classes."""
-    if not _REGISTRY:
-        load_all_strategies()
-    return list(_REGISTRY.values())
+def get_strategy(strategy_id: str) -> BaseStrategy:
+    registry = discover_strategies()
+    if strategy_id in registry:
+        return registry[strategy_id]()
 
+    for key, strategy_cls in registry.items():
+        if key.endswith(f"_{strategy_id}") or key.split("_", 1)[-1] == strategy_id:
+            return strategy_cls()
 
-def get_strategy(strategy_id: str) -> Type[BaseStrategy] | None:
-    """Get a strategy class by ID."""
-    if not _REGISTRY:
-        load_all_strategies()
-    return _REGISTRY.get(strategy_id)
+    available = ", ".join(sorted(registry)) or "(none)"
+    raise KeyError(f"Unknown strategy '{strategy_id}'. Available: {available}")
