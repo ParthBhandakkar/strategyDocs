@@ -129,6 +129,39 @@ def sort_timeframes(tfs: list[TF]) -> list[TF]:
     return sorted(tfs, key=lambda t: tf_to_minutes(t))
 
 
+# Exness CSV folder name mapping
+_TF_FOLDER = {
+    TF.M1: "1m",
+    TF.M2: "2m",
+    TF.M3: "3m",
+    TF.M5: "5m",
+    TF.M10: "10m",
+    TF.M15: "15m",
+    TF.M30: "30m",
+    TF.H1: "1h",
+    TF.H2: "2h",
+    TF.H4: "4h",
+    TF.H6: "6h",
+    TF.H8: "8h",
+    TF.H12: "12h",
+    TF.D1: "1d",
+    TF.W1: "1w",
+    TF.MN1: "1mo",
+}
+
+_FOLDER_TF = {folder: tf for tf, folder in _TF_FOLDER.items()}
+
+
+def tf_folder_name(tf: TF) -> str:
+    """Map TF enum to Exness history folder name."""
+    return _TF_FOLDER.get(tf, tf_short(tf).lower())
+
+
+def tf_from_folder(folder: str) -> TF | None:
+    """Map Exness folder name to TF enum."""
+    return _FOLDER_TF.get(folder.lower())
+
+
 # All common forex timeframes for the API
 ALL_TIMEFRAMES = [
     {"value": tf.value, "label": tf_label(tf), "short": tf_short(tf), "minutes": tf_to_minutes(tf)}
