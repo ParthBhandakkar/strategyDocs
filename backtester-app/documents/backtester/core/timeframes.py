@@ -111,6 +111,32 @@ def tf_from_string(s: str) -> TF:
     raise ValueError(f"Unknown timeframe string: {s}")
 
 
+def tf_from_folder(folder: str) -> TF:
+    """Map Exness CSV folder name to TF enum."""
+    mapping = {
+        "1m": TF.M1,
+        "2m": TF.M2,
+        "3m": TF.M3,
+        "5m": TF.M5,
+        "10m": TF.M10,
+        "15m": TF.M15,
+        "30m": TF.M30,
+        "1h": TF.H1,
+        "2h": TF.H2,
+        "4h": TF.H4,
+        "6h": TF.H6,
+        "8h": TF.H8,
+        "12h": TF.H12,
+        "1d": TF.D1,
+        "1w": TF.W1,
+        "1mo": TF.MN1,
+    }
+    key = folder.lower().strip()
+    if key not in mapping:
+        raise ValueError(f"Unknown timeframe folder: {folder}")
+    return mapping[key]
+
+
 def tf_from_minutes(minutes: int) -> TF:
     """Get the TF enum for a given minute value."""
     for tf, mins in _TF_MINUTES.items():

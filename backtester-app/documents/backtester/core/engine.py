@@ -12,10 +12,10 @@ from . import BacktestConfig, BacktestResult, Signal
 from .timeframes import TF
 from .events import MarketEvent
 from .data_feed import MultiTimeframeDataFeed
-from .broker import SimulatedBroker
+from .broker import SimulatedBroker, pip_value_usd_per_lot
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.connectors.exness_csv import ExnessCSVClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: ExnessCSVClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -160,7 +160,16 @@ class BacktestEngine:
         last_bar = self.data_feed.get_current_bar()
         if last_bar:
             for pos in list(self.broker.open_positions):
-                pos.trade.close(last_bar.time, last_bar.close, self.broker.pip_value)
+                pip_val = pip_value_usd_per_lot(pos.trade.symbol, pos.trade.entry_price)
+                pos.trade.close(
+                    last_bar.time,
+                    last_bar.close,
+                    self.broker.pip_value,
+                    pos.lot_size,
+                    pip_val,
+                )
+                commission = float(pos.trade.metadata.get("commission_usd", 0))
+                pos.trade.metadata["pnl_usd"] = round(pos.trade.pnl_usd - commission, 2)
                 self.portfolio.on_trade_closed(pos.trade)
             self.broker.open_positions.clear()
 
