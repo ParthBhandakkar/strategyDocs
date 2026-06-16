@@ -51,3 +51,19 @@ def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> 
     vah = max(va_prices) if va_prices else overall_high
     val = min(va_prices) if va_prices else overall_low
     return VolumeProfile(poc=poc_price, vah=vah, val=val, total_volume=total_vol)
+
+
+def compute_vwap(bars: list[Bar]) -> float | None:
+    """Session VWAP from typical price weighted by tick volume."""
+    if not bars:
+        return None
+    total_vol = 0
+    weighted = 0.0
+    for bar in bars:
+        vol = bar.tick_volume or 1
+        typical = (bar.high + bar.low + bar.close) / 3.0
+        weighted += typical * vol
+        total_vol += vol
+    if total_vol <= 0:
+        return None
+    return weighted / total_vol

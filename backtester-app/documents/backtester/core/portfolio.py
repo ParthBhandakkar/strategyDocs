@@ -7,6 +7,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from . import BacktestConfig, BacktestResult, Trade
+from .broker import pip_value_per_lot_usd
 
 
 class Portfolio:
@@ -20,21 +21,23 @@ class Portfolio:
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
 
-    def on_trade_closed(self, trade: Trade):
-        """Update portfolio when a trade is closed."""
-        self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
-        self.balance += pnl_usd
+    def on_trade_closed(self, trade: Trade, lot_size: float = 0.01, pip_value: float = 0.0001):
+        """Update portfolio when a trade is closed using USD PnL."""
+        symbol = trade.symbol
+        pip_per_lot = pip_value_per_lot_usd(symbol)
+        pnl_pips = trade.pnl / pip_value if pip_value > 0 else 0.0
+        commission = self.config.commission_per_lot * lot_size
+        pnl_usd = (pnl_pips * pip_per_lot * lot_size) - commission
+
+        trade.pnl_pips = round(pnl_pips, 1)
+        trade.metadata["lot_size"] = lot_size
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        trade.pnl = pnl_usd
+
+        self.trades.append(trade)
+        self.balance += pnl_usd
 
     def record_equity(self, timestamp: datetime):
-        """Record a point on the equity curve."""
         self.equity_curve.append({
             "time": timestamp.isoformat(),
             "equity": round(self.balance, 2),
@@ -43,7 +46,6 @@ class Portfolio:
             self._peak_equity = self.balance
 
     def get_result(self) -> BacktestResult:
-        """Generate the final backtest result with computed statistics."""
         result = BacktestResult(
             config=self.config,
             trades=self.trades,

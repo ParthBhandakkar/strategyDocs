@@ -5,7 +5,11 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime, time, timedelta
 from typing import Optional
+from zoneinfo import ZoneInfo
+
 from backtester.core import Bar
+
+NY_TZ = ZoneInfo("America/New_York")
 
 @dataclass
 class SessionRange:
@@ -24,6 +28,7 @@ SESSIONS = {
     "london_killzone": {"start": time(3, 0), "end": time(5, 0), "cross": False},
     "ny_killzone": {"start": time(7, 0), "end": time(11, 0), "cross": False},
     "ny_am": {"start": time(9, 30), "end": time(12, 0), "cross": False},
+    "ny_pm": {"start": time(12, 0), "end": time(14, 0), "cross": False},
 }
 
 RESTRICTED_HOURS = {
@@ -31,7 +36,9 @@ RESTRICTED_HOURS = {
 }
 
 def get_ny_time(utc_time: datetime) -> datetime:
-    return utc_time - timedelta(hours=5)
+    if utc_time.tzinfo is None:
+        utc_time = utc_time.replace(tzinfo=ZoneInfo("UTC"))
+    return utc_time.astimezone(NY_TZ)
 
 def is_restricted_hour(utc_time: datetime) -> bool:
     ny = get_ny_time(utc_time)

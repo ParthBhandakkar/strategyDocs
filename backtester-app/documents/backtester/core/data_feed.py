@@ -8,12 +8,16 @@ from __future__ import annotations
 
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
-from typing import Optional
+from typing import Optional, Protocol
 
 from backtester.core import Bar
 from backtester.core.timeframes import TF, tf_to_minutes, sort_timeframes
 from backtester.core.events import MarketEvent
-from backtester.connectors import MT5Client
+
+
+class DataClient(Protocol):
+    def get_bars(self, symbol: str, timeframe: TF, start: datetime, end: datetime) -> list[Bar]:
+        ...
 
 
 class MultiTimeframeDataFeed:
@@ -25,7 +29,7 @@ class MultiTimeframeDataFeed:
 
     def __init__(
         self,
-        client: MT5Client,
+        client: DataClient,
         symbol: str,
         timeframes: list[TF],
         start: datetime,
@@ -35,23 +39,21 @@ class MultiTimeframeDataFeed:
         self.client = client
         self.symbol = symbol
         self.timeframes = sort_timeframes(timeframes)
-        self.base_tf = self.timeframes[0]  # Smallest/fastest TF
+        self.base_tf = self.timeframes[0]
         self.start = start
         self.end = end
         self.extra_symbols = extra_symbols or []
 
-        # Storage: symbol -> TF -> list[Bar]
         self._all_bars: dict[str, dict[TF, list[Bar]]] = defaultdict(dict)
-        # Current index per symbol per TF
         self._indices: dict[str, dict[TF, int]] = defaultdict(lambda: defaultdict(int))
-        # History windows for strategies to look back
         self._history: dict[str, dict[TF, list[Bar]]] = defaultdict(lambda: defaultdict(list))
+        self._last_emitted: dict[str, dict[TF, Optional[Bar]]] = defaultdict(lambda: defaultdict(lambda: None))
 
         self._loaded = False
         self._current_time: Optional[datetime] = None
 
     def load(self):
-        """Pre-fetch all data from MT5 for the backtest period."""
+        """Pre-fetch all data for the backtest period."""
         all_symbols = [self.symbol] + self.extra_symbols
 
         for sym in all_symbols:
@@ -62,10 +64,16 @@ class MultiTimeframeDataFeed:
                 print(f"{len(bars)} bars")
 
         self._loaded = True
-        # Set initial time from the first base_tf bar
         base_bars = self._all_bars.get(self.symbol, {}).get(self.base_tf, [])
         if base_bars:
             self._current_time = base_bars[0].time
+
+    def _bar_is_closed(self, bar: Bar, tf: TF, current_time: datetime) -> bool:
+        duration = timedelta(minutes=tf_to_minutes(tf))
+        bar_close = bar.time + duration
+        current = current_time if current_time.tzinfo else current_time.replace(tzinfo=timezone.utc)
+        close_time = bar_close if bar_close.tzinfo else bar_close.replace(tzinfo=timezone.utc)
+        return close_time <= current
 
     def __iter__(self):
         """Iterate through time, yielding MarketEvents."""
@@ -76,10 +84,8 @@ class MultiTimeframeDataFeed:
         if not base_bars:
             return
 
-        for i, base_bar in enumerate(base_bars):
+        for base_bar in base_bars:
             self._current_time = base_bar.time
-
-            # Check which timeframes have a new completed bar at this time
             new_bars: dict[TF, Bar] = {}
             multi_bars: dict[str, dict[TF, Bar]] = defaultdict(dict)
 
@@ -88,18 +94,16 @@ class MultiTimeframeDataFeed:
                     tf_bars = self._all_bars.get(sym, {}).get(tf, [])
                     idx = self._indices[sym][tf]
 
-                    # Advance the index for this TF to the latest bar at or before current_time
                     while idx < len(tf_bars) and tf_bars[idx].time <= self._current_time:
-                        # Add to history window
-                        self._history[sym][tf].append(tf_bars[idx])
+                        candidate = tf_bars[idx]
+                        if self._bar_is_closed(candidate, tf, self._current_time):
+                            self._history[sym][tf].append(candidate)
+                            self._last_emitted[sym][tf] = candidate
                         idx += 1
 
                     self._indices[sym][tf] = idx
-
-                    # If we advanced, the latest bar in history is the new bar
-                    history = self._history[sym][tf]
-                    if history:
-                        latest = history[-1]
+                    latest = self._last_emitted[sym][tf]
+                    if latest is not None:
                         if sym == self.symbol:
                             new_bars[tf] = latest
                         multi_bars[sym][tf] = latest
@@ -113,17 +117,12 @@ class MultiTimeframeDataFeed:
                 yield event
 
     def get_history(self, symbol: str | None = None, timeframe: TF | None = None, lookback: int = 100) -> list[Bar]:
-        """
-        Get historical bars up to the current time for a specific symbol and timeframe.
-        Used by strategies to look back at previous bars.
-        """
         sym = symbol or self.symbol
         tf = timeframe or self.base_tf
         history = self._history.get(sym, {}).get(tf, [])
         return history[-lookback:] if len(history) > lookback else list(history)
 
     def get_current_bar(self, symbol: str | None = None, timeframe: TF | None = None) -> Optional[Bar]:
-        """Get the most recent bar for a symbol/timeframe."""
         history = self.get_history(symbol, timeframe, lookback=1)
         return history[-1] if history else None
 
@@ -133,5 +132,4 @@ class MultiTimeframeDataFeed:
 
     @property
     def total_bars(self) -> int:
-        """Total number of base-timeframe bars to process."""
         return len(self._all_bars.get(self.symbol, {}).get(self.base_tf, []))

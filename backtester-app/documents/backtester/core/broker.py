@@ -12,6 +12,22 @@ from .events import FillEvent, OrderEvent
 from .step_tracker import StepTracker
 
 
+def pip_value_per_lot_usd(symbol: str) -> float:
+    """Approximate USD pip value for one standard lot."""
+    sym = symbol.upper()
+    if "XAU" in sym or "GOLD" in sym:
+        return 10.0
+    if "XAG" in sym or "SILVER" in sym:
+        return 50.0
+    if "BTC" in sym:
+        return 1.0
+    if "ETH" in sym:
+        return 1.0
+    if sym.endswith("JPY") or "JPY" in sym:
+        return 6.5
+    return 10.0
+
+
 class SimulatedBroker:
     """
     Simulates order execution with configurable spread, slippage, and commission.
@@ -66,8 +82,7 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
+        pip_value_per_lot = pip_value_per_lot_usd(signal.symbol)
         lot_size = risk_amount / (pip_distance * pip_value_per_lot)
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
@@ -100,6 +115,7 @@ class SimulatedBroker:
         # Create position
         position = Position(trade=trade, lot_size=lot_size)
         self.open_positions.append(position)
+        trade.metadata["lot_size"] = lot_size
 
         return FillEvent(
             timestamp=signal.timestamp,
