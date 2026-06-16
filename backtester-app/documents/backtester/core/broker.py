@@ -1,22 +1,20 @@
 """
-Simulated Broker — handles order execution, fill simulation, SL/TP management.
+Simulated Broker — order execution, fill simulation, SL/TP management.
+Symbol-aware lot sizing and USD PnL via contract specifications.
 """
 
 from __future__ import annotations
 
-from datetime import datetime
 from typing import Optional
 
-from . import Bar, Signal, Trade, Position, Direction, OrderType, TradeStatus
-from .events import FillEvent, OrderEvent
+from . import Bar, Signal, Trade, Position, Direction, TradeStatus
+from .events import FillEvent
 from .step_tracker import StepTracker
+from .symbol_specs import pip_size, contract_size, usd_pnl
 
 
 class SimulatedBroker:
-    """
-    Simulates order execution with configurable spread, slippage, and commission.
-    Manages open positions and checks SL/TP hits each bar.
-    """
+    """Simulates order execution with spread, slippage, and commission."""
 
     def __init__(
         self,
@@ -34,16 +32,13 @@ class SimulatedBroker:
         self.closed_trades: list[Trade] = []
 
     def set_pip_value(self, symbol: str):
-        """Set pip value based on symbol type."""
-        sym = symbol.upper()
-        if "JPY" in sym:
-            self.pip_value = 0.01
-        elif "XAU" in sym or "GOLD" in sym:
-            self.pip_value = 0.1
-        elif "XAG" in sym or "SILVER" in sym:
-            self.pip_value = 0.01
-        else:
-            self.pip_value = 0.0001
+        self.pip_value = pip_size(symbol)
+
+    def _usd_per_pip_per_lot(self, symbol: str, price: float) -> float:
+        ps = pip_size(symbol)
+        if ps <= 0:
+            return 10.0
+        return contract_size(symbol) * ps
 
     def execute_signal(
         self,
@@ -52,37 +47,29 @@ class SimulatedBroker:
         balance: float,
         risk_per_trade: float = 0.01,
     ) -> Optional[FillEvent]:
-        """
-        Execute a trading signal. Returns a FillEvent if the order is filled.
-        """
-        # Calculate lot size based on risk
         risk_amount = balance * risk_per_trade
         sl_distance = abs(signal.entry_price - signal.stop_loss)
         if sl_distance <= 0:
             return None
 
-        # Pip value per lot (standard lot = 100,000 units for forex)
         pip_distance = sl_distance / self.pip_value
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
-        lot_size = risk_amount / (pip_distance * pip_value_per_lot)
-        lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
+        usd_per_pip = self._usd_per_pip_per_lot(signal.symbol, signal.entry_price)
+        lot_size = risk_amount / (pip_distance * usd_per_pip)
+        lot_size = max(0.01, round(lot_size, 2))
 
-        # Apply spread and slippage
         spread = self.spread_pips * self.pip_value
         slippage = self.slippage_pips * self.pip_value
 
-        if signal.direction == Direction.LONG:
+        if signal.direction.value == "LONG":
             fill_price = signal.entry_price + spread / 2 + slippage
         else:
             fill_price = signal.entry_price - spread / 2 - slippage
 
         commission = self.commission_per_lot * lot_size
 
-        # Create the trade
         trade = Trade(
             id=self._next_trade_id,
             strategy_id=signal.strategy_id,
@@ -93,12 +80,11 @@ class SimulatedBroker:
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             status=TradeStatus.OPEN,
-            metadata=signal.metadata.copy(),
+            metadata={**signal.metadata, "lot_size": lot_size, "commission": commission},
         )
         self._next_trade_id += 1
 
-        # Create position
-        position = Position(trade=trade, lot_size=lot_size)
+        position = Position(trade=trade, lot_size=lot_size, commission=commission)
         self.open_positions.append(position)
 
         return FillEvent(
@@ -117,23 +103,24 @@ class SimulatedBroker:
         )
 
     def update_positions(self, bar: Bar, step_tracker: StepTracker | None = None) -> list[Trade]:
-        """
-        Check all open positions against the current bar for SL/TP hits.
-        Returns list of newly closed trades.
-        """
-        closed = []
-        remaining = []
+        closed: list[Trade] = []
+        remaining: list[Position] = []
 
         for pos in self.open_positions:
             trade = pos.trade
             closed_trade = None
 
-            # Check SL hit first (worst case first)
             if pos.is_sl_hit(bar):
                 exit_price = pos.current_sl
-                trade.close(bar.time, exit_price, self.pip_value)
+                trade.close(
+                    bar.time,
+                    exit_price,
+                    self.pip_value,
+                    pos.lot_size,
+                    trade.symbol,
+                    pos.commission,
+                )
                 closed_trade = trade
-
                 if step_tracker:
                     step_tracker.add_step_to_trade(
                         trade.id,
@@ -144,13 +131,17 @@ class SimulatedBroker:
                         "",
                         f"Stop loss triggered at {exit_price:.5f}",
                     )
-
-            # Check TP hit
             elif pos.is_tp_hit(bar):
                 exit_price = pos.current_tp
-                trade.close(bar.time, exit_price, self.pip_value)
+                trade.close(
+                    bar.time,
+                    exit_price,
+                    self.pip_value,
+                    pos.lot_size,
+                    trade.symbol,
+                    pos.commission,
+                )
                 closed_trade = trade
-
                 if step_tracker:
                     step_tracker.add_step_to_trade(
                         trade.id,
@@ -163,7 +154,6 @@ class SimulatedBroker:
                     )
 
             if closed_trade:
-                # Attach steps from step tracker
                 if step_tracker:
                     closed_trade.steps = step_tracker.get_trade_steps(closed_trade.id)
                 self.closed_trades.append(closed_trade)
@@ -175,20 +165,17 @@ class SimulatedBroker:
         return closed
 
     def has_open_position(self, strategy_id: str | None = None) -> bool:
-        """Check if there's an open position (optionally for a specific strategy)."""
         if strategy_id:
             return any(p.trade.strategy_id == strategy_id for p in self.open_positions)
         return len(self.open_positions) > 0
 
     def get_open_position(self, strategy_id: str) -> Optional[Position]:
-        """Get the open position for a strategy."""
-        for p in self.open_positions:
-            if p.trade.strategy_id == strategy_id:
-                return p
+        for pos in self.open_positions:
+            if pos.trade.strategy_id == strategy_id:
+                return pos
         return None
 
     def move_to_breakeven(self, strategy_id: str, bar: Bar, step_tracker: StepTracker | None = None):
-        """Move stop loss to breakeven for a strategy's open position."""
         pos = self.get_open_position(strategy_id)
         if pos and not pos.break_even_applied:
             pos.move_sl_to_breakeven()
