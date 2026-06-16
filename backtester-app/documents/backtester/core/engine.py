@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.core.data_feed import DataClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: DataClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -47,7 +47,7 @@ class BacktestEngine:
         )
         self.broker.set_pip_value(config.symbol)
 
-        self.portfolio = Portfolio(config)
+        self.portfolio = Portfolio(config, self.broker)
         self.step_tracker = StepTracker(strategy.id)
 
         # Build data feed with the strategy's required timeframes
