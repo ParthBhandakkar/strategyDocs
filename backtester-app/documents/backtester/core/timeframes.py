@@ -129,6 +129,34 @@ def sort_timeframes(tfs: list[TF]) -> list[TF]:
     return sorted(tfs, key=lambda t: tf_to_minutes(t))
 
 
+_FOLDER_TO_TF = {
+    "1m": TF.M1,
+    "2m": TF.M2,
+    "3m": TF.M3,
+    "5m": TF.M5,
+    "10m": TF.M10,
+    "15m": TF.M15,
+    "30m": TF.M30,
+    "1h": TF.H1,
+    "2h": TF.H2,
+    "4h": TF.H4,
+    "6h": TF.H6,
+    "8h": TF.H8,
+    "12h": TF.H12,
+    "1d": TF.D1,
+    "1w": TF.W1,
+    "1mo": TF.MN1,
+}
+
+
+def tf_from_folder(folder: str) -> TF:
+    """Map Exness history folder name to TF enum."""
+    key = folder.lower().strip()
+    if key not in _FOLDER_TO_TF:
+        raise ValueError(f"Unknown timeframe folder: {folder}")
+    return _FOLDER_TO_TF[key]
+
+
 # All common forex timeframes for the API
 ALL_TIMEFRAMES = [
     {"value": tf.value, "label": tf_label(tf), "short": tf_short(tf), "minutes": tf_to_minutes(tf)}

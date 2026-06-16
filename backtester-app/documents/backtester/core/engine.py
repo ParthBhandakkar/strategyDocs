@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.connectors import ExnessCSVClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: ExnessCSVClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -122,7 +122,7 @@ class BacktestEngine:
                         self.config.risk_per_trade,
                     )
                     if fill:
-                        # Assign pending steps to this trade
+                        self.portfolio.on_fill(fill.commission)
                         self.step_tracker.assign_to_trade(fill.trade_id)
 
                         # Record entry step
@@ -160,8 +160,8 @@ class BacktestEngine:
         last_bar = self.data_feed.get_current_bar()
         if last_bar:
             for pos in list(self.broker.open_positions):
-                pos.trade.close(last_bar.time, last_bar.close, self.broker.pip_value)
-                self.portfolio.on_trade_closed(pos.trade)
+                closed = self.broker._close_trade(pos, last_bar.time, last_bar.close)
+                self.portfolio.on_trade_closed(closed)
             self.broker.open_positions.clear()
 
         # Final equity point
