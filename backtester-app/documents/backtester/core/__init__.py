@@ -121,30 +121,44 @@ class Trade:
     take_profit: float
     exit_time: Optional[datetime] = None
     exit_price: Optional[float] = None
+    lot_size: float = 0.01
     pnl: float = 0.0
     pnl_pips: float = 0.0
+    pnl_usd: float = 0.0
     risk_reward_achieved: float = 0.0
     status: TradeStatus = TradeStatus.OPEN
     steps: list[StepRecord] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
 
-    def close(self, exit_time: datetime, exit_price: float, pip_value: float = 0.0001):
-        """Close the trade and calculate PnL."""
+    def close(
+        self,
+        exit_time: datetime,
+        exit_price: float,
+        pip_size: float = 0.0001,
+        lot_size: float | None = None,
+        contract_size: float = 100_000.0,
+        commission: float = 0.0,
+    ):
+        """Close the trade and calculate price and USD PnL."""
         self.exit_time = exit_time
         self.exit_price = exit_price
         self.status = TradeStatus.CLOSED
+        lots = lot_size if lot_size is not None else self.lot_size
 
         if self.direction == Direction.LONG:
-            self.pnl = exit_price - self.entry_price
+            price_delta = exit_price - self.entry_price
         else:
-            self.pnl = self.entry_price - exit_price
+            price_delta = self.entry_price - exit_price
 
-        if pip_value > 0:
-            self.pnl_pips = self.pnl / pip_value
+        self.pnl = price_delta
+        if pip_size > 0:
+            self.pnl_pips = price_delta / pip_size
+
+        self.pnl_usd = round(price_delta * lots * contract_size - commission, 2)
 
         risk = abs(self.entry_price - self.stop_loss)
         if risk > 0:
-            self.risk_reward_achieved = round(self.pnl / risk, 2)
+            self.risk_reward_achieved = round(price_delta / risk, 2)
 
 
 @dataclass
@@ -233,17 +247,17 @@ class BacktestResult:
         if self.total_trades == 0:
             return
 
-        winners = [t for t in self.trades if t.pnl > 0]
-        losers = [t for t in self.trades if t.pnl <= 0]
+        winners = [t for t in self.trades if t.pnl_usd > 0]
+        losers = [t for t in self.trades if t.pnl_usd <= 0]
         self.winning_trades = len(winners)
         self.losing_trades = len(losers)
         self.win_rate = round(self.winning_trades / self.total_trades * 100, 2)
 
-        gross_profit = sum(t.pnl for t in winners) if winners else 0
-        gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
-        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
+        gross_profit = sum(t.pnl_usd for t in winners) if winners else 0
+        gross_loss = abs(sum(t.pnl_usd for t in losers)) if losers else 0
+        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float("inf")
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = round(sum(t.pnl_usd for t in self.trades), 2)
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )
@@ -328,6 +342,7 @@ class BacktestResult:
                     "exit_time": t.exit_time.isoformat() if t.exit_time else None,
                     "exit_price": t.exit_price,
                     "pnl": round(t.pnl, 5),
+                    "pnl_usd": round(t.pnl_usd, 2),
                     "pnl_pips": round(t.pnl_pips, 1),
                     "rr_achieved": t.risk_reward_achieved,
                     "status": t.status.value,
