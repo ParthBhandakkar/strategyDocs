@@ -23,15 +23,38 @@ class Portfolio:
     def on_trade_closed(self, trade: Trade):
         """Update portfolio when a trade is closed."""
         self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
+        lot_size = float(trade.metadata.get("lot_size", 0.01))
+        pip_distance = trade.pnl / self._pip_value_for_symbol(trade.symbol)
+        pnl_usd = pip_distance * self._pip_value_per_lot(trade.symbol) * lot_size
+        commission = float(trade.metadata.get("commission", 0.0))
+        pnl_usd -= commission
         self.balance += pnl_usd
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+
+    def _pip_value_for_symbol(self, symbol: str) -> float:
+        sym = symbol.upper()
+        if "JPY" in sym:
+            return 0.01
+        if "XAU" in sym or "GOLD" in sym:
+            return 0.1
+        if "XAG" in sym or "SILVER" in sym:
+            return 0.01
+        if "BTC" in sym or "ETH" in sym:
+            return 1.0
+        return 0.0001
+
+    @staticmethod
+    def _pip_value_per_lot(symbol: str) -> float:
+        sym = symbol.upper()
+        if "JPY" in sym:
+            return 6.5
+        if "XAU" in sym or "GOLD" in sym:
+            return 10.0
+        if "XAG" in sym or "SILVER" in sym:
+            return 50.0
+        if "BTC" in sym or "ETH" in sym:
+            return 1.0
+        return 10.0
 
     def record_equity(self, timestamp: datetime):
         """Record a point on the equity curve."""

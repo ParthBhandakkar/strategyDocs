@@ -1,0 +1,1 @@
+[IST 16-Jun-2026 16:05:00] - Bootstrapped folder-based backtester pipeline: removed legacy flat strategies/MT5 server, added ExnessCSVClient, main_backtester.py, and Video #1 vp_orderflow_absorption strategy module.

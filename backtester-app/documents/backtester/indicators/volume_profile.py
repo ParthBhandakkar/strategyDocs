@@ -10,6 +10,7 @@ class VolumeProfile:
     poc: float  # Point of Control
     vah: float  # Value Area High
     val: float  # Value Area Low
+    vwap: float = 0.0
     total_volume: int = 0
 
 def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> VolumeProfile | None:
@@ -50,4 +51,21 @@ def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> 
             break
     vah = max(va_prices) if va_prices else overall_high
     val = min(va_prices) if va_prices else overall_low
-    return VolumeProfile(poc=poc_price, vah=vah, val=val, total_volume=total_vol)
+    vwap = compute_vwap(bars)
+    return VolumeProfile(poc=poc_price, vah=vah, val=val, vwap=vwap, total_volume=total_vol)
+
+
+def compute_vwap(bars: list[Bar]) -> float:
+    """Volume-weighted average price for a bar series."""
+    if not bars:
+        return 0.0
+    weighted_sum = 0.0
+    total_volume = 0
+    for bar in bars:
+        typical = (bar.high + bar.low + bar.close) / 3.0
+        volume = bar.tick_volume or 1
+        weighted_sum += typical * volume
+        total_volume += volume
+    if total_volume <= 0:
+        return bars[-1].close
+    return weighted_sum / total_volume
