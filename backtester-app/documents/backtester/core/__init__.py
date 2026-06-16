@@ -152,6 +152,7 @@ class Position:
     """An open position being tracked by the portfolio."""
     trade: Trade
     lot_size: float = 0.01
+    commission: float = 0.0
     current_sl: float = 0.0
     current_tp: float = 0.0
     break_even_applied: bool = False
@@ -233,17 +234,17 @@ class BacktestResult:
         if self.total_trades == 0:
             return
 
-        winners = [t for t in self.trades if t.pnl > 0]
-        losers = [t for t in self.trades if t.pnl <= 0]
+        winners = [t for t in self.trades if t.metadata.get("pnl_usd", t.pnl) > 0]
+        losers = [t for t in self.trades if t.metadata.get("pnl_usd", t.pnl) <= 0]
         self.winning_trades = len(winners)
         self.losing_trades = len(losers)
         self.win_rate = round(self.winning_trades / self.total_trades * 100, 2)
 
-        gross_profit = sum(t.pnl for t in winners) if winners else 0
-        gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
-        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
+        gross_profit = sum(t.metadata.get("pnl_usd", t.pnl) for t in winners) if winners else 0
+        gross_loss = abs(sum(t.metadata.get("pnl_usd", t.pnl) for t in losers)) if losers else 0
+        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float("inf")
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = round(sum(t.metadata.get("pnl_usd", t.pnl) for t in self.trades), 2)
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )

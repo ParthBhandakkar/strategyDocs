@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.core.data_feed import DataClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: DataClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -102,7 +102,11 @@ class BacktestEngine:
             if base_bar:
                 closed_trades = self.broker.update_positions(base_bar, self.step_tracker)
                 for trade in closed_trades:
-                    self.portfolio.on_trade_closed(trade)
+                    lot_size = float(trade.metadata.get("lot_size", 0.01))
+                    commission = float(trade.metadata.get("commission", 0.0))
+                    self.portfolio.on_trade_closed(
+                        trade, lot_size=lot_size, commission=commission
+                    )
 
             # 2. Let strategy process the new bars
             signals = self.strategy.on_bar(
@@ -161,7 +165,11 @@ class BacktestEngine:
         if last_bar:
             for pos in list(self.broker.open_positions):
                 pos.trade.close(last_bar.time, last_bar.close, self.broker.pip_value)
-                self.portfolio.on_trade_closed(pos.trade)
+                lot_size = float(pos.trade.metadata.get("lot_size", pos.lot_size))
+                commission = float(pos.trade.metadata.get("commission", pos.commission))
+                self.portfolio.on_trade_closed(
+                    pos.trade, lot_size=lot_size, commission=commission
+                )
             self.broker.open_positions.clear()
 
         # Final equity point
