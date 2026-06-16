@@ -93,7 +93,11 @@ class SimulatedBroker:
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             status=TradeStatus.OPEN,
-            metadata=signal.metadata.copy(),
+            metadata={
+                **signal.metadata.copy(),
+                "lot_size": lot_size,
+                "commission": commission,
+            },
         )
         self._next_trade_id += 1
 
