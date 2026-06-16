@@ -7,6 +7,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from . import BacktestConfig, BacktestResult, Trade
+from .broker import SimulatedBroker
 
 
 class Portfolio:
@@ -19,19 +20,28 @@ class Portfolio:
         self.equity_curve: list[dict] = []
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
+        self._broker_ref: SimulatedBroker | None = None
+
+    def attach_broker(self, broker: SimulatedBroker):
+        self._broker_ref = broker
 
     def on_trade_closed(self, trade: Trade):
-        """Update portfolio when a trade is closed."""
+        """Update portfolio when a trade is closed using consistent USD PnL."""
         self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
-        self.balance += pnl_usd
+        lot_size = float(trade.metadata.get("lot_size", 0.01))
+        commission = float(trade.metadata.get("commission_usd", 0.0))
+
+        pip_value = 0.0001
+        pip_value_usd = 10.0
+        if self._broker_ref is not None:
+            self._broker_ref.set_pip_value(trade.symbol)
+            pip_value = self._broker_ref.pip_value
+            pip_value_usd = self._broker_ref.pip_value_usd_per_lot(trade.symbol)
+
+        pnl_pips = trade.pnl / pip_value if pip_value > 0 else 0.0
+        pnl_usd = (pnl_pips * pip_value_usd * lot_size) - commission
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        self.balance += pnl_usd
 
     def record_equity(self, timestamp: datetime):
         """Record a point on the equity curve."""
