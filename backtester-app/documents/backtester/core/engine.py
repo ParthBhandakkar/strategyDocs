@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.connectors import ExnessCSVClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: ExnessCSVClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -161,6 +161,7 @@ class BacktestEngine:
         if last_bar:
             for pos in list(self.broker.open_positions):
                 pos.trade.close(last_bar.time, last_bar.close, self.broker.pip_value)
+                self.broker._apply_usd_pnl(pos.trade, pos.lot_size)
                 self.portfolio.on_trade_closed(pos.trade)
             self.broker.open_positions.clear()
 

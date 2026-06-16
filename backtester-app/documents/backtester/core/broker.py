@@ -29,21 +29,32 @@ class SimulatedBroker:
         self.slippage_pips = slippage_pips
         self.commission_per_lot = commission_per_lot
         self.pip_value = pip_value
+        self.pip_value_per_lot = 10.0
         self._next_trade_id = 1
         self.open_positions: list[Position] = []
         self.closed_trades: list[Trade] = []
 
     def set_pip_value(self, symbol: str):
-        """Set pip value based on symbol type."""
+        """Set pip/point size and USD value per standard lot."""
         sym = symbol.upper()
         if "JPY" in sym:
             self.pip_value = 0.01
+            self.pip_value_per_lot = 10.0
         elif "XAU" in sym or "GOLD" in sym:
             self.pip_value = 0.1
+            self.pip_value_per_lot = 10.0
         elif "XAG" in sym or "SILVER" in sym:
             self.pip_value = 0.01
+            self.pip_value_per_lot = 50.0
+        elif "BTC" in sym:
+            self.pip_value = 1.0
+            self.pip_value_per_lot = 1.0
+        elif "ETH" in sym:
+            self.pip_value = 0.1
+            self.pip_value_per_lot = 1.0
         else:
             self.pip_value = 0.0001
+            self.pip_value_per_lot = 10.0
 
     def execute_signal(
         self,
@@ -67,8 +78,7 @@ class SimulatedBroker:
             return None
 
         # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
-        lot_size = risk_amount / (pip_distance * pip_value_per_lot)
+        lot_size = risk_amount / (pip_distance * self.pip_value_per_lot)
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
         # Apply spread and slippage
@@ -132,6 +142,7 @@ class SimulatedBroker:
             if pos.is_sl_hit(bar):
                 exit_price = pos.current_sl
                 trade.close(bar.time, exit_price, self.pip_value)
+                self._apply_usd_pnl(trade, pos.lot_size)
                 closed_trade = trade
 
                 if step_tracker:
@@ -149,6 +160,7 @@ class SimulatedBroker:
             elif pos.is_tp_hit(bar):
                 exit_price = pos.current_tp
                 trade.close(bar.time, exit_price, self.pip_value)
+                self._apply_usd_pnl(trade, pos.lot_size)
                 closed_trade = trade
 
                 if step_tracker:
@@ -173,6 +185,15 @@ class SimulatedBroker:
 
         self.open_positions = remaining
         return closed
+
+    def _apply_usd_pnl(self, trade: Trade, lot_size: float):
+        """Store consistent USD PnL on the trade metadata."""
+        pnl_usd = trade.pnl_pips * self.pip_value_per_lot * lot_size
+        commission = self.commission_per_lot * lot_size
+        pnl_usd -= commission
+        trade.pnl = pnl_usd
+        trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        trade.metadata["lot_size"] = lot_size
 
     def has_open_position(self, strategy_id: str | None = None) -> bool:
         """Check if there's an open position (optionally for a specific strategy)."""
