@@ -1,5 +1,5 @@
 """
-Portfolio Manager — tracks equity, drawdown, and generates equity curve.
+Portfolio Manager — consistent USD PnL model for balance and stats.
 """
 
 from __future__ import annotations
@@ -9,8 +9,22 @@ from datetime import datetime
 from . import BacktestConfig, BacktestResult, Trade
 
 
+def trade_pnl_usd(trade: Trade) -> float:
+    """Convert price-based PnL to USD using stored lot and symbol specs."""
+    lot_size = float(trade.metadata.get("lot_size", 0.01))
+    pip_value = float(trade.metadata.get("pip_value", 0.0001))
+    dollar_per_pip = float(trade.metadata.get("dollar_per_pip_per_lot", 10.0))
+    commission = float(trade.metadata.get("commission", 0.0))
+
+    if pip_value <= 0:
+        return 0.0
+
+    pip_move = trade.pnl / pip_value
+    return round(pip_move * dollar_per_pip * lot_size - commission, 2)
+
+
 class Portfolio:
-    """Tracks account balance, equity curve, and computes portfolio metrics."""
+    """Tracks account balance, equity curve, and portfolio metrics."""
 
     def __init__(self, config: BacktestConfig):
         self.config = config
@@ -20,30 +34,21 @@ class Portfolio:
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
 
-    def on_trade_closed(self, trade: Trade):
-        """Update portfolio when a trade is closed."""
+    def on_trade_closed(self, trade: Trade) -> None:
+        pnl_usd = trade_pnl_usd(trade)
+        trade.metadata["pnl_usd"] = pnl_usd
+        trade.pnl = pnl_usd
         self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
         self.balance += pnl_usd
-        trade.metadata["pnl_usd"] = round(pnl_usd, 2)
 
-    def record_equity(self, timestamp: datetime):
-        """Record a point on the equity curve."""
-        self.equity_curve.append({
-            "time": timestamp.isoformat(),
-            "equity": round(self.balance, 2),
-        })
+    def record_equity(self, timestamp: datetime) -> None:
+        self.equity_curve.append(
+            {"time": timestamp.isoformat(), "equity": round(self.balance, 2)}
+        )
         if self.balance > self._peak_equity:
             self._peak_equity = self.balance
 
     def get_result(self) -> BacktestResult:
-        """Generate the final backtest result with computed statistics."""
         result = BacktestResult(
             config=self.config,
             trades=self.trades,
