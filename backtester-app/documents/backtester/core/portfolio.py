@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from . import BacktestConfig, BacktestResult, Trade
+from . import BacktestConfig, BacktestResult, Trade, Direction
 
 
 class Portfolio:
@@ -20,18 +20,28 @@ class Portfolio:
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
 
+    def _trade_pnl_usd(self, trade: Trade) -> float:
+        if trade.exit_price is None:
+            return 0.0
+        lot_size = float(trade.metadata.get("lot_size", 0.01))
+        contract_size = float(trade.metadata.get("contract_size", 100_000.0))
+        commission = float(trade.metadata.get("commission_usd", 0.0))
+
+        if trade.direction == Direction.LONG:
+            price_delta = trade.exit_price - trade.entry_price
+        else:
+            price_delta = trade.entry_price - trade.exit_price
+
+        gross = price_delta * contract_size * lot_size
+        return gross - commission
+
     def on_trade_closed(self, trade: Trade):
         """Update portfolio when a trade is closed."""
-        self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
-        else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
-        self.balance += pnl_usd
+        pnl_usd = self._trade_pnl_usd(trade)
+        trade.pnl = pnl_usd
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        self.trades.append(trade)
+        self.balance += pnl_usd
 
     def record_equity(self, timestamp: datetime):
         """Record a point on the equity curve."""
