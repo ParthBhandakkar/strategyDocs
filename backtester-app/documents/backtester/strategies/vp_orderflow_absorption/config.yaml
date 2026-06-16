@@ -1,0 +1,25 @@
+strategy_id: s001_vp_orderflow_absorption
+module: vp_orderflow_absorption
+video_number: 1
+cluster: A
+asset_focus_hint: [XAUUSD]
+
+backtest_defaults:
+  initial_balance: 10000.0
+  risk_per_trade: 0.01
+  spread_pips: 1.0
+  slippage_pips: 0.5
+  commission_per_lot: 7.0
+
+required_timeframes: [M1]
+min_trades_for_ranking: 10
+
+# Proxies tick_volume for L2 orderflow (no curve fitting on backtest results)
+absorption:
+  min_wick_ratio: 0.35
+  min_volume_ratio: 1.2
+  cluster_lookback: 8
+
+session:
+  start_ny: "09:30"
+  end_ny: "16:00"
