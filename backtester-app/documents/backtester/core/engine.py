@@ -15,7 +15,6 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
 
 
 class BacktestEngine:
@@ -31,7 +30,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config

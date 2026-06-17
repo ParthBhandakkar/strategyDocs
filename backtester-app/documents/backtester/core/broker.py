@@ -12,6 +12,33 @@ from .events import FillEvent, OrderEvent
 from .step_tracker import StepTracker
 
 
+def pip_size(symbol: str) -> float:
+    sym = symbol.upper()
+    if "JPY" in sym:
+        return 0.01
+    if "XAU" in sym or "GOLD" in sym:
+        return 0.1
+    if "XAG" in sym or "SILVER" in sym:
+        return 0.01
+    if sym in ("BTCUSD", "ETHUSD"):
+        return 1.0
+    return 0.0001
+
+
+def dollars_per_lot_per_point(symbol: str) -> float:
+    """USD PnL change for a 1.0 price-unit move on 1 standard lot."""
+    sym = symbol.upper()
+    if "XAU" in sym:
+        return 100.0
+    if "XAG" in sym:
+        return 5000.0
+    if sym in ("BTCUSD", "ETHUSD"):
+        return 1.0
+    if "JPY" in sym:
+        return 1000.0
+    return 100000.0
+
+
 class SimulatedBroker:
     """
     Simulates order execution with configurable spread, slippage, and commission.
@@ -34,16 +61,7 @@ class SimulatedBroker:
         self.closed_trades: list[Trade] = []
 
     def set_pip_value(self, symbol: str):
-        """Set pip value based on symbol type."""
-        sym = symbol.upper()
-        if "JPY" in sym:
-            self.pip_value = 0.01
-        elif "XAU" in sym or "GOLD" in sym:
-            self.pip_value = 0.1
-        elif "XAG" in sym or "SILVER" in sym:
-            self.pip_value = 0.01
-        else:
-            self.pip_value = 0.0001
+        self.pip_value = pip_size(symbol)
 
     def execute_signal(
         self,
@@ -61,15 +79,9 @@ class SimulatedBroker:
         if sl_distance <= 0:
             return None
 
-        # Pip value per lot (standard lot = 100,000 units for forex)
-        pip_distance = sl_distance / self.pip_value
-        if pip_distance <= 0:
-            return None
-
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
-        lot_size = risk_amount / (pip_distance * pip_value_per_lot)
-        lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
+        point_value = dollars_per_lot_per_point(signal.symbol)
+        lot_size = risk_amount / (sl_distance * point_value)
+        lot_size = max(0.01, round(lot_size, 2))
 
         # Apply spread and slippage
         spread = self.spread_pips * self.pip_value
@@ -93,7 +105,11 @@ class SimulatedBroker:
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             status=TradeStatus.OPEN,
-            metadata=signal.metadata.copy(),
+            metadata={
+                **signal.metadata.copy(),
+                "lot_size": lot_size,
+                "commission": commission,
+            },
         )
         self._next_trade_id += 1
 

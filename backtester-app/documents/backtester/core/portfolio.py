@@ -1,5 +1,6 @@
 """
 Portfolio Manager — tracks equity, drawdown, and generates equity curve.
+Uses a consistent USD PnL model based on lot size and price movement.
 """
 
 from __future__ import annotations
@@ -7,6 +8,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from . import BacktestConfig, BacktestResult, Trade
+from .broker import dollars_per_lot_per_point
 
 
 class Portfolio:
@@ -20,21 +22,34 @@ class Portfolio:
         self.trades: list[Trade] = []
         self._peak_equity = config.initial_balance
 
-    def on_trade_closed(self, trade: Trade):
-        """Update portfolio when a trade is closed."""
-        self.trades.append(trade)
-        # Simple PnL: for proper lot-based PnL, multiply by lot_size * contract_size
-        # Here we use risk-based PnL: risk_amount * RR_achieved
-        risk_amount = self.initial_balance * self.config.risk_per_trade
-        if trade.risk_reward_achieved != 0:
-            pnl_usd = risk_amount * trade.risk_reward_achieved
+    @staticmethod
+    def _trade_pnl_usd(trade: Trade) -> float:
+        lot_size = float(trade.metadata.get("lot_size", 0.01))
+        commission = float(trade.metadata.get("commission", 0.0))
+        point_value = dollars_per_lot_per_point(trade.symbol)
+        if trade.exit_price is None:
+            return 0.0
+        if trade.direction.value == "LONG":
+            price_delta = trade.exit_price - trade.entry_price
         else:
-            pnl_usd = trade.pnl * 10000  # Rough conversion for testing
-        self.balance += pnl_usd
+            price_delta = trade.entry_price - trade.exit_price
+        return price_delta * lot_size * point_value - commission
+
+    def on_trade_closed(self, trade: Trade):
+        pnl_usd = self._trade_pnl_usd(trade)
+        trade.pnl = pnl_usd
         trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+        risk = abs(trade.entry_price - trade.stop_loss)
+        if risk > 0 and trade.exit_price is not None:
+            if trade.direction.value == "LONG":
+                raw = trade.exit_price - trade.entry_price
+            else:
+                raw = trade.entry_price - trade.exit_price
+            trade.risk_reward_achieved = round(raw / risk, 2)
+        self.trades.append(trade)
+        self.balance += pnl_usd
 
     def record_equity(self, timestamp: datetime):
-        """Record a point on the equity curve."""
         self.equity_curve.append({
             "time": timestamp.isoformat(),
             "equity": round(self.balance, 2),
@@ -43,7 +58,6 @@ class Portfolio:
             self._peak_equity = self.balance
 
     def get_result(self) -> BacktestResult:
-        """Generate the final backtest result with computed statistics."""
         result = BacktestResult(
             config=self.config,
             trades=self.trades,
