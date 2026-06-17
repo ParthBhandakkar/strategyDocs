@@ -35,15 +35,33 @@ class SimulatedBroker:
 
     def set_pip_value(self, symbol: str):
         """Set pip value based on symbol type."""
+        self.pip_value = self._pip_size(symbol)
+
+    @staticmethod
+    def _pip_size(symbol: str) -> float:
         sym = symbol.upper()
         if "JPY" in sym:
-            self.pip_value = 0.01
-        elif "XAU" in sym or "GOLD" in sym:
-            self.pip_value = 0.1
-        elif "XAG" in sym or "SILVER" in sym:
-            self.pip_value = 0.01
-        else:
-            self.pip_value = 0.0001
+            return 0.01
+        if "XAU" in sym or "GOLD" in sym:
+            return 0.1
+        if "XAG" in sym or "SILVER" in sym:
+            return 0.01
+        if sym in ("BTCUSD", "ETHUSD"):
+            return 1.0
+        return 0.0001
+
+    def pip_value_per_lot(self, symbol: str) -> float:
+        """USD value of one pip/point for one standard lot."""
+        sym = symbol.upper()
+        if "XAU" in sym:
+            return 10.0
+        if "XAG" in sym:
+            return 50.0
+        if sym in ("BTCUSD", "ETHUSD"):
+            return 1.0
+        if "JPY" in sym:
+            return 6.5
+        return 10.0
 
     def execute_signal(
         self,
@@ -66,8 +84,7 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
+        pip_value_per_lot = self.pip_value_per_lot(signal.symbol)
         lot_size = risk_amount / (pip_distance * pip_value_per_lot)
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
@@ -163,7 +180,9 @@ class SimulatedBroker:
                     )
 
             if closed_trade:
-                # Attach steps from step tracker
+                pnl_usd = pos.lot_size * closed_trade.pnl_pips * self.pip_value_per_lot(trade.symbol)
+                closed_trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+                closed_trade.metadata["lot_size"] = pos.lot_size
                 if step_tracker:
                     closed_trade.steps = step_tracker.get_trade_steps(closed_trade.id)
                 self.closed_trades.append(closed_trade)

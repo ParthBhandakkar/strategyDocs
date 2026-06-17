@@ -2,15 +2,33 @@
 Fixed Range Volume Profile (FRVP) — approximation using tick_volume.
 """
 from __future__ import annotations
+
 from dataclasses import dataclass
+
 from backtester.core import Bar
+
 
 @dataclass
 class VolumeProfile:
     poc: float  # Point of Control
     vah: float  # Value Area High
     val: float  # Value Area Low
+    vwap: float = 0.0
     total_volume: int = 0
+
+
+def compute_vwap(bars: list[Bar]) -> float:
+    """Volume-weighted average price for a bar series."""
+    if not bars:
+        return 0.0
+    total_vol = 0
+    weighted = 0.0
+    for bar in bars:
+        vol = bar.tick_volume or 1
+        typical = (bar.high + bar.low + bar.close) / 3.0
+        weighted += typical * vol
+        total_vol += vol
+    return weighted / total_vol if total_vol > 0 else bars[-1].close
 
 def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> VolumeProfile | None:
     """Compute Fixed Range Volume Profile from a list of bars using tick_volume."""
@@ -50,4 +68,20 @@ def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> 
             break
     vah = max(va_prices) if va_prices else overall_high
     val = min(va_prices) if va_prices else overall_low
-    return VolumeProfile(poc=poc_price, vah=vah, val=val, total_volume=total_vol)
+    vwap = compute_vwap(bars)
+    return VolumeProfile(poc=poc_price, vah=vah, val=val, vwap=vwap, total_volume=total_vol)
+
+
+def wick_volume_ratio(bar: Bar) -> tuple[float, float]:
+    """
+    Approximate orderflow absorption proxy: upper vs lower wick volume share.
+    Uses tick_volume distributed by wick size (no L2 data available).
+    """
+    vol = bar.tick_volume or 1
+    upper = bar.upper_wick
+    lower = bar.lower_wick
+    body = max(bar.body_size, 1e-9)
+    total = upper + lower + body
+    upper_share = vol * (upper / total)
+    lower_share = vol * (lower / total)
+    return upper_share, lower_share
