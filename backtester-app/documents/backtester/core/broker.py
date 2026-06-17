@@ -42,8 +42,23 @@ class SimulatedBroker:
             self.pip_value = 0.1
         elif "XAG" in sym or "SILVER" in sym:
             self.pip_value = 0.01
+        elif "BTC" in sym or "ETH" in sym:
+            self.pip_value = 1.0
         else:
             self.pip_value = 0.0001
+
+    def pip_value_per_lot(self, symbol: str) -> float:
+        """Approximate USD value per pip for one standard lot."""
+        sym = symbol.upper()
+        if "XAU" in sym:
+            return 10.0
+        if "XAG" in sym:
+            return 50.0
+        if "BTC" in sym or "ETH" in sym:
+            return 1.0
+        if sym.endswith("JPY") or (len(sym) == 6 and "JPY" in sym):
+            return 6.5
+        return 10.0
 
     def execute_signal(
         self,
@@ -66,8 +81,7 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
+        pip_value_per_lot = self.pip_value_per_lot(signal.symbol)
         lot_size = risk_amount / (pip_distance * pip_value_per_lot)
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
@@ -93,7 +107,13 @@ class SimulatedBroker:
             stop_loss=signal.stop_loss,
             take_profit=signal.take_profit,
             status=TradeStatus.OPEN,
-            metadata=signal.metadata.copy(),
+            metadata={
+                **signal.metadata.copy(),
+                "lot_size": lot_size,
+                "commission": commission,
+                "pip_value": self.pip_value,
+                "pip_value_per_lot": pip_value_per_lot,
+            },
         )
         self._next_trade_id += 1
 
