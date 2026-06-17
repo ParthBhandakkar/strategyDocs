@@ -243,7 +243,7 @@ class BacktestResult:
         gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
         self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = round(sum(t.pnl for t in self.trades), 2)
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )

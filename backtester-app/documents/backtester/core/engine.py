@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.core.data_feed import DataClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: DataClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -156,13 +156,10 @@ class BacktestEngine:
             if self.progress_callback and bar_count % 1000 == 0:
                 self.progress_callback(bar_count, total_bars)
 
-        # Force-close any remaining positions at the last bar
         last_bar = self.data_feed.get_current_bar()
         if last_bar:
-            for pos in list(self.broker.open_positions):
-                pos.trade.close(last_bar.time, last_bar.close, self.broker.pip_value)
-                self.portfolio.on_trade_closed(pos.trade)
-            self.broker.open_positions.clear()
+            for trade in self.broker.force_close_all(last_bar):
+                self.portfolio.on_trade_closed(trade)
 
         # Final equity point
         if self.data_feed.current_time:
