@@ -13,7 +13,7 @@ from typing import Optional
 from backtester.core import Bar
 from backtester.core.timeframes import TF, tf_to_minutes, sort_timeframes
 from backtester.core.events import MarketEvent
-from backtester.connectors import MT5Client
+from backtester.connectors.exness_csv import ExnessCSVClient
 
 
 class MultiTimeframeDataFeed:
@@ -25,7 +25,7 @@ class MultiTimeframeDataFeed:
 
     def __init__(
         self,
-        client: MT5Client,
+        client: ExnessCSVClient,
         symbol: str,
         timeframes: list[TF],
         start: datetime,
@@ -51,7 +51,7 @@ class MultiTimeframeDataFeed:
         self._current_time: Optional[datetime] = None
 
     def load(self):
-        """Pre-fetch all data from MT5 for the backtest period."""
+        """Pre-fetch all data for the backtest period."""
         all_symbols = [self.symbol] + self.extra_symbols
 
         for sym in all_symbols:
@@ -76,8 +76,9 @@ class MultiTimeframeDataFeed:
         if not base_bars:
             return
 
-        for i, base_bar in enumerate(base_bars):
-            self._current_time = base_bar.time
+        base_duration = timedelta(minutes=tf_to_minutes(self.base_tf))
+        for base_bar in base_bars:
+            self._current_time = base_bar.time + base_duration
 
             # Check which timeframes have a new completed bar at this time
             new_bars: dict[TF, Bar] = {}
@@ -88,21 +89,27 @@ class MultiTimeframeDataFeed:
                     tf_bars = self._all_bars.get(sym, {}).get(tf, [])
                     idx = self._indices[sym][tf]
 
-                    # Advance the index for this TF to the latest bar at or before current_time
-                    while idx < len(tf_bars) and tf_bars[idx].time <= self._current_time:
-                        # Add to history window
-                        self._history[sym][tf].append(tf_bars[idx])
+                    # HTF bars enter history only after bar close (anti-lookahead).
+                    while idx < len(tf_bars):
+                        candidate = tf_bars[idx]
+                        bar_close_time = candidate.time + timedelta(
+                            minutes=tf_to_minutes(tf)
+                        )
+                        if bar_close_time > self._current_time:
+                            break
+                        self._history[sym][tf].append(candidate)
                         idx += 1
 
                     self._indices[sym][tf] = idx
 
-                    # If we advanced, the latest bar in history is the new bar
                     history = self._history[sym][tf]
                     if history:
                         latest = history[-1]
-                        if sym == self.symbol:
-                            new_bars[tf] = latest
-                        multi_bars[sym][tf] = latest
+                        latest_close = latest.time + timedelta(minutes=tf_to_minutes(tf))
+                        if latest_close <= self._current_time:
+                            if sym == self.symbol:
+                                new_bars[tf] = latest
+                            multi_bars[sym][tf] = latest
 
             if new_bars:
                 event = MarketEvent(

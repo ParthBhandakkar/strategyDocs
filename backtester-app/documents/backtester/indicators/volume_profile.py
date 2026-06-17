@@ -12,6 +12,22 @@ class VolumeProfile:
     val: float  # Value Area Low
     total_volume: int = 0
 
+def compute_session_vwap(bars: list[Bar]) -> float | None:
+    """Volume-weighted average price for a bar sequence."""
+    if not bars:
+        return None
+    total_volume = 0
+    price_volume = 0.0
+    for bar in bars:
+        volume = bar.tick_volume or 1
+        typical_price = (bar.high + bar.low + bar.close) / 3.0
+        total_volume += volume
+        price_volume += typical_price * volume
+    if total_volume <= 0:
+        return bars[-1].close
+    return price_volume / total_volume
+
+
 def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> VolumeProfile | None:
     """Compute Fixed Range Volume Profile from a list of bars using tick_volume."""
     if not bars:
