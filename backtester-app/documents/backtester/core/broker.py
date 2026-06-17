@@ -35,15 +35,33 @@ class SimulatedBroker:
 
     def set_pip_value(self, symbol: str):
         """Set pip value based on symbol type."""
+        self.pip_value = self._pip_size(symbol)
+
+    @staticmethod
+    def _pip_size(symbol: str) -> float:
         sym = symbol.upper()
         if "JPY" in sym:
-            self.pip_value = 0.01
-        elif "XAU" in sym or "GOLD" in sym:
-            self.pip_value = 0.1
-        elif "XAG" in sym or "SILVER" in sym:
-            self.pip_value = 0.01
-        else:
-            self.pip_value = 0.0001
+            return 0.01
+        if "XAU" in sym or "GOLD" in sym:
+            return 0.1
+        if "XAG" in sym or "SILVER" in sym:
+            return 0.01
+        if sym in {"BTCUSD", "ETHUSD"}:
+            return 1.0
+        return 0.0001
+
+    @staticmethod
+    def _pip_value_per_lot(symbol: str) -> float:
+        sym = symbol.upper()
+        if "XAU" in sym or "GOLD" in sym:
+            return 10.0
+        if "XAG" in sym or "SILVER" in sym:
+            return 50.0
+        if sym in {"BTCUSD", "ETHUSD"}:
+            return 1.0
+        if "JPY" in sym:
+            return 9.0
+        return 10.0
 
     def execute_signal(
         self,
@@ -66,10 +84,9 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
+        pip_value_per_lot = self._pip_value_per_lot(signal.symbol)
         lot_size = risk_amount / (pip_distance * pip_value_per_lot)
-        lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
+        lot_size = max(0.01, round(lot_size, 2))
 
         # Apply spread and slippage
         spread = self.spread_pips * self.pip_value
@@ -95,6 +112,8 @@ class SimulatedBroker:
             status=TradeStatus.OPEN,
             metadata=signal.metadata.copy(),
         )
+        trade.metadata["lot_size"] = lot_size
+        trade.metadata["commission"] = commission
         self._next_trade_id += 1
 
         # Create position
@@ -163,6 +182,13 @@ class SimulatedBroker:
                     )
 
             if closed_trade:
+                lot_size = float(pos.trade.metadata.get("lot_size", pos.lot_size))
+                pip_move = closed_trade.pnl / self.pip_value if self.pip_value else 0.0
+                pnl_usd = pip_move * self._pip_value_per_lot(closed_trade.symbol) * lot_size
+                closed_trade.metadata["pnl_usd"] = round(pnl_usd, 2)
+                closed_trade.metadata["commission"] = float(
+                    pos.trade.metadata.get("commission", 0.0)
+                )
                 # Attach steps from step tracker
                 if step_tracker:
                     closed_trade.steps = step_tracker.get_trade_steps(closed_trade.id)

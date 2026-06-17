@@ -7,10 +7,23 @@ from backtester.core import Bar
 
 @dataclass
 class VolumeProfile:
-    poc: float  # Point of Control
-    vah: float  # Value Area High
-    val: float  # Value Area Low
+    poc: float
+    vah: float
+    val: float
+    vwap: float = 0.0
     total_volume: int = 0
+
+def compute_vwap(bars: list[Bar]) -> float:
+    if not bars:
+        return 0.0
+    total_volume = 0
+    weighted = 0.0
+    for bar in bars:
+        volume = bar.tick_volume or 1
+        typical = (bar.high + bar.low + bar.close) / 3.0
+        weighted += typical * volume
+        total_volume += volume
+    return weighted / total_volume if total_volume else 0.0
 
 def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> VolumeProfile | None:
     """Compute Fixed Range Volume Profile from a list of bars using tick_volume."""
@@ -50,4 +63,10 @@ def compute_frvp(bars: list[Bar], row_size: int = 100, va_pct: float = 70.0) -> 
             break
     vah = max(va_prices) if va_prices else overall_high
     val = min(va_prices) if va_prices else overall_low
-    return VolumeProfile(poc=poc_price, vah=vah, val=val, total_volume=total_vol)
+    return VolumeProfile(
+        poc=poc_price,
+        vah=vah,
+        val=val,
+        vwap=compute_vwap(bars),
+        total_volume=total_vol,
+    )

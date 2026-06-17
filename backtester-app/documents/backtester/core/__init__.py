@@ -233,17 +233,25 @@ class BacktestResult:
         if self.total_trades == 0:
             return
 
-        winners = [t for t in self.trades if t.pnl > 0]
-        losers = [t for t in self.trades if t.pnl <= 0]
+        def trade_pnl(trade: Trade) -> float:
+            if "net_pnl_usd" in trade.metadata:
+                return float(trade.metadata["net_pnl_usd"])
+            if "pnl_usd" in trade.metadata:
+                commission = float(trade.metadata.get("commission", 0.0))
+                return float(trade.metadata["pnl_usd"]) - commission
+            return trade.pnl
+
+        winners = [t for t in self.trades if trade_pnl(t) > 0]
+        losers = [t for t in self.trades if trade_pnl(t) <= 0]
         self.winning_trades = len(winners)
         self.losing_trades = len(losers)
         self.win_rate = round(self.winning_trades / self.total_trades * 100, 2)
 
-        gross_profit = sum(t.pnl for t in winners) if winners else 0
-        gross_loss = abs(sum(t.pnl for t in losers)) if losers else 0
-        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float('inf')
+        gross_profit = sum(trade_pnl(t) for t in winners) if winners else 0
+        gross_loss = abs(sum(trade_pnl(t) for t in losers)) if losers else 0
+        self.profit_factor = round(gross_profit / gross_loss, 2) if gross_loss > 0 else float("inf")
 
-        self.total_pnl = sum(t.pnl for t in self.trades)
+        self.total_pnl = round(sum(trade_pnl(t) for t in self.trades), 2)
         self.avg_rr = round(
             sum(t.risk_reward_achieved for t in self.trades) / self.total_trades, 2
         )
