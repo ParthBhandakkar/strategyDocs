@@ -1,0 +1,27 @@
+strategy_id: s001_vp_orderflow_absorption
+module: vp_orderflow_absorption
+video_number: 1
+cluster: A
+asset_focus_hint: [XAUUSD]
+
+backtest_defaults:
+  initial_balance: 10000.0
+  risk_per_trade: 0.01
+  spread_pips: 1.0
+  slippage_pips: 0.5
+  commission_per_lot: 7.0
+
+required_timeframes: [M1]
+min_trades_for_ranking: 10
+
+# Absorption / inversion parameters from video spec (not tuned on backtest data)
+absorption:
+  min_wick_ratio: 0.45
+  volume_spike_mult: 1.2
+  cluster_lookback: 15
+  level_tolerance_pct: 0.0015
+
+session:
+  trade_after_ny_open: true
+  ny_open_hour: 9
+  ny_open_minute: 30
