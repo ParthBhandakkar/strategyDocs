@@ -1,7 +1,3 @@
-"""
-Strategy Registry - Auto-imports all strategy modules.
-"""
+from .registry import get_all_strategies, get_strategy, load_all_strategies
 
-from .registry import STRATEGY_REGISTRY
-
-__all__ = ["STRATEGY_REGISTRY"]
+__all__ = ["get_all_strategies", "get_strategy", "load_all_strategies"]
