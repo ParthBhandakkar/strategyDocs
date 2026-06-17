@@ -29,21 +29,29 @@ class SimulatedBroker:
         self.slippage_pips = slippage_pips
         self.commission_per_lot = commission_per_lot
         self.pip_value = pip_value
+        self.pip_value_per_lot = 10.0
         self._next_trade_id = 1
         self.open_positions: list[Position] = []
         self.closed_trades: list[Trade] = []
 
     def set_pip_value(self, symbol: str):
-        """Set pip value based on symbol type."""
+        """Set pip size and USD pip value per standard lot for the symbol."""
         sym = symbol.upper()
         if "JPY" in sym:
             self.pip_value = 0.01
+            self.pip_value_per_lot = 6.67
         elif "XAU" in sym or "GOLD" in sym:
             self.pip_value = 0.1
+            self.pip_value_per_lot = 10.0
         elif "XAG" in sym or "SILVER" in sym:
             self.pip_value = 0.01
+            self.pip_value_per_lot = 5.0
+        elif sym in {"BTCUSD", "ETHUSD"}:
+            self.pip_value = 1.0
+            self.pip_value_per_lot = 1.0
         else:
             self.pip_value = 0.0001
+            self.pip_value_per_lot = 10.0
 
     def execute_signal(
         self,
@@ -66,8 +74,7 @@ class SimulatedBroker:
         if pip_distance <= 0:
             return None
 
-        # Approximate: 1 standard lot on EURUSD = $10/pip
-        pip_value_per_lot = 10.0  # Simplified
+        pip_value_per_lot = self.pip_value_per_lot
         lot_size = risk_amount / (pip_distance * pip_value_per_lot)
         lot_size = max(0.01, round(lot_size, 2))  # Min 0.01 lot
 
@@ -131,7 +138,14 @@ class SimulatedBroker:
             # Check SL hit first (worst case first)
             if pos.is_sl_hit(bar):
                 exit_price = pos.current_sl
-                trade.close(bar.time, exit_price, self.pip_value)
+                trade.close(
+                    bar.time,
+                    exit_price,
+                    self.pip_value,
+                    lot_size=pos.lot_size,
+                    pip_value_per_lot=self.pip_value_per_lot,
+                    commission=self.commission_per_lot * pos.lot_size,
+                )
                 closed_trade = trade
 
                 if step_tracker:
@@ -148,7 +162,14 @@ class SimulatedBroker:
             # Check TP hit
             elif pos.is_tp_hit(bar):
                 exit_price = pos.current_tp
-                trade.close(bar.time, exit_price, self.pip_value)
+                trade.close(
+                    bar.time,
+                    exit_price,
+                    self.pip_value,
+                    lot_size=pos.lot_size,
+                    pip_value_per_lot=self.pip_value_per_lot,
+                    commission=self.commission_per_lot * pos.lot_size,
+                )
                 closed_trade = trade
 
                 if step_tracker:

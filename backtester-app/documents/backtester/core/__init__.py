@@ -128,23 +128,37 @@ class Trade:
     steps: list[StepRecord] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
 
-    def close(self, exit_time: datetime, exit_price: float, pip_value: float = 0.0001):
-        """Close the trade and calculate PnL."""
+    def close(
+        self,
+        exit_time: datetime,
+        exit_price: float,
+        pip_value: float = 0.0001,
+        lot_size: float = 0.01,
+        pip_value_per_lot: float = 10.0,
+        commission: float = 0.0,
+    ):
+        """Close the trade and calculate PnL in price, pips, and USD."""
         self.exit_time = exit_time
         self.exit_price = exit_price
         self.status = TradeStatus.CLOSED
 
         if self.direction == Direction.LONG:
-            self.pnl = exit_price - self.entry_price
+            price_delta = exit_price - self.entry_price
         else:
-            self.pnl = self.entry_price - exit_price
+            price_delta = self.entry_price - exit_price
 
+        self.pnl = price_delta
         if pip_value > 0:
-            self.pnl_pips = self.pnl / pip_value
+            self.pnl_pips = price_delta / pip_value
+
+        pnl_usd = (self.pnl_pips * pip_value_per_lot * lot_size) - commission
+        self.metadata["lot_size"] = lot_size
+        self.metadata["pnl_usd"] = round(pnl_usd, 2)
+        self.pnl = pnl_usd
 
         risk = abs(self.entry_price - self.stop_loss)
         if risk > 0:
-            self.risk_reward_achieved = round(self.pnl / risk, 2)
+            self.risk_reward_achieved = round(price_delta / risk, 2)
 
 
 @dataclass
