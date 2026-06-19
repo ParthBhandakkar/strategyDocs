@@ -1,6 +1,37 @@
 """
 Strategy 12: The 8:00 AM Candle Strategy
 Source: Faiz SMC ("This 8AM Candle Strategy Is Boring, But It Makes F*ck You Money")
+
+BIAS FIX (2026-06-19):
+  Original bias: Marked the 8:00 AM H1 range when h1_bar.hour==8 at the START of that hour,
+  using the full hour's OHLC before the 8-9 AM candle closed (playbook requires close).
+  Fix: Only capture the 8 AM H1 candle after 9:00 AM NY when that H1 bar is fully closed
+  (relying on engine bar-close semantics + explicit ny_cur.hour >= 9 check).
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  AUDCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  AUDUSD: Trades: 59 | Win rate: 3.39% | PF: 0.19 | PnL: $-0.02 | Max DD: 20.74% | Avg R:R: -0.34
+  BTCUSD: Trades: 122 | Win rate: 6.56% | PF: 0.31 | PnL: $-9340.53 | Max DD: 19.82% | Avg R:R: -0.16
+  CADCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CADJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CHFJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  ETHUSD: Trades: 111 | Win rate: 5.41% | PF: 0.14 | PnL: $-746.56 | Max DD: 24.99% | Avg R:R: -0.22
+  EURCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURGBP: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURUSD: Trades: 59 | Win rate: 8.47% | PF: 0.42 | PnL: $-0.01 | Max DD: 12.07% | Avg R:R: -0.18
+  GBPAUD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCAD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPNZD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPUSD: Trades: 57 | Win rate: 7.02% | PF: 0.36 | PnL: $-0.02 | Max DD: 12.92% | Avg R:R: -0.23
+  NZDJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  NZDUSD: Trades: 60 | Win rate: 8.33% | PF: 0.49 | PnL: $-0.01 | Max DD: 10.64% | Avg R:R: -0.09
+  USDCAD: Trades: 49 | Win rate: 10.2% | PF: 0.37 | PnL: $-0.02 | Max DD: 13.45% | Avg R:R: -0.22
+  USDCHF: Trades: 61 | Win rate: 6.56% | PF: 0.2 | PnL: $-0.02 | Max DD: 16.95% | Avg R:R: -0.28
+  USDJPY: Trades: 74 | Win rate: 2.7% | PF: 0.17 | PnL: $-3.61 | Max DD: 24.2% | Avg R:R: -0.33
+  XAGUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  XAUUSD: Trades: 67 | Win rate: 13.43% | PF: 0.69 | PnL: $-45.92 | Max DD: 14.46% | Avg R:R: -0.14
 """
 
 from __future__ import annotations
@@ -60,10 +91,11 @@ class EightAMCandleStrategy(BaseStrategy):
             self.on_start()
             self.trade_date = ny_time.date()
 
-        # Step 1: Capture 8AM Candle at 9:00 AM
+        # Step 1: Capture 8AM Candle after it closes (9:00 AM NY onward)
         if self.state == "WAIT_8AM" and h1_bar:
             ny_h1_time = get_ny_time(h1_bar.time)
-            if ny_h1_time.hour == 8:
+            ny_cur = get_ny_time(current_time)
+            if ny_h1_time.hour == 8 and ny_cur.hour >= 9:
                 self.candle_8am_high = h1_bar.high
                 self.candle_8am_low = h1_bar.low
                 self.candle_8am_mid = (h1_bar.high + h1_bar.low) / 2

@@ -1,6 +1,37 @@
 """
 Strategy 03: One-Minute Liquidity Sweep Trading Strategy
 Source: Faiz SMC ("Secret ICT Liquidity Sweep Trading Strategy With Insane Winrate!")
+
+BIAS FIX (2026-06-19):
+  Original bias: Engine released higher-TF (M15/H1) bars at period OPEN with full future
+  OHLC already baked in, so M15 orderflow bias could see the incomplete bar's final high/low.
+  Fix: MultiTimeframeDataFeed now emits bars only after period close. Strategy logic already
+  uses history() + completed M1 bar for entries (close-based CISD), which is correct at bar close.
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  AUDCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  AUDUSD: Trades: 100 | Win rate: 5.0% | PF: 0.12 | PnL: $-0.02 | Max DD: 37.34% | Avg R:R: -0.37
+  BTCUSD: Trades: 149 | Win rate: 5.37% | PF: 0.35 | PnL: $-5078.61 | Max DD: 57.11% | Avg R:R: -0.39
+  CADCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CADJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CHFJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  ETHUSD: Trades: 148 | Win rate: 4.05% | PF: 0.24 | PnL: $-327.14 | Max DD: 54.82% | Avg R:R: -0.37
+  EURCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURGBP: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURUSD: Trades: 98 | Win rate: 6.12% | PF: 0.25 | PnL: $-0.02 | Max DD: 32.09% | Avg R:R: -0.33
+  GBPAUD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCAD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPNZD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPUSD: Trades: 96 | Win rate: 0.0% | PF: 0.0 | PnL: $-0.03 | Max DD: 41.0% | Avg R:R: -0.43
+  NZDJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  NZDUSD: Trades: 93 | Win rate: 7.53% | PF: 0.18 | PnL: $-0.01 | Max DD: 31.26% | Avg R:R: -0.33
+  USDCAD: Trades: 93 | Win rate: 3.23% | PF: 0.07 | PnL: $-0.02 | Max DD: 35.08% | Avg R:R: -0.38
+  USDCHF: Trades: 93 | Win rate: 2.15% | PF: 0.04 | PnL: $-0.02 | Max DD: 49.7% | Avg R:R: -0.53
+  USDJPY: Trades: 96 | Win rate: 5.21% | PF: 0.14 | PnL: $-1.89 | Max DD: 27.53% | Avg R:R: -0.29
+  XAGUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  XAUUSD: Trades: 100 | Win rate: 3.0% | PF: 0.15 | PnL: $-75.58 | Max DD: 39.0% | Avg R:R: -0.39
 """
 
 from __future__ import annotations

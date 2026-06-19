@@ -2,10 +2,41 @@
 Strategy 04: Gold Fixed Range Volume Profile
 Source: Faiz SMC ("The Easiest Gold Volume Profile Trading Strategy That Works!")
 Video URL: https://www.youtube.com/watch?v=LsC2IokcYpc
+
+BIAS FIX (2026-06-19):
+  Original bias: FRVP was computed at 7:00 AM using session bars that included the 7:00 M5
+  candle's full OHLC before that candle closed, leaking the 7:00-7:05 range into the profile.
+  Fix: Compute FRVP only after the first M5 close past 7:00 (7:05 NY) and include only bars
+  that opened between 3:00 and 6:55 NY (fully closed before 7:00).
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  AUDCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  AUDUSD: Trades: 108 | Win rate: 25.0% | PF: 0.47 | PnL: $-0.01 | Max DD: 19.07% | Avg R:R: -0.17
+  BTCUSD: Trades: 163 | Win rate: 31.9% | PF: 0.51 | PnL: $-4208.88 | Max DD: 29.44% | Avg R:R: -0.14
+  CADCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CADJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CHFJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  ETHUSD: Trades: 162 | Win rate: 37.65% | PF: 0.91 | PnL: $-55.27 | Max DD: 18.42% | Avg R:R: -0.07
+  EURCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURGBP: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURUSD: Trades: 105 | Win rate: 33.33% | PF: 0.58 | PnL: $-0.01 | Max DD: 26.85% | Avg R:R: -0.21
+  GBPAUD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCAD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPNZD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPUSD: Trades: 112 | Win rate: 36.61% | PF: 0.78 | PnL: $-0.01 | Max DD: 24.2% | Avg R:R: -0.13
+  NZDJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  NZDUSD: Trades: 109 | Win rate: 24.77% | PF: 0.47 | PnL: $-0.01 | Max DD: 28.66% | Avg R:R: -0.24
+  USDCAD: Trades: 114 | Win rate: 28.95% | PF: 0.54 | PnL: $-0.01 | Max DD: 19.61% | Avg R:R: -0.16
+  USDCHF: Trades: 110 | Win rate: 35.45% | PF: 0.5 | PnL: $-0.01 | Max DD: 20.57% | Avg R:R: -0.19
+  USDJPY: Trades: 113 | Win rate: 30.97% | PF: 0.67 | PnL: $-0.98 | Max DD: 13.17% | Avg R:R: -0.1
+  XAGUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  XAUUSD: Trades: 112 | Win rate: 34.82% | PF: 0.87 | PnL: $-10.57 | Max DD: 9.47% | Avg R:R: -0.01
 """
 
 from __future__ import annotations
-from datetime import datetime, time, timedelta
+from datetime import datetime, time
 
 from backtester.core import Bar, Signal, PlaybookStep, Direction
 from backtester.core.timeframes import TF
@@ -64,17 +95,16 @@ class GoldFixedRangeVolumeProfile(BaseStrategy):
                 self.state = "COLLECT_SESSION"
                 self.session_start_time = current_time
 
-        # Step 1: Collect London session bars and compute FRVP at 7AM
+        # Step 1: Collect London session bars and compute FRVP after 7:00 AM window closes
         elif self.state == "COLLECT_SESSION":
-            # At exactly 7AM close, compute the FRVP
-            if ny_time.hour == 7 and ny_time.minute == 0:
-                # Get bars from 3AM to 7AM
-                session_start = ny_time.replace(hour=3, minute=0, second=0, microsecond=0)
-                session_end = ny_time.replace(hour=7, minute=0, second=0, microsecond=0)
-                
+            # Wait until 7:05 NY (first M5 close after the 7:00 session end)
+            if ny_time.hour == 7 and ny_time.minute >= 5:
                 m5_hist = history(self.symbol, TF.M5, 100)
-                session_bars = [b for b in m5_hist if get_ny_time(b.time) >= session_start and get_ny_time(b.time) <= session_end]
-                
+                session_bars = [
+                    b for b in m5_hist
+                    if self._is_london_session_bar(b)
+                ]
+
                 if session_bars:
                     self.frvp = compute_frvp(session_bars, row_size=100)
                     if self.frvp:
@@ -142,6 +172,18 @@ class GoldFixedRangeVolumeProfile(BaseStrategy):
                     return [Signal(self.id, Direction.SHORT, m5_bar.close, sl, tp, current_time, self.symbol)]
 
         return []
+
+    @staticmethod
+    def _is_london_session_bar(bar: Bar) -> bool:
+        """3:00-6:55 AM NY M5 bars (all fully closed before 7:00)."""
+        ny = get_ny_time(bar.time)
+        if ny.hour < 3:
+            return False
+        if ny.hour > 6:
+            return False
+        if ny.hour == 6 and ny.minute > 55:
+            return False
+        return True
 
     def on_position_update(self, bars, history, position, broker, step_tracker, current_time):
         """Move to BE at POC."""

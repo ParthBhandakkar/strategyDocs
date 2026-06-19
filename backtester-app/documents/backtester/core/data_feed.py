@@ -7,13 +7,14 @@ advancing time bar-by-bar and emitting MarketEvents.
 from __future__ import annotations
 
 from collections import defaultdict
-from datetime import datetime, timedelta, timezone
+from datetime import datetime
 from typing import Optional
 
 from backtester.core import Bar
-from backtester.core.timeframes import TF, tf_to_minutes, sort_timeframes
+from backtester.core.bar_timing import bar_close_time
+from backtester.core.timeframes import TF, sort_timeframes
 from backtester.core.events import MarketEvent
-from backtester.connectors import MT5Client
+from backtester.connectors.factory import DataClient
 
 
 class MultiTimeframeDataFeed:
@@ -21,11 +22,14 @@ class MultiTimeframeDataFeed:
     Holds bars for N timeframes (and optionally N symbols) simultaneously.
     Advances time by the smallest subscribed timeframe and emits MarketEvents
     whenever new bars complete on any subscribed timeframe.
+
+    Bars are only released into history after their period closes, preventing
+    higher-timeframe look-ahead (no peeking at full H1/H4 OHLC at bar open).
     """
 
     def __init__(
         self,
-        client: MT5Client,
+        client: DataClient,
         symbol: str,
         timeframes: list[TF],
         start: datetime,
@@ -51,7 +55,7 @@ class MultiTimeframeDataFeed:
         self._current_time: Optional[datetime] = None
 
     def load(self):
-        """Pre-fetch all data from MT5 for the backtest period."""
+        """Pre-fetch all data for the backtest period."""
         all_symbols = [self.symbol] + self.extra_symbols
 
         for sym in all_symbols:
@@ -62,13 +66,12 @@ class MultiTimeframeDataFeed:
                 print(f"{len(bars)} bars")
 
         self._loaded = True
-        # Set initial time from the first base_tf bar
         base_bars = self._all_bars.get(self.symbol, {}).get(self.base_tf, [])
         if base_bars:
-            self._current_time = base_bars[0].time
+            self._current_time = bar_close_time(base_bars[0], self.base_tf)
 
     def __iter__(self):
-        """Iterate through time, yielding MarketEvents."""
+        """Iterate through time, yielding MarketEvents at each base-TF bar close."""
         if not self._loaded:
             self.load()
 
@@ -76,10 +79,9 @@ class MultiTimeframeDataFeed:
         if not base_bars:
             return
 
-        for i, base_bar in enumerate(base_bars):
-            self._current_time = base_bar.time
+        for base_bar in base_bars:
+            self._current_time = bar_close_time(base_bar, self.base_tf)
 
-            # Check which timeframes have a new completed bar at this time
             new_bars: dict[TF, Bar] = {}
             multi_bars: dict[str, dict[TF, Bar]] = defaultdict(dict)
 
@@ -88,21 +90,17 @@ class MultiTimeframeDataFeed:
                     tf_bars = self._all_bars.get(sym, {}).get(tf, [])
                     idx = self._indices[sym][tf]
 
-                    # Advance the index for this TF to the latest bar at or before current_time
-                    while idx < len(tf_bars) and tf_bars[idx].time <= self._current_time:
-                        # Add to history window
-                        self._history[sym][tf].append(tf_bars[idx])
+                    while idx < len(tf_bars):
+                        candidate = tf_bars[idx]
+                        if bar_close_time(candidate, tf) > self._current_time:
+                            break
+                        self._history[sym][tf].append(candidate)
+                        if sym == self.symbol:
+                            new_bars[tf] = candidate
+                        multi_bars[sym][tf] = candidate
                         idx += 1
 
                     self._indices[sym][tf] = idx
-
-                    # If we advanced, the latest bar in history is the new bar
-                    history = self._history[sym][tf]
-                    if history:
-                        latest = history[-1]
-                        if sym == self.symbol:
-                            new_bars[tf] = latest
-                        multi_bars[sym][tf] = latest
 
             if new_bars:
                 event = MarketEvent(

@@ -1,6 +1,15 @@
 """
 Strategy 38: 4H Core Trend & SMT Divergence System
 Source: Faiz SMC ("Ultimate ICT Gold Trading Strategy With 73% Winrate..")
+
+BIAS FIX (2026-06-19):
+  Original bias: H4 FVGs recomputed every bar using incomplete H4 candle; could enter on
+  every bar once divergence existed (no one-shot guard).
+  Fix: Engine bar-close for H4/M15; track last divergence time and only enter on fresh signal.
+  Uses XAGUSD as correlated symbol (loaded via extra_symbols when primary is XAUUSD).
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  XAUUSD: Trades: 20 | Win rate: 25.0% | PF: 0.44 | PnL: $-58.92 | Max DD: 12.0% | Avg R:R: -0.36
 """
 
 from __future__ import annotations
@@ -35,9 +44,8 @@ class CoreTrendSMTDivergence(BaseStrategy):
     def on_start(self):
         self.state = "MONITOR"
         self.h4_fvgs = []
-        # If the main symbol isn't XAUUSD/Gold, this strategy might not make sense unless configured properly,
-        # but we'll run it against the primary symbol and the first extra_symbol.
         self.correlated_symbol = self.extra_symbols[0]
+        self._last_div_time = None
 
     def on_bar(
         self,
@@ -82,11 +90,16 @@ class CoreTrendSMTDivergence(BaseStrategy):
         # To get the correlated history, we'd normally call history(self.correlated_symbol, TF.M15, 20)
         # Assuming the history callable supports this:
         secondary_hist = history(self.correlated_symbol, TF.M15, 20)
+        if len(secondary_hist) < 5:
+            return []
 
         divergences = detect_smt_divergence(primary_hist, secondary_hist)
         
         if divergences:
             div = divergences[-1]
+            if self._last_div_time == div.time:
+                return []
+            self._last_div_time = div.time
             
             # Step 4: CISD Execution
             # Simplified: we use the SMT divergence directly if it aligns with the 4H FVG direction

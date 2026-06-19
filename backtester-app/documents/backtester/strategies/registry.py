@@ -47,3 +47,6 @@ def get_strategy(strategy_id: str) -> Type[BaseStrategy] | None:
     if not _REGISTRY:
         load_all_strategies()
     return _REGISTRY.get(strategy_id)
+
+
+STRATEGY_REGISTRY = _REGISTRY

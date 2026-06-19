@@ -2,6 +2,37 @@
 Strategy 06: Fractal-Based Inversion & Order Flow Strategy
 Source: Faiz SMC ("The Only Trading Strategy I'd Use If I Had To Start Over")
 Video URL: https://www.youtube.com/watch?v=YGKTvqJIx1w
+
+BIAS FIX (2026-06-19):
+  Original bias: (1) H4 swing targets were read via history(TF.H4) but H4 was not in
+  timeframes, so data was never loaded. (2) Engine HTF look-ahead on H1/M15 bars.
+  (3) State machine used `if` instead of `elif` for WAIT_M15_FVG, skipping WAIT_INVERSION.
+  Fix: Added TF.H4 to timeframes; engine now closes bars before release; fixed elif chain.
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  AUDCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  AUDUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  BTCUSD: Trades: 1 | Win rate: 0.0% | PF: 0.0 | PnL: $-89.38 | Max DD: 1.0% | Avg R:R: -1.0
+  CADCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CADJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  CHFJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  ETHUSD: Trades: 1 | Win rate: 0.0% | PF: 0.0 | PnL: $-6.24 | Max DD: 1.0% | Avg R:R: -1.0
+  EURCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURGBP: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  EURUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPAUD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCAD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPNZD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  GBPUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  NZDJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  NZDUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  USDCAD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  USDCHF: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  USDJPY: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  XAGUSD: Trades: 0 | Win rate: 0.0% | PF: 0.0 | PnL: $0.00 | Max DD: 0.0% | Avg R:R: 0.0
+  XAUUSD: Trades: 1 | Win rate: 0.0% | PF: 0.0 | PnL: $-0.94 | Max DD: 1.0% | Avg R:R: -1.0
 """
 
 from __future__ import annotations
@@ -20,7 +51,7 @@ class FractalInversionOrderflow(BaseStrategy):
     name = "Fractal Inversion & Order Flow"
     source_video = "https://www.youtube.com/watch?v=YGKTvqJIx1w"
     description = "Higher timeframe orderflow + lower timeframe FVG inversion. Trade after 9:30 AM NY."
-    timeframes = [TF.H1, TF.M15, TF.M5, TF.M1]
+    timeframes = [TF.H4, TF.H1, TF.M15, TF.M5, TF.M1]
     
     playbook = [
         PlaybookStep(1, "H1 Orderflow", "Evaluate 1H chart for macro momentum. Bullish = respects bullish FVGs.", "H1"),
@@ -34,6 +65,7 @@ class FractalInversionOrderflow(BaseStrategy):
         self.state = "WAIT_H1_BIAS"
         self.bias = None
         self.target_zone = None
+        self.active_fvg = None
 
     def on_bar(
         self,
@@ -42,7 +74,6 @@ class FractalInversionOrderflow(BaseStrategy):
         multi_symbol_bars: dict,
         current_time: datetime,
     ) -> list[Signal]:
-        h1_bar = bars.get(TF.H1)
         m15_bar = bars.get(TF.M15)
         m1_bar = bars.get(TF.M1)
         
@@ -51,11 +82,9 @@ class FractalInversionOrderflow(BaseStrategy):
 
         ny_time = get_ny_time(current_time)
         
-        # Only trade after 9:30 AM NY
         if ny_time.hour < 9 or (ny_time.hour == 9 and ny_time.minute < 30):
             return []
 
-        # Step 1: H1 Orderflow Bias
         if self.state == "WAIT_H1_BIAS":
             h1_hist = history(self.symbol, TF.H1, 30)
             if h1_hist:
@@ -66,7 +95,6 @@ class FractalInversionOrderflow(BaseStrategy):
                     self.bias = "bearish"
                     self.state = "WAIT_M15_FVG"
 
-        # Step 2: Monitor for macro target zones
         elif self.state == "WAIT_M15_FVG":
             h4_hist = history(self.symbol, TF.H4, 50)
             if h4_hist:
@@ -79,40 +107,35 @@ class FractalInversionOrderflow(BaseStrategy):
                     if sw_lows:
                         self.target_zone = min([s.price for s in sw_lows[-3:]])
 
-        # Step 3 & 4: M15 FVG and M1 Inversion
-        if self.state == "WAIT_M15_FVG" and m15_bar:
-            m15_hist = history(self.symbol, TF.M15, 30)
-            fvgs = get_unmitigated_fvgs(detect_fvg(m15_hist, min_gap_pips=1.0))
-            
-            # Find FVG near target zone
-            target_fvg = None
-            for fvg in fvgs:
-                if self.bias == "bearish" and fvg.direction == "bearish":
-                    if self.target_zone and abs(fvg.high - self.target_zone) < (self.target_zone * 0.002):
-                        target_fvg = fvg
-                        break
-                elif self.bias == "bullish" and fvg.direction == "bullish":
-                    if self.target_zone and abs(fvg.low - self.target_zone) < (self.target_zone * 0.002):
-                        target_fvg = fvg
-                        break
-            
-            if target_fvg:
-                self.active_fvg = target_fvg
-                self.state = "WAIT_INVERSION"
-                self.step_tracker.record(
-                    "M15 FVG Found", 3, current_time, m15_bar.close, "M15",
-                    f"FVG identified near target zone {self.target_zone:.5f}"
-                )
+            if m15_bar and self.target_zone:
+                m15_hist = history(self.symbol, TF.M15, 30)
+                fvgs = get_unmitigated_fvgs(detect_fvg(m15_hist, min_gap_pips=1.0))
+                
+                target_fvg = None
+                for fvg in fvgs:
+                    if self.bias == "bearish" and fvg.direction == "bearish":
+                        if abs(fvg.high - self.target_zone) < (self.target_zone * 0.002):
+                            target_fvg = fvg
+                            break
+                    elif self.bias == "bullish" and fvg.direction == "bullish":
+                        if abs(fvg.low - self.target_zone) < (self.target_zone * 0.002):
+                            target_fvg = fvg
+                            break
+                
+                if target_fvg:
+                    self.active_fvg = target_fvg
+                    self.state = "WAIT_INVERSION"
+                    self.step_tracker.record(
+                        "M15 FVG Found", 3, current_time, m15_bar.close, "M15",
+                        f"FVG identified near target zone {self.target_zone:.5f}"
+                    )
 
-        # Step 4: Wait for M1 Inversion
         elif self.state == "WAIT_INVERSION":
             m1_hist = history(self.symbol, TF.M1, 20)
             ifvgs = detect_ifvg(m1_hist)
             
-            # Check for valid inversion
             for ifvg in ifvgs:
                 if self.bias == "bearish" and ifvg.direction == "bearish":
-                    # Bearish FVG inverted = bearish confirmation
                     if m1_bar.close < ifvg.low:
                         self.state = "DONE"
                         self.step_tracker.record(

@@ -15,7 +15,7 @@ from .data_feed import MultiTimeframeDataFeed
 from .broker import SimulatedBroker
 from .portfolio import Portfolio
 from .step_tracker import StepTracker
-from backtester.connectors import MT5Client
+from backtester.connectors.factory import DataClient
 
 
 class BacktestEngine:
@@ -31,7 +31,7 @@ class BacktestEngine:
         self,
         config: BacktestConfig,
         strategy,  # BaseStrategy instance
-        client: MT5Client,
+        client: DataClient,
         progress_callback: Optional[Callable[[int, int], None]] = None,
     ):
         self.config = config
@@ -69,7 +69,7 @@ class BacktestEngine:
         print(f"\n{'='*60}")
         print(f"BACKTEST: {self.strategy.name}")
         print(f"Symbol: {self.config.symbol}")
-        print(f"Period: {self.config.start_date.date()} → {self.config.end_date.date()}")
+        print(f"Period: {self.config.start_date.date()} -> {self.config.end_date.date()}")
         print(f"Timeframes: {[tf.name for tf in self.strategy.timeframes]}")
         print(f"{'='*60}")
 

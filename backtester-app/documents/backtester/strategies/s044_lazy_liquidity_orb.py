@@ -1,6 +1,37 @@
 """
 Strategy 44: The Lazy Liquidity Strategy (Mechanical ORB Setup)
 Source: Faiz SMC ("The Laziest Liquidity Trading Strategy Making $15,000/Month")
+
+BIAS FIX (2026-06-19):
+  Original bias: Anchor 3:00 AM M15 range captured at 3:00 (bar open) with full 15-min OHLC
+  known in advance; breakout could fire on same incomplete candle.
+  Fix: Capture anchor at 3:15 NY when the 3:00-3:15 M15 candle has closed; skip breakout
+  checks on the anchor bar itself.
+
+BACKTEST RESULTS (local Exness CSV, 2024-01-01 to 2024-06-30, all pairs):
+  AUDCHF: Trades: 45 | Win rate: 37.78% | PF: 1.34 | PnL: $0.01 | Max DD: 4.33% | Avg R:R: 0.09
+  AUDUSD: Trades: 128 | Win rate: 32.81% | PF: 1.08 | PnL: $0.00 | Max DD: 14.02% | Avg R:R: 0.02
+  BTCUSD: Trades: 181 | Win rate: 20.44% | PF: 0.75 | PnL: $-8765.03 | Max DD: 37.0% | Avg R:R: -0.16
+  CADCHF: Trades: 45 | Win rate: 20.0% | PF: 0.48 | PnL: $-0.01 | Max DD: 13.03% | Avg R:R: -0.29
+  CADJPY: Trades: 45 | Win rate: 24.44% | PF: 0.78 | PnL: $-0.67 | Max DD: 10.73% | Avg R:R: -0.16
+  CHFJPY: Trades: 45 | Win rate: 22.22% | PF: 0.53 | PnL: $-2.57 | Max DD: 15.26% | Avg R:R: -0.27
+  ETHUSD: Trades: 179 | Win rate: 24.58% | PF: 1.04 | PnL: $67.17 | Max DD: 21.0% | Avg R:R: -0.04
+  EURCHF: Trades: 44 | Win rate: 20.45% | PF: 0.84 | PnL: $-0.00 | Max DD: 10.17% | Avg R:R: -0.18
+  EURGBP: Trades: 40 | Win rate: 30.0% | PF: 0.77 | PnL: $-0.00 | Max DD: 12.17% | Avg R:R: -0.15
+  EURUSD: Trades: 128 | Win rate: 29.69% | PF: 0.99 | PnL: $-0.00 | Max DD: 16.93% | Avg R:R: -0.03
+  GBPAUD: Trades: 45 | Win rate: 28.89% | PF: 1.06 | PnL: $0.00 | Max DD: 11.0% | Avg R:R: 0.03
+  GBPCAD: Trades: 46 | Win rate: 23.91% | PF: 0.67 | PnL: $-0.01 | Max DD: 8.08% | Avg R:R: -0.18
+  GBPCHF: Trades: 45 | Win rate: 24.44% | PF: 0.81 | PnL: $-0.01 | Max DD: 8.68% | Avg R:R: -0.19
+  GBPJPY: Trades: 45 | Win rate: 22.22% | PF: 0.97 | PnL: $-0.20 | Max DD: 8.26% | Avg R:R: -0.11
+  GBPNZD: Trades: 45 | Win rate: 22.22% | PF: 0.56 | PnL: $-0.02 | Max DD: 12.3% | Avg R:R: -0.18
+  GBPUSD: Trades: 129 | Win rate: 21.71% | PF: 0.6 | PnL: $-0.04 | Max DD: 31.4% | Avg R:R: -0.18
+  NZDJPY: Trades: 45 | Win rate: 35.56% | PF: 1.66 | PnL: $1.48 | Max DD: 7.0% | Avg R:R: 0.15
+  NZDUSD: Trades: 128 | Win rate: 28.12% | PF: 0.83 | PnL: $-0.01 | Max DD: 21.14% | Avg R:R: -0.11
+  USDCAD: Trades: 129 | Win rate: 25.58% | PF: 0.66 | PnL: $-0.03 | Max DD: 26.35% | Avg R:R: -0.16
+  USDCHF: Trades: 125 | Win rate: 24.0% | PF: 0.76 | PnL: $-0.02 | Max DD: 38.8% | Avg R:R: -0.2
+  USDJPY: Trades: 128 | Win rate: 24.22% | PF: 0.82 | PnL: $-2.14 | Max DD: 27.57% | Avg R:R: -0.17
+  XAGUSD: Trades: 37 | Win rate: 24.32% | PF: 0.81 | PnL: $-0.54 | Max DD: 9.53% | Avg R:R: -0.12
+  XAUUSD: Trades: 128 | Win rate: 25.0% | PF: 1.0 | PnL: $1.36 | Max DD: 15.6% | Avg R:R: -0.02
 """
 
 from __future__ import annotations
@@ -75,16 +106,17 @@ class LazyLiquidityORB(BaseStrategy):
             return []
 
         ny_time = get_ny_time(bar.time)
+        ny_cur = get_ny_time(current_time)
         
         # Reset state on a new day
-        if self.anchor_date != ny_time.date() and ny_time.hour == 0:
+        if self.anchor_date != ny_time.date() and ny_cur.hour == 0:
             self.anchor_high = 0.0
             self.anchor_low = 0.0
             self.trade_taken_today = False
             self.last_trade_result = None
 
-        # 1. Capture the 3:00 AM candle (London Open)
-        if ny_time.hour == 3 and ny_time.minute == 0:
+        # 1. Capture the 3:00 AM candle after the 3:00-3:15 M15 bar closes
+        if ny_time.hour == 3 and ny_time.minute == 0 and ny_cur.hour == 3 and ny_cur.minute == 15:
             self.anchor_high = bar.high
             self.anchor_low = bar.low
             self.anchor_date = ny_time.date()
